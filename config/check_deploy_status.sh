@@ -1,7 +1,8 @@
-#!/bin/sh -eu
+#!/bin/sh
 #####
 # WARNING: This script creates directories where it will deploy the files.
 #####
+set -eu -o pipefail
 
 # Get project directory's absolute path.
 # NOTE: Should do before changing the working directory because

@@ -1,4 +1,5 @@
-#!/bin/sh -eu
+#!/bin/sh
+set -eu -o pipefail
 
 # Get project directory's absolute path.
 # NOTE: Should do before changing the working directory because

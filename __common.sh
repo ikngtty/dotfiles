@@ -1,10 +1,11 @@
-#!/bin/sh -eu
+#!/bin/sh
 #####
 # This script is supposed to be read by other scripts only
 # (using a 'source' or '.' command).
 # Hence its file name starts with '__' (it is my rule).
 # The shabang above is a mere comment to silence a linter.
 #####
+set -eu -o pipefail
 
 #####
 # Arguments
