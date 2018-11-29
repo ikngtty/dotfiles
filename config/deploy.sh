@@ -17,7 +17,17 @@ cd "$dir_project"
 cd "$dir_here"
 ./check_deploy_status.sh    |
   tail -n +2                | # Remove the header
-    while IFS="$(printf "\t")" read deploy_from deploy_to
+    while IFS="$(printf "\t")" read deploy_from deploy_to deploy_status
     do
-      ln -s "$deploy_from" "$(dirname "$deploy_to")"
+      case "$deploy_status" in
+        "UNDEPLOYED")
+          printf "Deploying $(basename "$deploy_from") ... "
+          ln -s "$deploy_from" "$(dirname "$deploy_to")"
+          echo "Done!"
+          ;;
+        "CONFLICT")
+          echo "[WARNING] Failed to deploy $(basename "$deploy_from")"\
+            "because it conflicts. Please check and resolve it."
+          ;;
+      esac
     done
