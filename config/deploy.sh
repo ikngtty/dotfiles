@@ -14,7 +14,7 @@ cd "$dir_project"
 
 # Deploy.
 cd "$dir_here"
-./list_deploy_files.sh      |
+./check_deploy_status.sh    |
   tail -n +2                | # Remove the header
     while IFS="$(printf "\t")" read deploy_from deploy_to
     do

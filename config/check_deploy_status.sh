@@ -15,7 +15,7 @@ cd "$dir_project"
 . ./__common.sh "$dir_project"
 
 # Output a header.
-printf "DEPLOY_FROM\tDEPLOY_TO\n"
+printf "DEPLOY_FROM\tDEPLOY_TO\tSTATUS\n"
 
 # List the file paths.
 {
@@ -41,5 +41,13 @@ printf "DEPLOY_FROM\tDEPLOY_TO\n"
     cd "$relative_dir"
     file_deploy=$(pwd)/$file_name
 
-    printf "$file_origin\t$file_deploy\n"
+    # Check a deployment status.
+    deploy_status="conflict"
+    if [ ! -e "$file_deploy" ]; then
+      deploy_status="undeployed"
+    elif [ "$(readlink "$file_deploy")" = "$file_origin" ]; then
+      deploy_status="deployed"
+    fi
+
+    printf "$file_origin\t$file_deploy\t$deploy_status\n"
   done
