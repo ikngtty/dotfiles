@@ -1,0 +1,84 @@
+function warn_if_universal_var \
+  -d "Call before adding values to the specified variable in `config.fish`."
+
+  if set -qU $argv
+    set_color red
+    echo "WARNING: $argv has universal values."
+    echo "This may cause the values to increase whenever fish starts."
+    set -S $argv
+    set_color normal
+  end
+end
+
+# Set paths
+set -gx GOPATH ~/Projects/workspace/go
+## PATH
+warn_if_universal_var fish_user_paths
+set fish_user_paths $GOPATH/bin $fish_user_paths
+set fish_user_paths (go env GOROOT)/bin $fish_user_paths
+set fish_user_paths ~/.nodebrew/current/bin $fish_user_paths
+set fish_user_paths /Applications/Racket\ v7.1/bin $fish_user_paths
+set fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
+## MANPATH
+if status --is-interactive
+  warn_if_universal_var MANPATH
+  if test (count $MANPATH) -eq 0
+    # NOTE: To search default paths for `manpath` command,
+    # the environment variable MANPATH should end with ':'.
+    # So the array MANPATH should end with an empty string item.
+    set MANPATH ""
+  end
+  set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
+end
+
+# Init
+if status --is-interactive
+  rbenv init - | source
+  pyenv init - | source
+  source (conda info --root)/etc/fish/conf.d/conda.fish
+  # conda activate base
+end
+
+# Abbreviations
+if status --is-interactive
+  set -g fish_user_abbreviations
+  abbr --add b bundle
+  abbr --add g git
+  abbr --add r rails
+  abbr --add relogin exec $SHELL -l
+  abbr --add rocaml rlwrap ocaml
+  abbr --add v vagrant
+end
+
+# Fisherman
+if status --is-interactive
+  set -g fisher_path ~/.config/fisher_conf
+
+  set fish_function_path $fish_function_path[1] $fisher_path/functions $fish_function_path[2..-1]
+  set fish_complete_path $fish_complete_path[1] $fisher_path/completions $fish_complete_path[2..-1]
+
+  for file in $fisher_path/conf.d/*.fish
+      builtin source $file ^ /dev/null
+  end
+end
+
+# bobthefish
+if status --is-interactive
+  # Fixing a bug in an unofficial way
+  builtin source $fisher_path/functions/fish_greeting.fish
+  builtin source $fisher_path/functions/fish_mode_prompt.fish
+  builtin source $fisher_path/functions/fish_prompt.fish
+  builtin source $fisher_path/functions/fish_right_prompt.fish
+  builtin source $fisher_path/functions/fish_title.fish
+
+  # Config
+  set -g fish_prompt_pwd_dir_length 0
+  set -g theme_color_scheme dracula
+  set -g theme_display_vagrant yes
+  set -g theme_newline_cursor clean
+  set -g theme_show_exit_status yes
+end
+
+# NOTE: Created automatically by `opam init`(probably)
+# opam configuration
+source /Users/ikngtty/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
