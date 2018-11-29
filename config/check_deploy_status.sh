@@ -42,11 +42,11 @@ printf "DEPLOY_FROM\tDEPLOY_TO\tSTATUS\n"
     file_deploy=$(pwd)/$file_name
 
     # Check a deployment status.
-    deploy_status="conflict"
+    deploy_status="CONFLICT"
     if [ ! -e "$file_deploy" ]; then
-      deploy_status="undeployed"
+      deploy_status="UNDEPLOYED"
     elif [ "$(readlink "$file_deploy")" = "$file_origin" ]; then
-      deploy_status="deployed"
+      deploy_status="DEPLOYED"
     fi
 
     printf "$file_origin\t$file_deploy\t$deploy_status\n"
