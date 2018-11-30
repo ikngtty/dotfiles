@@ -9,8 +9,8 @@ My preference is saved in `$HOME/Configurations/iTerm2` after deploying.
 3.  `gem i bundler` (then `rbenv hash`? Check [this tip](https://qiita.com/tokimari/items/51ac63a1fe244b819aea)).
 4.  Move to `$HOME/Configurations/gem` (after deploying), and `bundle install`.
 
-NOTE: These gems are installed globally (by each virtual environment).
-We had better to install locally by each project with
+NOTE: These gems are installed globally (per virtual environment).
+We had better to install locally per project with
 `bundle install --path=vendor/bundle` as much as we can,
 because we can use `bundle clean` with project's bundle file.
 
