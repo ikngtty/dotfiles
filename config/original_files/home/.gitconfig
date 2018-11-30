@@ -1,0 +1,47 @@
+[core]
+	excludesfile = /Users/ikngtty/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = ikngtty
+	email = ikngtty@gmail.com
+[commit]
+	template = /Users/ikngtty/.stCommitMsg
+[alias]
+	br = branch
+	cm = commit
+	co = checkout
+	cp = cherry-pick
+	df = diff
+	dfs = diff --staged
+	mg = merge
+	mga = merge --abort
+	mgc = merge --continue
+	mgnc = merge --no-commit
+	rb = rebase
+	rs = reset
+	rsh = reset --hard
+	rsm = reset --mixed
+	rss = reset --soft
+	ss = stash
+	ssa = stash apply
+	ssd = stash drop
+	ssl = stash list
+	ssp = stash pop
+	st = status
+	# tr means tree.
+	tr = log --all --graph --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%Y/%m/%d %H:%M:%S'
+[pager]
+	diff = diff-so-fancy | less --tabs=2 -RFX --pattern='^(added|deleted|modified|renamed): '
+	show = diff-so-fancy | less --tabs=2 -RFX --pattern='^(added|deleted|modified|renamed): '
+[rebase]
+	autosquash = true
+[merge]
+	ff = false
+[pull]
+	ff = only
+	rebase = true
