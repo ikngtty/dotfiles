@@ -42,7 +42,14 @@ TODO: Decide how share them.
 *   Google Chrome(fullscreen).app
 
 ## Mac
+*   Decrease brightness of display.
 *   Change the computer name.
+*   General
+    *   Change the theme to dark one.
+    *   Make Vivaldi the default browser.
+*   Dock
+    *   Change position to left.
+    *   Turn on to show/hide automatically.
 
 ## Install fonts.
 **TODO:**
