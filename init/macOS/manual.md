@@ -52,7 +52,12 @@ TODO: Decide how share them.
     *   Turn on to show/hide automatically.
 
 ## Install fonts.
-**TODO:**
+*   Ricty Diminished
+*   Ricty
+*   Inconsolata-dz for Powerline
+*   Osaka-Mono
+
+TODO: Make it scripts.
 
 ## iTerm
 Use the feature to load preferences.
