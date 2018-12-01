@@ -22,6 +22,14 @@ dir_origin_home=$dir_origin/home
 dir_deploy_home=$HOME
 # dir_deploy_home=$1/_used_by_deploy_test   # For debug.
 # mkdir -p "$dir_deploy_home"               # For debug.
+dir_init=$1/init
+dir_init_mac=$dir_init/macOS
+
+sh_check_deploy_status=$dir_config/check_deploy_status.sh
+sh_deploy=$dir_config/deploy.sh
+sh_init_mac_after_install=$dir_init_mac/after_install.sh
+sh_init_mac_change_defaults=$dir_init_mac/change_defaults.sh
+sh_init_mac_install=$dir_init_mac/install.sh
 
 # Provide utility functions.
 # -> Nothing now.

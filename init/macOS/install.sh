@@ -19,8 +19,7 @@ if ! brew -v > /dev/null 2>&1; then
 fi
 
 # Deploy `Brewfile`.
-cd "$dir_project"
-./config/deploy.sh "Brewfile"
+$sh_deploy "Brewfile"
 
 # Install packages with Homebrew.
 cd "$dir_deploy_home/Configurations/Homebrew-Bundle"
