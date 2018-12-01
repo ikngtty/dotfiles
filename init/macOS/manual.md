@@ -64,11 +64,7 @@ Follow my comment in `init.coffee`.
 TODO: Make it scripts.
 
 ## Vivaldi
-### Settings
-**TODO:**
-
-### Bookmark
-**TODO:**
+Use [Vivaldi.net](https://vivaldi.net).
 
 ## Ruby gems
 1.  Set up a Ruby environment (by using `rbenv`).
