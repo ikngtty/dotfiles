@@ -22,6 +22,9 @@ dir_origin_home=$dir_origin/home
 dir_deploy_home=$HOME
 # dir_deploy_home=$1/_used_by_deploy_test   # For debug.
 # mkdir -p "$dir_deploy_home"               # For debug.
+dir_dummy=$1/dummy
+file_shells=/etc/shells
+# file_shells=$dir_dummy/shells   # For debug.
 dir_init=$1/init
 dir_init_mac=$dir_init/macOS
 
@@ -41,6 +44,9 @@ $sh_init_mac_change_defaults
 $sh_init_mac_install
 EOF
 }
+
+# Login shell
+login_shell=fish
 
 # Provide utility functions.
 log() {

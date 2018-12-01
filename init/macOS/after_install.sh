@@ -18,8 +18,26 @@ here_log() {
   log "$my_file_name" "$1"
 }
 
-# TODO: Change the login shell to fish if not.
+# Add installed shells' path to /etc/shells
+add_shells() {
+  shell_name=$1
+  shell_path="$(which $shell_name)"
+  if ! grep "$shell_path" "$file_shells" > /dev/null; then
+    here_log "Add '$shell_name' path to '$file_shells'."
+    sudo bash -c "echo '$shell_path' >> '$file_shells'"
+  fi
+}
+add_shells zsh
+add_shells fish
 
+# Change the login shell.
+if [ "$SHELL" != "$(which $login_shell)" ]; then
+  here_log "Change login shell to $login_shell."
+  chsh -s "$(which $login_shell)"
+  printf "\e[32m"
+  printf "Login shell has changed! Please relogin to your terminal."
+  printf "\e[m\n"
+fi
 
 printf "\e[32m"
 printf "Yeah! $my_file_name complete!"

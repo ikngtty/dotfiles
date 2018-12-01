@@ -1,0 +1,10 @@
+# This is dummy file for debug.
+
+/bin/bash
+/bin/csh
+/bin/ksh
+/bin/sh
+/bin/tcsh
+/bin/zsh
+/usr/local/bin/zsh
+/usr/local/bin/fish
