@@ -27,6 +27,7 @@ TODO: Try to use `brew cask`.
 *   SourceTree.app
 *   TweetDeck.app
 *   (comment out) Unity
+*   Vagrant
 *   VirtualBox.app
 *   (comment out) Visual Studio Code.app
 *   Vivaldi.app
