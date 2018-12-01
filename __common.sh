@@ -43,4 +43,10 @@ EOF
 }
 
 # Provide utility functions.
-# -> Nothing now.
+log() {
+  file_name=$1
+  msg=$2
+  printf "\e[36m"
+  printf "[$1 log] $2"
+  printf "\e[m\n"
+}

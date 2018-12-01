@@ -28,13 +28,22 @@ $sh_check_deploy_status     |
       do
         case "$deploy_status" in
           *UNDEPLOYED*)
-            printf "Deploying $(basename "$deploy_from") ... "
+            printf "\e[32m"
+            printf "Deploying "
+            printf "\e[1m$(basename "$deploy_from")\e[m"
+            printf "\e[32m"
+            printf "... "
             ln -s "$deploy_from" "$(dirname "$deploy_to")"
-            echo "Done!"
+            printf "Done!"
+            printf "\e[m\n"
             ;;
           *CONFLICT*)
-            echo "[WARNING] Failed to deploy $(basename "$deploy_from")"\
-              "because it conflicts. Please check and resolve it."
+            printf "\e[33m"
+            printf "WARNING: Failed to deploy "
+            printf "\e[1m$(basename "$deploy_from")\e[m "
+            printf "\e[33m"
+            printf "because it conflicts. Please check and resolve it."
+            printf "\e[m\n"
             ;;
         esac
       done
