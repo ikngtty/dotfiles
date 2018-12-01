@@ -1,4 +1,45 @@
 # Manual
+## Install applications.
+TODO: Try to use `brew cask`.
+*   Alfred.app
+*   AppCleaner.app
+*   Atom.app
+*   CheatSheet.app
+*   Clipy.app
+*   CotEditor.app
+*   Cyberduck.app
+*   (comment out) DB Browser for SQLite.app
+*   (comment out) Discord.app
+*   (comment out) Eclipse.app
+*   GIMP.app
+*   Google Chrome.app
+*   Google Drive.app
+*   Grammarly.app
+*   ImageOptim.app
+*   (comment out) IntelliJ IDEA CE.app
+*   Karabiner-Elements.app
+*   Kindle.app
+*   LINE.app
+*   MacDown.app
+*   (comment out) PyCharm CE.app
+*   (comment out) Racket v7.1
+*   Slack.app
+*   SourceTree.app
+*   TweetDeck.app
+*   (comment out) Unity
+*   VirtualBox.app
+*   (comment out) Visual Studio Code.app
+*   Vivaldi.app
+*   iTerm.app
+
+### jar
+*   (comment out) Automaton Simulator
+
+### My scripts
+TODO: Decide how share them.
+*   Connect_with_iPhone.app
+*   Google Chrome(fullscreen).app
+
 ## Install fonts.
 **TODO**
 
