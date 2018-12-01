@@ -25,11 +25,22 @@ dir_deploy_home=$HOME
 dir_init=$1/init
 dir_init_mac=$dir_init/macOS
 
+sh_make_scripts_executable=$1/make_scripts_executable.sh
 sh_check_deploy_status=$dir_config/check_deploy_status.sh
 sh_deploy=$dir_config/deploy.sh
 sh_init_mac_after_install=$dir_init_mac/after_install.sh
 sh_init_mac_change_defaults=$dir_init_mac/change_defaults.sh
 sh_init_mac_install=$dir_init_mac/install.sh
+sh_scripts() {
+  cat << EOF
+$sh_make_scripts_executable
+$sh_check_deploy_status
+$sh_deploy
+$sh_init_mac_after_install
+$sh_init_mac_change_defaults
+$sh_init_mac_install
+EOF
+}
 
 # Provide utility functions.
 # -> Nothing now.
