@@ -44,7 +44,7 @@ TODO: Decide how share them.
 *   Change the computer name.
 
 ## Install fonts.
-**TODO**
+**TODO:**
 
 ## iTerm
 Use the feature to load preferences.
@@ -55,7 +55,7 @@ Use `fish_config` command.
 *   colors -> Choose `Tomorrow Night Bright` theme.
 
 ## Fisherman
-**TODO**
+**TODO:**
 
 ## Atom
 Use `Sync Settings` package.
@@ -64,10 +64,10 @@ TODO: Make it scripts.
 
 ## Vivaldi
 ### Settings
-**TODO**
+**TODO:**
 
 ### Bookmark
-**TODO**
+**TODO:**
 
 ## Ruby gems
 1.  Set up a Ruby environment (by using `rbenv`).
