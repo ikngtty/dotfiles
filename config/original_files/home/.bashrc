@@ -1,7 +1,14 @@
 # Prompt
-PS1='
-[\u@\h \W]\$
-$ '
+PS1='$(st=$?
+  if [ $st -eq 0 ]; then
+    printf "\e[37m"
+  else
+    printf "\e[31;1m"
+  fi
+  echo "($st)\e[m"
+)
+\e[35m[\u@\h \W]\e[m
+\$ '
 
 # Alias
 alias relogin='exec $SHELL -l'

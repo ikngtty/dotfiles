@@ -1,6 +1,6 @@
 # Prompt
-PROMPT='
-%F{magenta}%n(%#) [%d]%f
+PROMPT='%F{white}(%?)%f
+%F{magenta}%n %# [%d]%f
 $ '
 
 # Alias
