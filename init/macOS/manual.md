@@ -40,6 +40,9 @@ TODO: Decide how share them.
 *   Connect_with_iPhone.app
 *   Google Chrome(fullscreen).app
 
+## Mac
+*   Change the computer name.
+
 ## Install fonts.
 **TODO**
 
