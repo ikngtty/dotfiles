@@ -1,6 +1,7 @@
 # Initialize macOS
 1.  `./change_defaults.sh`.
 2.  Reboot.
-3.  `./install.sh | tee ~/Documents/install.log`
-4.  `./after_install.sh`
-5.  Follow [the manual](./manual.md).
+3.  `../../config/deploy.sh bashrc` and relogin bash to install comfortably.
+4.  `./install.sh | tee ~/Documents/install.log`
+5.  `./after_install.sh`
+6.  Follow [the manual](./manual.md).
