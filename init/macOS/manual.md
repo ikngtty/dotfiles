@@ -68,7 +68,7 @@ Use `fish_config` command.
 *   colors -> Choose `Tomorrow Night Bright` theme.
 
 ## Fisherman
-**TODO:**
+Use `fisher` command after deploying `fishfile` and reflecting `config.fish`.
 
 ## Atom
 Use `Sync Settings` package.
