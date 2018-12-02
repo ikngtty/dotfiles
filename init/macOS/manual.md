@@ -71,9 +71,6 @@ TODO: Try to make it scripts with using `defaults` command.
 Use `fish_config` command.
 *   colors -> Choose `Tomorrow Night Bright` theme.
 
-## Fisherman
-Use `fisher` command after deploying `fishfile` and reflecting `config.fish`.
-
 ## Atom
 Use `Sync Settings` package.
 Follow my comment in `init.coffee`.

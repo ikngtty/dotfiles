@@ -87,6 +87,14 @@ deploy_rc fishfile
 deploy_rc .zprofile
 deploy_rc .zshrc
 
+# Install Fisherman
+here_log "Install Fisherman."
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+
+# Install packages by Fisherman's fishfile.
+here_log 'Run `fisher`.'
+fish -c fisher
+
 printf "\e[32m"
 printf "Yeah! $my_file_name complete!"
 printf "\e[m\n"
