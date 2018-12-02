@@ -51,6 +51,8 @@ TODO: Decide how share them.
     *   Change position to left.
     *   Turn on to show/hide automatically.
 
+TODO: Try to make it scripts with using `defaults` command.
+
 ## Install fonts.
 *   Ricty Diminished
 *   Ricty
@@ -62,6 +64,8 @@ TODO: Make it scripts.
 ## iTerm
 Use the feature to load preferences.
 My preference is saved in `$HOME/Configurations/iTerm2` after deploying.
+
+TODO: Try to make it scripts with using `defaults` command.
 
 ## Fish
 Use `fish_config` command.
@@ -105,6 +109,8 @@ TODO: Make it scripts.
 ## Virtual Box
 Change the default VM folder path.
 
+TODO: Try to make it scripts with using `defaults` command.
+
 ## MacDown
 *   Editor
     *   Font -> 18pts
@@ -112,6 +118,8 @@ Change the default VM folder path.
 *   Rendering
     *   CSS -> GitHub2_edited
     *   Turn on reflection breaklines.
+
+TODO: Try to make it scripts with using `defaults` command.
 
 ## Karabiner
 Need not to share.
