@@ -18,6 +18,23 @@ here_log() {
   log "$my_file_name" "$1"
 }
 
+# Check requirements.
+here_log "Check requirements."
+exit_for_no_shell() {
+  st=$?
+  shell_name=$1
+  printf "\e[31m"                   # Red
+  printf "Oh my God! Failed to run because "
+  printf "\e[1m$shell_name\e[m"     # Bold
+  printf "\e[31m"                   # Red
+  printf " is not installed. "
+  printf "Please install it!"
+  printf "\e[m\n"                   # Normal text
+  exit $st
+}
+zsh --version > /dev/null || exit_for_no_shell zsh
+fish --version > /dev/null || exit_for_no_shell fish
+
 # Add installed shells' path to /etc/shells
 add_shells() {
   shell_name=$1
