@@ -1,5 +1,5 @@
 # Initialize macOS
-1.  `./change_defaults.sh`.
+1.  `./adjust_mac.sh`.
 2.  Reboot.
 3.  `../../config/deploy.sh bashrc` and relogin bash to install comfortably.
 4.  `./install.sh | tee ~/Documents/install.log`
