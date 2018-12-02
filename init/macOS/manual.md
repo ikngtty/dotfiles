@@ -53,6 +53,10 @@ TODO: Decide how share them.
 
 TODO: Try to make it scripts with using `defaults` command.
 
+## Git
+[Generate a SSH key and add to GitHub and Bitbucket.](https://help.github.com/articles/connecting-to-github-with-ssh/)
+TODO: Make it scripts.
+
 ## Install fonts.
 *   Ricty Diminished
 *   Ricty
