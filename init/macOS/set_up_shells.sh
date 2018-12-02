@@ -56,6 +56,37 @@ if [ "$SHELL" != "$(which $login_shell)" ]; then
   printf "\e[m\n"
 fi
 
+# Deploy rc files.
+here_log "Deploy rc files if it has not."
+deploy_rc() {
+  pattern=$1
+  status_line=$($sh_check_deploy_status | grep -F "$pattern")
+  if [ $(echo "$status_line" | wc -l) -gt 1 ]; then
+    printf "\e[31m"                 # Red
+    printf "Oh no! I don't know which is the right "
+    printf "\e[1m$pattern\e[m"      # Bold
+    printf "\e[31m"                 # Red
+    printf " file? Please fix the ambiguous search in me!"
+    printf "\e[m\n"                 # Normal text
+    exit $code_ambiguous_search
+  fi
+
+  if echo "$status_line" | grep 'CONFLICT\e\[m$' > /dev/null ; then
+    printf "\e[31m"                 # Red
+    printf "Oh my God! Cannot deploy the "
+    printf "\e[1m$pattern\e[m"      # Bold
+    printf "\e[31m"                 # Red
+    printf " file because it conflicts. Please resolve it!"
+    printf "\e[m\n"                 # Normal text
+    exit $code_conflict
+  fi
+  $sh_deploy "$pattern"
+}
+deploy_rc config.fish
+deploy_rc fishfile
+deploy_rc .zprofile
+deploy_rc .zshrc
+
 printf "\e[32m"
 printf "Yeah! $my_file_name complete!"
 printf "\e[m\n"

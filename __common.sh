@@ -45,6 +45,10 @@ $sh_init_mac_install
 EOF
 }
 
+# Status code
+code_conflict=10
+code_ambiguous_search=20
+
 # Login shell
 login_shell=fish
 
