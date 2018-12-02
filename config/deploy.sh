@@ -21,9 +21,9 @@ cd "$dir_project"
 . ./__common.sh "$dir_project"
 
 # Deploy.
-$sh_check_deploy_status     |
-  tail -n +2                | # Remove the header
-    grep "$pattern_deploy"  |
+$sh_check_deploy_status         |
+  tail -n +2                    | # Remove the header
+    grep -F "$pattern_deploy"   |
       while IFS="$(printf "\t")" read deploy_from deploy_to deploy_status
       do
         case "$deploy_status" in
