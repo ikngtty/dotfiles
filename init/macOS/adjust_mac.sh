@@ -31,8 +31,7 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 defaults write com.apple.screencapture disable-shadow -bool true
 # defaults write com.apple.screencapture location ~/Pictures
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# TODO: Turn off auto-largescale.
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
 # Remove directories' localization file.
 rm_if_exist() {
