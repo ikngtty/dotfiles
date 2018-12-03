@@ -33,7 +33,8 @@ cd "$dir_deploy_home/Configurations/Homebrew-Bundle"
 here_log "Run \`brew upgrade --cleanup\`."
 brew upgrade --cleanup
 here_log "Run \`brew bundle check\`."
-brew bundle check
+# brew bundle check
+# TODO: Research the `brew bundle check` feature.
 here_log "Run \`brew bundle\`."
 brew bundle
 
