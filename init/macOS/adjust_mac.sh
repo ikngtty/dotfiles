@@ -32,6 +32,8 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # defaults write com.apple.screencapture location ~/Pictures
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+# TODO: Turn off auto-largescale.
+
 # Remove directories' localization file.
 rm_if_exist() {
   file_path=$1
@@ -49,6 +51,7 @@ rm_if_exist ~/Movies/.localized
 rm_if_exist ~/Music/.localized
 rm_if_exist ~/Pictures/.localized
 rm_if_exist ~/Public/.localized
+# TODO: Find out.
 
 here_log "Change directory's visibility."
 chflags nohidden ~/Library
