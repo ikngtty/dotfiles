@@ -23,15 +23,15 @@ ssh-add -K ~/.ssh/id_rsa
 4.  Add the SSH key in [Bitbucket's settings page](https://bitbucket.org/account/user/ikngtty/ssh-keys/).
 5.  Clone this repository.
 ```
-    mkdir -p ~/Projects/github.com
-    cd ~/Projects/github.com
+    mkdir -p ~/Projects/github.com/ikngtty
+    cd ~/Projects/github.com/ikngtty
     git clone git@github.com:ikngtty/dotfiles.git
     cd dotfiles
 ```
 6.  `./init/macOS/adjust_mac.sh`.
-7.  Reboot and `cd ~/Projects/github.com/dotfiles`.
+7.  Reboot and `cd ~/Projects/github.com/ikngtty/dotfiles`.
 8.  `./config/deploy.sh bashrc` and relogin bash to install comfortably.
-9.  `./init/macOS/install.sh | tee ~/Documents/install.log`
+9.  `./init/macOS/install.sh | tee ~/Desktop/install.log`
 10. `./init/macOS/set_up_shells.sh`
 11. Follow [the manual](./manual.md).
 
