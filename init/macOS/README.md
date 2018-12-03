@@ -3,9 +3,7 @@
 2.  [Generate a new SSH key and add it to the ssh-agent.](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
     Contents in the link is below.
 ```
-ls -al ~/.ssh                     # Check for existing SSH keys.
-ssh-keygen -t rsa -b 4096 -C "ikngtty@gmail.com"
-eval "$(ssh-agent -s)"            # Start the ssh-agent in the background.
+ssh-keygen -t rsa -b 4096 -C ikngtty@gmail.com
 vim ~/.ssh/config                 # Modify as below.
 ```
 ```
