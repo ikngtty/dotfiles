@@ -21,6 +21,8 @@ TODO: Try to use `brew cask`.
 *   Kindle.app
 *   LINE.app
 *   MacDown.app
+*   Microsoft Office
+*   Microsoft Teams
 *   (comment out) PyCharm CE.app
 *   (comment out) Racket v7.1
 *   Slack.app
@@ -42,14 +44,28 @@ TODO: Decide how share them.
 *   Google Chrome(fullscreen).app
 
 ## Mac
-*   Decrease brightness of display.
-*   Change the computer name.
+*   Adjust brightness of display.
+*   Change the computer name (and reboot?).
+    ```
+    sudo scutil --set LocalHostName *localhost name(ex.MBA-of-ikngtty)]*
+    sudo scutil --set ComputerName *computer name(ex.MBA-of-ikngtty)*
+    ```
+*   Trackpad
+    *   Turn on `Application Expose`.
+    *   Adjust sensitivity.
 *   General
-    *   Change the theme to dark one.
     *   Make Vivaldi the default browser.
 *   Dock
     *   Change position to left.
     *   Turn on to show/hide automatically.
+    *   Adjust sizes.
+    *   Change lineups. TODO: Descirbe.
+*   Finder
+    *   General
+        *   Start with the home folder.
+        *   Turn off to open folder in new tab.
+    *   Sidebar
+        *   Add home and HDD.
 
 TODO: Try to make it scripts with using `defaults` command.
 
@@ -61,11 +77,23 @@ TODO: Try to make it scripts with using `defaults` command.
 
 TODO: Make it scripts.
 
-## iTerm
+## Google IME
+TODO:
+
+## terminal
+TODO:
+
+## iTerm2
 Use the feature to load preferences.
 My preference is saved in `$HOME/Configurations/iTerm2` after deploying.
 
 TODO: Try to make it scripts with using `defaults` command.
+
+## Alfred
+*   General
+    *   I'm in Japan.
+*   Appearane
+    *   Choose the `Frosty Teal` theme.
 
 ## Fish
 Use `fish_config` command.
@@ -75,9 +103,11 @@ Use `fish_config` command.
 Use `Sync Settings` package.
 Follow my comment in `init.coffee`.
 TODO: Make it scripts.
+TODO: Find out steps to create Lisp IDE.
 
 ## Vivaldi
 Use [Vivaldi.net](https://vivaldi.net).
+TODO: Detailed settings.
 
 ## Ruby gems
 1.  Set up a Ruby environment (by using `rbenv`).
