@@ -31,6 +31,17 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # defaults write com.apple.screencapture location ~/Pictures
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
+here_log "Remove directories' localize file."
+# rm ~/Applications/.localized
+rm ~/Desktop/.localized
+rm ~/Documents/.localized
+rm ~/Downloads/.localized
+rm ~/Library/.localized
+rm ~/Movies/.localized
+rm ~/Music/.localized
+rm ~/Pictures/.localized
+rm ~/Public/.localized
+
 here_log "Change directory's visibility."
 chflags nohidden ~/Library
 sudo chflags nohidden /Volumes
