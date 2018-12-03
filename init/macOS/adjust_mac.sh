@@ -18,6 +18,7 @@ here_log() {
   log "$my_file_name" "$1"
 }
 
+# Change preferences.
 here_log "Change preferences of Desktop, Finder, ScreenCapture, etc."
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
@@ -31,16 +32,23 @@ defaults write com.apple.screencapture disable-shadow -bool true
 # defaults write com.apple.screencapture location ~/Pictures
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-here_log "Remove directories' localize file."
-# rm ~/Applications/.localized
-rm ~/Desktop/.localized
-rm ~/Documents/.localized
-rm ~/Downloads/.localized
-rm ~/Library/.localized
-rm ~/Movies/.localized
-rm ~/Music/.localized
-rm ~/Pictures/.localized
-rm ~/Public/.localized
+# Remove directories' localization file.
+rm_if_exist() {
+  file_path=$1
+  if [ -e "$file_path" ]; then
+    here_log "Remove $file_path"
+    rm "$file_path"
+  fi
+}
+rm_if_exist ~/Applications/.localized
+rm_if_exist ~/Desktop/.localized
+rm_if_exist ~/Documents/.localized
+rm_if_exist ~/Downloads/.localized
+rm_if_exist ~/Library/.localized
+rm_if_exist ~/Movies/.localized
+rm_if_exist ~/Music/.localized
+rm_if_exist ~/Pictures/.localized
+rm_if_exist ~/Public/.localized
 
 here_log "Change directory's visibility."
 chflags nohidden ~/Library
