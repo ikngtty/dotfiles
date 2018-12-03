@@ -51,7 +51,8 @@ TODO: Decide how share them.
 
 TODO: Make it scripts.
 
-## Mac
+## Set up GUI.
+### Mac
 *   Adjust brightness of display.
 *   Change the computer name (and reboot?).
     ```
@@ -77,38 +78,38 @@ TODO: Make it scripts.
 
 TODO: Try to make it scripts with using `defaults` command.
 
-## Alfred
+### Alfred
 *   General
     *   I'm in Japan.
 *   Appearane
     *   Choose the `Frosty Teal` theme.
 
-## Atom
+### Atom
 Use `Sync Settings` package.
 Follow my comment in `init.coffee`.
 TODO: Make it scripts.
 TODO: Find out steps to create Lisp IDE.
 
-## Fish
+### Fish
 Use `fish_config` command.
 *   colors -> Choose `Tomorrow Night Bright` theme.
 
-## Google IME
+### Google IME
 TODO:
 
-## iTerm2
+### iTerm2
 Use the feature to load preferences.
 My preference is saved in `$HOME/Configurations/iTerm2` after deploying.
 
 TODO: Try to make it scripts with using `defaults` command.
 
-## Karabiner
+### Karabiner
 Need not to share.
 
-## terminal
+### terminal
 TODO:
 
-## MacDown
+### MacDown
 *   Editor
     *   Font -> 18pts
     *   Theme -> Tomorrow+
@@ -118,16 +119,17 @@ TODO:
 
 TODO: Try to make it scripts with using `defaults` command.
 
-## Virtual Box
+### Virtual Box
 Change the default VM folder path.
 
 TODO: Try to make it scripts with using `defaults` command.
 
-## Vivaldi
+### Vivaldi
 Use [Vivaldi.net](https://vivaldi.net).
 TODO: Detailed settings.
 
-## Ruby gems
+## Set up others.
+### Ruby gems
 1.  Set up a Ruby environment (by using `rbenv`).
 2.  `gem update` (then `gem cleanup`).
 3.  `gem i bundler` (then `rbenv hash`? Check [this tip](https://qiita.com/tokimari/items/51ac63a1fe244b819aea)).
@@ -145,7 +147,7 @@ with `--binstubs=bundle_bin`.
 
 TODO: Make it scripts.
 
-## OPAM
+### OPAM
 TODO: Make it scripts.
 *   ocp-indent
 *   merlin
