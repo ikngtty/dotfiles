@@ -43,6 +43,14 @@ TODO: Decide how share them.
 *   Connect_with_iPhone.app
 *   Google Chrome(fullscreen).app
 
+## Install fonts.
+*   Ricty Diminished
+*   Ricty
+*   Inconsolata-dz for Powerline
+*   Osaka-Mono
+
+TODO: Make it scripts.
+
 ## Mac
 *   Adjust brightness of display.
 *   Change the computer name (and reboot?).
@@ -69,18 +77,23 @@ TODO: Decide how share them.
 
 TODO: Try to make it scripts with using `defaults` command.
 
-## Install fonts.
-*   Ricty Diminished
-*   Ricty
-*   Inconsolata-dz for Powerline
-*   Osaka-Mono
+## Alfred
+*   General
+    *   I'm in Japan.
+*   Appearane
+    *   Choose the `Frosty Teal` theme.
 
+## Atom
+Use `Sync Settings` package.
+Follow my comment in `init.coffee`.
 TODO: Make it scripts.
+TODO: Find out steps to create Lisp IDE.
+
+## Fish
+Use `fish_config` command.
+*   colors -> Choose `Tomorrow Night Bright` theme.
 
 ## Google IME
-TODO:
-
-## terminal
 TODO:
 
 ## iTerm2
@@ -89,21 +102,26 @@ My preference is saved in `$HOME/Configurations/iTerm2` after deploying.
 
 TODO: Try to make it scripts with using `defaults` command.
 
-## Alfred
-*   General
-    *   I'm in Japan.
-*   Appearane
-    *   Choose the `Frosty Teal` theme.
+## Karabiner
+Need not to share.
 
-## Fish
-Use `fish_config` command.
-*   colors -> Choose `Tomorrow Night Bright` theme.
+## terminal
+TODO:
 
-## Atom
-Use `Sync Settings` package.
-Follow my comment in `init.coffee`.
-TODO: Make it scripts.
-TODO: Find out steps to create Lisp IDE.
+## MacDown
+*   Editor
+    *   Font -> 18pts
+    *   Theme -> Tomorrow+
+*   Rendering
+    *   CSS -> GitHub2_edited
+    *   Turn on reflection breaklines.
+
+TODO: Try to make it scripts with using `defaults` command.
+
+## Virtual Box
+Change the default VM folder path.
+
+TODO: Try to make it scripts with using `defaults` command.
 
 ## Vivaldi
 Use [Vivaldi.net](https://vivaldi.net).
@@ -132,21 +150,3 @@ TODO: Make it scripts.
 *   ocp-indent
 *   merlin
 *   utop
-
-## Virtual Box
-Change the default VM folder path.
-
-TODO: Try to make it scripts with using `defaults` command.
-
-## MacDown
-*   Editor
-    *   Font -> 18pts
-    *   Theme -> Tomorrow+
-*   Rendering
-    *   CSS -> GitHub2_edited
-    *   Turn on reflection breaklines.
-
-TODO: Try to make it scripts with using `defaults` command.
-
-## Karabiner
-Need not to share.
