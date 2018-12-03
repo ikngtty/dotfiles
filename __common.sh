@@ -34,16 +34,16 @@ sh_deploy=$dir_config/deploy.sh
 sh_init_mac_after_install=$dir_init_mac/after_install.sh
 sh_init_mac_change_defaults=$dir_init_mac/change_defaults.sh
 sh_init_mac_install=$dir_init_mac/install.sh
-sh_scripts() {
-  cat << EOF
-$sh_make_scripts_executable
-$sh_check_deploy_status
-$sh_deploy
-$sh_init_mac_after_install
-$sh_init_mac_change_defaults
-$sh_init_mac_install
-EOF
-}
+# sh_scripts() {
+#   cat << EOF
+# $sh_make_scripts_executable
+# $sh_check_deploy_status
+# $sh_deploy
+# $sh_init_mac_after_install
+# $sh_init_mac_change_defaults
+# $sh_init_mac_install
+# EOF
+# }
 
 # Status code
 code_conflict=10
