@@ -10,6 +10,7 @@ TODO: Try to use `brew cask`.
 *   Cyberduck.app
 *   (comment out) DB Browser for SQLite.app
 *   (comment out) Discord.app
+*   Docker for Mac
 *   (comment out) Eclipse.app
 *   GIMP.app
 *   Google Chrome.app
@@ -136,11 +137,19 @@ Use [Vivaldi.net](https://vivaldi.net).
 TODO: Detailed settings.
 
 ## Set up others.
+### Node.js
+1.  `mkdir -p ~/.nodebrew/src`
+2.  `nodebrew install-binary stable`
+3.  `nodebrew use stable`
+
+### npm
+*   `npm i -g yarn`
+
 ### Ruby gems
 1.  Set up a Ruby environment (by using `rbenv`).
 2.  `gem update` (then `gem cleanup`).
 3.  `gem i bundler` (then `rbenv hash`? Check [this tip](https://qiita.com/tokimari/items/51ac63a1fe244b819aea)).
-4.  Move to `$HOME/Configurations/gem` (after deploying), and `bundle install`.
+4.  Move to `~/Configurations/gem` (after deploying), and `bundle install`.
 
 NOTE: These gems are installed globally (per virtual environment).
 We had better to install locally per project with
