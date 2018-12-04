@@ -14,7 +14,6 @@ TODO: Try to use `brew cask`.
 *   GIMP.app
 *   Google Chrome.app
 *   Google Drive.app
-*   Grammarly.app
 *   ImageOptim.app
 *   (comment out) IntelliJ IDEA CE.app
 *   Karabiner-Elements.app
@@ -44,10 +43,12 @@ TODO: Decide how share them.
 *   Google Chrome(fullscreen).app
 
 ## Install fonts.
-*   Ricty Diminished
-*   Ricty
-*   Inconsolata-dz for Powerline
-*   Osaka-Mono
+*   [Ricty Diminished](https://www.rs.tus.ac.jp/yyusa/ricty_diminished.html)
+*   [Ricty](https://www.rs.tus.ac.jp/yyusa/ricty.html)
+    *   [Inconsolata](https://fonts.google.com/specimen/Inconsolata)
+    *   [Migu 1M](http://mix-mplus-ipa.osdn.jp/)
+*   [Inconsolata-dz for Powerline](https://github.com/powerline/fonts)
+*   Osaka-Mono (Mac has it by default.)
 
 TODO: Make it scripts.
 
@@ -64,6 +65,8 @@ TODO: Make it scripts.
     *   Adjust sensitivity.
 *   General
     *   Make Vivaldi the default browser.
+*   Security and Privacy
+    *   The time require the password is right after sleeping and saving the scrreen.
 *   Dock
     *   Change position to left.
     *   Turn on to show/hide automatically.
@@ -75,14 +78,18 @@ TODO: Make it scripts.
         *   Turn off to open folder in new tab.
     *   Sidebar
         *   Add home and HDD.
+*   Desktop and ScreenSaver
 
 TODO: Try to make it scripts with using `defaults` command.
 
 ### Alfred
 *   General
     *   I'm in Japan.
-*   Appearane
-    *   Choose the `Frosty Teal` theme.
+*   Features
+    *   Default Results
+        *   Turn on `Folders`.
+*   Appearance
+    *   Choose theme.
 
 ### Atom
 Use `Sync Settings` package.
@@ -111,10 +118,10 @@ TODO:
 
 ### MacDown
 *   Editor
-    *   Font -> 18pts
-    *   Theme -> Tomorrow+
+    *   Font -> Ricty Diminshed 24pts
+    *   Theme -> Tomorrow+ (default)
 *   Rendering
-    *   CSS -> GitHub2_edited
+    *   CSS -> GitHub2_edited TODO: Make font size bigger.
     *   Turn on reflection breaklines.
 
 TODO: Try to make it scripts with using `defaults` command.
