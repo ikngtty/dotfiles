@@ -45,6 +45,7 @@ end
 if status --is-interactive
   set -g fish_user_abbreviations
   abbr --add b bundle
+  abbr --add d docker
   abbr --add g git
   abbr --add r rails
   abbr --add relogin exec $SHELL -l
