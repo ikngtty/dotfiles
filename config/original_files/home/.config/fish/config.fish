@@ -33,10 +33,12 @@ end
 
 # Init
 if status --is-interactive
-  rbenv init - | source
-  pyenv init - | source
-  source (conda info --root)/etc/fish/conf.d/conda.fish
-  # conda activate base
+  which rbenv > /dev/null ^ /dev/null and rbenv init - | source
+  which pyenv > /dev/null ^ /dev/null and pyenv init - | source
+  if which conda > /dev/null ^ /dev/null
+    source (conda info --root)/etc/fish/conf.d/conda.fish
+    # conda activate base
+  end
 end
 
 # Abbreviations
