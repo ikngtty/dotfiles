@@ -101,9 +101,14 @@ TODO: Make it scripts.
 TODO: Find out steps to create Lisp IDE.
 
 # CotEditor
+1.  Download themes from [here](https://github.com/naotaka/CotEditor-themes).
+2.  Make CotEditor read them at `settings` window. (Then they can be deleted.)
+
 *   Display
     *   Font -> Ricty Diminished 20pts
-    *   Theme -> TODO: Decide.
+    *   Theme -> base16-Monokai.dark
+
+TODO: Make it scripts.
 
 ### Fish
 Use `fish_config` command.
