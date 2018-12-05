@@ -68,6 +68,8 @@ TODO: Make it scripts.
     *   Make Vivaldi the default browser.
 *   Security and Privacy
     *   The time require the password is right after sleeping and saving the scrreen.
+*   Keyboard
+    *   Make function keys default.
 *   Dock
     *   Change position to left.
     *   Turn on to show/hide automatically.
@@ -97,6 +99,11 @@ Use `Sync Settings` package.
 Follow my comment in `init.coffee`.
 TODO: Make it scripts.
 TODO: Find out steps to create Lisp IDE.
+
+# CotEditor
+*   Display
+    *   Font -> Ricty Diminished 20pts
+    *   Theme -> TODO: Decide.
 
 ### Fish
 Use `fish_config` command.
