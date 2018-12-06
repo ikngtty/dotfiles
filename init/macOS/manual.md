@@ -24,12 +24,8 @@ TODO: Decide how share them.
 *   Google Chrome(fullscreen).app
 
 ## Install fonts.
-*   [Ricty Diminished](https://www.rs.tus.ac.jp/yyusa/ricty_diminished.html)
+Install with Homebrew Cask except below.
 *   [Ricty](https://www.rs.tus.ac.jp/yyusa/ricty.html)
-    *   [Inconsolata](https://fonts.google.com/specimen/Inconsolata)
-    *   [Migu 1M](http://mix-mplus-ipa.osdn.jp/)
-*   [Inconsolata-dz for Powerline](https://github.com/powerline/fonts)
-*   Osaka-Mono (Mac has it by default.)
 
 TODO: Make it scripts.
 
