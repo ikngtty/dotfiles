@@ -1,39 +1,19 @@
 # Manual
 ## Install applications.
-TODO: Try to use `brew cask`.
-*   Alfred.app
-*   AppCleaner.app
-*   Atom.app
-*   CheatSheet.app
-*   Clipy.app
-*   CotEditor.app
-*   Cyberduck.app
 *   (comment out) DB Browser for SQLite.app
 *   (comment out) Discord.app
-*   Docker for Mac
 *   (comment out) Eclipse.app
-*   GIMP.app
-*   Google Chrome.app
 *   Google Drive.app
-*   ImageOptim.app
 *   (comment out) IntelliJ IDEA CE.app
-*   Karabiner-Elements.app
+*   Karabiner
 *   Kindle.app
 *   LINE.app
-*   MacDown.app
-*   Microsoft Office
-*   Microsoft Teams
 *   (comment out) PyCharm CE.app
 *   (comment out) Racket v7.1
 *   Slack.app
-*   SourceTree.app
 *   TweetDeck.app
 *   (comment out) Unity
-*   Vagrant
-*   VirtualBox.app
 *   (comment out) Visual Studio Code.app
-*   Vivaldi.app
-*   iTerm.app
 
 ### jar
 *   (comment out) Automaton Simulator
