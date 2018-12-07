@@ -53,6 +53,14 @@ if status --is-interactive
   abbr --add v vagrant
 end
 
+# Functions
+if status --is-interactive
+  ## The description is shown by `hub alias fish`.
+  function git --wraps hub --description 'Alias for hub, which wraps git to provide extra functionality with GitHub.'
+    hub $argv
+  end
+end
+
 # Fisherman
 set -g fisher_path ~/.config/fisher_conf
 
