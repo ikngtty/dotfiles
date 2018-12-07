@@ -11,5 +11,5 @@ MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export MANPATH
 
 # Other
-eval "$(rbenv init -)"
-eval "$(pyenv init -)"
+which rbenv >/dev/null 2>&1 && eval "$(rbenv init -)"
+which pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
