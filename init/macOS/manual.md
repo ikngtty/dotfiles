@@ -99,6 +99,14 @@ My preference is saved in `$HOME/Configurations/iTerm2` after deploying.
 
 TODO: Try to make it scripts with using `defaults` command.
 
+### jasper
+[Download the dark theme](https://github.com/jasperapp/jasper/tree/master/theme/dark).
+
+*   Preferences
+    *   General
+        *   Browser - built-in
+    *   Theme - Load the dark theme.
+
 ### Karabiner
 Need not to share.
 
