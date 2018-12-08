@@ -31,6 +31,7 @@ ssh-add -K ~/.ssh/id_rsa
 8.  `./config/deploy.sh bashrc` and relogin bash to install comfortably.
 9.  `./init/macOS/install.sh | tee ~/Desktop/install.log`
 10. `./init/macOS/set_up_shells.sh`
-11. Follow [the manual](./manual.md).
+11. `./init/macOS/set_up_iTerm2.sh`
+12. Follow [the manual](./manual.md).
 
 TODO: Create a script to generate a SSH key.

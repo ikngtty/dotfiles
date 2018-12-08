@@ -31,9 +31,13 @@ dir_init_mac=$dir_init/macOS
 sh_check_deploy_status=$dir_config/check_deploy_status.sh
 sh_deploy=$dir_config/deploy.sh
 
+lib_plist_buddy="/usr/libexec/PlistBuddy"
+
 # Status code
 code_conflict=10
 code_ambiguous_search=20
+code_not_installed=30
+code_not_opened=40
 
 # Login shell
 login_shell=fish
