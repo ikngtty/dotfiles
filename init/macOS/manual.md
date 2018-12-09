@@ -137,9 +137,7 @@ TODO: Detailed settings.
 1.  `mkdir -p ~/.nodebrew/src`
 2.  `nodebrew install-binary stable`
 3.  `nodebrew use stable`
-
-### npm
-*   `npm i -g yarn`
+4.  Execute `~/Configurations/bundle-npm-packages.sh` after deploying.
 
 ### Ruby gems
 1.  Set up a Ruby environment (by using `rbenv`).
@@ -158,9 +156,3 @@ TODO: Install `rbenv-binstubs` and use `bundle install`
 with `--binstubs=bundle_bin`.
 
 TODO: Make it scripts.
-
-### OPAM
-TODO: Make it scripts.
-*   ocp-indent
-*   merlin
-*   utop
