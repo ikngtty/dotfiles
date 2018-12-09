@@ -18,42 +18,14 @@ here_log() {
   log "$my_file_name" "$1"
 }
 
-# Check whether iTerm2 is installed.
-if [ ! -e "/Applications/iTerm.app" ]; then
-  printf "\e[31m"                   # Red
-  printf "Oh my God! Failed to run because "
-  printf "\e[1miTerm2\e[m"     # Bold
-  printf "\e[31m"                   # Red
-  printf " is not installed. "
-  printf "Please install it!"
-  printf "\e[m\n"                   # Normal text
-  exit $code_not_installed
-fi
-
-# Check whether Inconsolata-dz for Powerline is installed.
-if ! fc-list | grep -F "Inconsolata-dz for Powerline" >/dev/null 2>&1; then
-  printf "\e[31m"                   # Red
-  printf "Oh my God! Failed to run because "
-  printf "\e[1mInconsolata-dz for Powerline\e[m"     # Bold
-  printf "\e[31m"                   # Red
-  printf " is not installed. "
-  printf "Please install it!"
-  printf "\e[m\n"                   # Normal text
-  exit $code_not_installed
-fi
-
-# Check Wheter iTerm2 has been opened before.
 file_plist="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
-if [ ! -e "$file_plist" ]; then
-  printf "\e[31m"                   # Red
-  printf "Oh my God! Failed to run because "
-  printf "\e[1miTerm2\e[m"     # Bold
-  printf "\e[31m"                   # Red
-  printf " has not been opened yet. "
-  printf "Please open it once!"
-  printf "\e[m\n"                   # Normal text
-  exit $code_not_opened
-fi
+
+# Check requirements.
+here_log "Check requirements."
+[ -e "/Applications/iTerm.app" ] || exit_for_not_installed iTerm2
+[ -e "$file_plist" ] || exit_for_not_opened_yet iTerm2
+fc-list | grep -F "Inconsolata-dz for Powerline" >/dev/null 2>&1\
+  || exit_for_not_installed "Inconsolata-dz for Powerline"
 
 # Change preferences.
 here_log "Change preferences."

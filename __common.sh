@@ -37,7 +37,7 @@ lib_plist_buddy="/usr/libexec/PlistBuddy"
 code_conflict=10
 code_ambiguous_search=20
 code_not_installed=30
-code_not_opened=40
+code_not_opened_yet=40
 
 # Login shell
 login_shell=fish
@@ -49,4 +49,26 @@ log() {
   printf "\e[36m"
   printf "[$1 log] $2"
   printf "\e[m\n"
+}
+
+exit_for_not_installed() {
+  require_app=$1
+  printf "\e[31m"                   # Red
+  printf "Cannot run! Please install "
+  printf "\e[1m$1\e[m"              # Bold and reset
+  printf "\e[31m"                   # Red again
+  printf "!"
+  printf "\e[m\n"                   # Reset
+  exit $code_not_installed
+}
+
+exit_for_not_opened_yet() {
+  require_app=$1
+  printf "\e[31m"                   # Red
+  printf "Cannot run! Please open "
+  printf "\e[1m$1\e[m"              # Bold and reset
+  printf "\e[31m"                   # Red again
+  printf " more than once!"
+  printf "\e[m\n"                   # Reset
+  exit $code_not_opened_yet
 }
