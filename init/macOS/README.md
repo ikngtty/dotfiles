@@ -35,4 +35,5 @@ ssh-add -K ~/.ssh/id_rsa
 12. Follow [the manual](./manual.md).
 
 TODO: Install GUI apps with `cask` command in `install.sh`.
+TODO: Where should I execute `xcode-select --install`?
 TODO: Create a script to generate a SSH key.
