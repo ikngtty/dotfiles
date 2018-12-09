@@ -1,4 +1,3 @@
-# TODO: Check every install options before running `brew bundle`.
 # TODO: Set `cask`s before running it.
 tap "coteditor/coteditor"
 tap "homebrew/bundle"
@@ -34,7 +33,7 @@ brew "sbt"
 brew "shellcheck"
 brew "sl"
 brew "tree"
-# brew "vim"    # TODO: Check install options.
+brew "vim"
 brew "wget"
 brew "zsh"
 brew "zsh-completions"
