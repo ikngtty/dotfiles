@@ -34,4 +34,5 @@ ssh-add -K ~/.ssh/id_rsa
 11. `./init/macOS/set_up_iTerm2.sh`
 12. Follow [the manual](./manual.md).
 
+TODO: Install GUI apps with `cask` command in `install.sh`.
 TODO: Create a script to generate a SSH key.
