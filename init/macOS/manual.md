@@ -57,6 +57,8 @@ TODO: Make it scripts.
         *   Turn off to open folder in new tab.
     *   Sidebar
         *   Add home and HDD.
+*   Bluetooth
+    *   Display on menubar.
 *   Desktop and ScreenSaver
 
 TODO: Try to make it scripts with using `defaults` command.
