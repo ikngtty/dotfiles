@@ -6,6 +6,7 @@ $ '
 # Alias
 alias relogin='exec $SHELL -l'
 alias b='bundle'
+alias d='docker'
 alias g='git'
 alias r='rails'
 alias relogin='exec $SHELL -l'
