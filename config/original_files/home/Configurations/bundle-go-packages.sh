@@ -37,6 +37,9 @@ get_with_info golang.org/x/tools/cmd/goimports
 get_with_info golang.org/x/tools/cmd/gorename
 get_with_info golang.org/x/tools/cmd/guru
 
+## May need.
+get_with_info bitbucket.org/liamstask/goose/cmd/goose
+
 printf "\e[32m"     # Green
 printf "Done!"
 printf "\e[m\n"     # Reset
