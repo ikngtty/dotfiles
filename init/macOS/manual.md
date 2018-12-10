@@ -78,7 +78,8 @@ TODO: Find out steps to create Lisp IDE.
 
 # CotEditor
 1.  Download themes from [here](https://github.com/naotaka/CotEditor-themes).
-2.  Make CotEditor read them at `settings` window. (Then they can be deleted.)
+2.  Open the theme specified below.
+3.  Make CotEditor read it at `settings` window. (Then they can be deleted.)
 
 *   Display
     *   Font -> Ricty Diminished 20pts
