@@ -14,6 +14,7 @@ PS1='$(st=$?
 alias relogin='exec $SHELL -l'
 alias b='bundle'
 alias d='docker'
+alias dc='docker-compose'
 alias g='git'
 alias r='rails'
 alias relogin='exec $SHELL -l'
