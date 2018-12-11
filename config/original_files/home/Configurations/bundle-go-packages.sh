@@ -26,6 +26,7 @@ get_with_info() {
 get_with_info github.com/alecthomas/gometalinter
 get_with_info github.com/derekparker/delve/cmd/dlv
 get_with_info github.com/fatih/gomodifytags
+get_with_info github.com/golang/lint/golint
 get_with_info github.com/mdempsky/gocode
 get_with_info github.com/ramya-rao-a/go-outline
 get_with_info github.com/rogpeppe/godef
