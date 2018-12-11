@@ -126,19 +126,6 @@ TODO:
 
 TODO: Try to make it scripts with using `defaults` command.
 
-### Trailer
-*   Start Trailer at Login - Turn on.
-*   Display
-    *   Turn on `Display relative...`.
-    *   Turn on `Prefix PR/Issue numbers...`.
-*   Comments
-    *   Turn on `Badge & send notifacations...`.
-*   Reviews
-    *   Turn on `Display review statuses...`.
-    *   Turn on all checkboxes in `Notify me when...`.
-
-TODO: Use the feature to import/export settings.
-
 ### Virtual Box
 Change the default VM folder path.
 
