@@ -145,8 +145,7 @@ TODO: Detailed settings.
 ### Ruby gems
 1.  Set up a Ruby environment (by using `rbenv`).
 2.  `gem update` (then `gem cleanup`).
-3.  `gem i bundler` (then `rbenv hash`? Check [this tip](https://qiita.com/tokimari/items/51ac63a1fe244b819aea)).
-4.  Move to `~/Configurations/gem` (after deploying), and `bundle install`.
+3.  Move to `~/Configurations/gem` (after deploying), and `bundle install`.
 
 NOTE: These gems are installed globally (per virtual environment).
 We had better to install locally per project with
