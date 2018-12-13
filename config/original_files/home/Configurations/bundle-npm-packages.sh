@@ -17,6 +17,7 @@ npm update -g
 # TODO: Are outdated packages cleaned up? Check through `npm outdated -g`.
 
 # Install.
+npm i -g elm-format
 npm i -g yarn
 
 printf "\e[32m"     # Green
