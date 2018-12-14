@@ -19,6 +19,8 @@ npm update -g
 # Install.
 npm i -g elm-format
 npm i -g elm-live
+# npm i -g eslint   // Use `standard` instead.
+npm i -g standard
 npm i -g yarn
 
 printf "\e[32m"     # Green
