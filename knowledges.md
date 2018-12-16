@@ -1,5 +1,21 @@
 # Knowledges
 ## My way to development
+### JavaScript (Node.js)
+*   Linter and Formatter
+    *   Project-local
+        *   Follow <https://www.npmjs.com/package/eslint-config-prettier-standard>.
+        *   Atom's `linter-eslint` package is executed. It does auto-fixing.
+        *   Atom's `linter-js-standard` package isn't,
+            because "skip if ESLint is installed locally".
+    *   Global fallback (when not installed ESLint locally)
+        *   Atom's `linter-js-standard` package is executed.
+        *   Atom's `linter-eslint` package isn't,
+            because "disable when no ESLint config is found".
+        *   Fixing can be executed by `eslint --fix` command, because
+            `.eslintrc` file should be deployed to home directory and
+            necessary ESLint modules should be installed globally
+            by `bundle-npm-packages.sh`.
+
 ### Ruby
 Use `rbenv`.
 
