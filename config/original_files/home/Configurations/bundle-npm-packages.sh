@@ -19,9 +19,19 @@ npm update -g
 # Install.
 npm i -g elm-format
 npm i -g elm-live
-# npm i -g eslint   // Use `standard` instead.
 npm i -g standard
 npm i -g yarn
+## For <https://www.npmjs.com/package/eslint-config-prettier-standard>.
+npm i -g eslint
+npm i -g eslint-config-prettier
+npm i -g eslint-config-prettier-standard
+npm i -g eslint-config-standard
+npm i -g eslint-plugin-import
+npm i -g eslint-plugin-node
+npm i -g eslint-plugin-prettier
+npm i -g eslint-plugin-promise
+npm i -g eslint-plugin-standard
+npm i -g prettier
 
 printf "\e[32m"     # Green
 printf "Done!"
