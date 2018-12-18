@@ -50,11 +50,17 @@ rm_if_exist ~/Movies/.localized
 rm_if_exist ~/Music/.localized
 rm_if_exist ~/Pictures/.localized
 rm_if_exist ~/Public/.localized
-# TODO: Find out.
+rm_if_exist /Applications/.localized
+# TODO: Why cannot they be removed?
+# rm_if_exist /Library/.localized
+# rm_if_exist /System/.localized
+# rm_if_exist /Users/.localized
+# TODO: Find more.
 
-here_log "Change directory's visibility."
-chflags nohidden ~/Library
-sudo chflags nohidden /Volumes
+# NOTE: Copied them from somewhere, but they may be unnecessary.
+# here_log "Change directory's visibility."
+# chflags nohidden ~/Library
+# sudo chflags nohidden /Volumes
 
 printf "\e[32m"
 printf "Yeah! $my_file_name complete! Please reboot to reflect settings."
