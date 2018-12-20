@@ -108,7 +108,9 @@ TODO: Try to make it scripts.
 *   Preferences
     *   General
         *   Browser - built-in
-    *   Theme - Load the dark theme.
+    *   Theme
+        *   Main Theme - Load the dark theme.
+        *   Broser Theme - DO NOT load the dark theme. It is bad to see.
 
 ### Karabiner
 Need not to share.
