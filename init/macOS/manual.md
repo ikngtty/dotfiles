@@ -60,6 +60,8 @@ TODO: Make it scripts.
 *   Bluetooth
     *   Display on menubar.
 *   Desktop and ScreenSaver
+*   Saving energy
+    *   Do not darken when using a battery.
 
 TODO: Try to make it scripts with using `defaults` command.
 
