@@ -58,5 +58,6 @@ printf "DEPLOY_FROM\tDEPLOY_TO\tSTATUS\n"
     fi
 
     printf "$file_origin\t$file_deploy\t$deploy_status\n"
-  done |
-  grep -F "$check_pattern"
+  done                      |
+  grep -F "$check_pattern"  |
+  grep -Fv ".DS_Store"
