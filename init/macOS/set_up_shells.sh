@@ -48,7 +48,7 @@ fi
 here_log "Deploy rc files if it has not."
 deploy_rc() {
   pattern=$1
-  status_line=$($sh_check_deploy_status | grep -F "$pattern")
+  status_line=$($sh_check_deploy_status "$pattern")
   if [ $(echo "$status_line" | wc -l) -gt 1 ]; then
     printf "\e[31m"                 # Red
     printf "Oh no! I don't know which is the right "

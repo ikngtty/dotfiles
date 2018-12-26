@@ -4,6 +4,13 @@
 #####
 set -eu -o pipefail
 
+#####
+# Arguments
+# $1: A pattern for file pathes to check. Default value is "".
+#####
+check_pattern=""
+[ $# -eq 1 ] && check_pattern=$1
+
 # Get project directory's absolute path.
 # NOTE: Should do before changing the working directory because
 # `$0` returns a relative path.
@@ -51,4 +58,5 @@ printf "DEPLOY_FROM\tDEPLOY_TO\tSTATUS\n"
     fi
 
     printf "$file_origin\t$file_deploy\t$deploy_status\n"
-  done
+  done |
+  grep -F "$check_pattern"

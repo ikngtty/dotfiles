@@ -21,29 +21,28 @@ cd "$dir_project"
 . ./__common.sh "$dir_project"
 
 # Deploy.
-$sh_check_deploy_status         |
-  tail -n +2                    | # Remove the header
-    grep -F "$pattern_deploy"   |
-      while IFS="$(printf "\t")" read deploy_from deploy_to deploy_status
-      do
-        case "$deploy_status" in
-          *UNDEPLOYED*)
-            printf "\e[32m"
-            printf "Deploying "
-            printf "\e[1m$(basename "$deploy_from")\e[m"
-            printf "\e[32m"
-            printf "... "
-            ln -s "$deploy_from" "$(dirname "$deploy_to")"
-            printf "Done!"
-            printf "\e[m\n"
-            ;;
-          *CONFLICT*)
-            printf "\e[33m"
-            printf "WARNING: Failed to deploy "
-            printf "\e[1m$(basename "$deploy_from")\e[m "
-            printf "\e[33m"
-            printf "because it conflicts. Please check and resolve it."
-            printf "\e[m\n"
-            ;;
-        esac
-      done
+$sh_check_deploy_status "$pattern_deploy"   |
+  tail -n +2                                | # Remove the header
+    while IFS="$(printf "\t")" read deploy_from deploy_to deploy_status
+    do
+      case "$deploy_status" in
+        *UNDEPLOYED*)
+          printf "\e[32m"
+          printf "Deploying "
+          printf "\e[1m$(basename "$deploy_from")\e[m"
+          printf "\e[32m"
+          printf "... "
+          ln -s "$deploy_from" "$(dirname "$deploy_to")"
+          printf "Done!"
+          printf "\e[m\n"
+          ;;
+        *CONFLICT*)
+          printf "\e[33m"
+          printf "WARNING: Failed to deploy "
+          printf "\e[1m$(basename "$deploy_from")\e[m "
+          printf "\e[33m"
+          printf "because it conflicts. Please check and resolve it."
+          printf "\e[m\n"
+          ;;
+      esac
+    done
