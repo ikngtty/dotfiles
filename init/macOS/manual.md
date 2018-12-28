@@ -130,6 +130,9 @@ TODO:
 
 TODO: Try to make it scripts with using `defaults` command.
 
+### Notation
+Set bigger textsize as default.
+
 ### Virtual Box
 Change the default VM folder path.
 
