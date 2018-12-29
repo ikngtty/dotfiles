@@ -62,6 +62,8 @@ TODO: Make it scripts.
 *   Desktop and ScreenSaver
 *   Saving energy
     *   Do not darken when using a battery.
+*   Others
+    *   Change default place to save screenshots to a clipboard.
 
 TODO: Try to make it scripts with using `defaults` command.
 
