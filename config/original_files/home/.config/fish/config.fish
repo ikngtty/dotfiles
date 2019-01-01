@@ -39,6 +39,7 @@ if status --is-interactive
     source (conda info --root)/etc/fish/conf.d/conda.fish
     # conda activate base
   end
+  which direnv > /dev/null ^ /dev/null; and eval (direnv hook fish)
 end
 
 # Abbreviations
