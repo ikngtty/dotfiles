@@ -54,7 +54,7 @@ deploy_rc() {
     exit $code_ambiguous_search
   fi
 
-  if echo "$status_line" | grep 'CONFLICT\e\[m$' > /dev/null ; then
+  if echo "$status_line" | grep -F "$deploy_status_conflict" > /dev/null ; then
     err_msg "Oh my God! Cannot deploy the <b>$pattern</b> file"\
       " because it conflicts. Please resolve it!"
     exit $code_conflict

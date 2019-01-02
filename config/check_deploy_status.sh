@@ -50,11 +50,11 @@ printf "DEPLOY_FROM\tDEPLOY_TO\tSTATUS\n"
     file_deploy=$(pwd)/$file_name
 
     # Check a deployment status.
-    deploy_status="\e[31mCONFLICT\e[m"
+    deploy_status="$deploy_status_conflict"
     if [ ! -e "$file_deploy" ]; then
-      deploy_status="\e[32mUNDEPLOYED\e[m"
+      deploy_status="$deploy_status_undeployed"
     elif [ "$(readlink "$file_deploy")" = "$file_origin" ]; then
-      deploy_status="\e[33mDEPLOYED\e[m"
+      deploy_status="$deploy_status_deployed"
     fi
 
     printf "$file_origin\t$file_deploy\t$deploy_status\n"

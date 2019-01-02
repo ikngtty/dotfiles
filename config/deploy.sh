@@ -27,15 +27,18 @@ $sh_check_deploy_status "$pattern_deploy"   |
     do
       file_name=$(basename "$deploy_from")
       case "$deploy_status" in
-        *UNDEPLOYED*)
+        "$deploy_status_undeployed")
           print_with_color green "Deploying <b>$file_name</b> ..."
           ln -s "$deploy_from" "$(dirname "$deploy_to")"
           echo_with_color green ' Done!'
           ;;
-        *CONFLICT*)
+        "$deploy_status_conflict")
           echo_with_color yellow 'WARNING: Failed to deploy'\
             " <b>$file_name</b> because it conflicts."\
             ' Please check and resolve it.'
+          ;;
+        "$deploy_status_deployed")
+          echo_with_color magenta "<b>$file_name</b> is already deployed."
           ;;
       esac
     done

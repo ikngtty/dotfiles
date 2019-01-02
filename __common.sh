@@ -44,7 +44,12 @@ code_unexpected=66
 # Login shell
 login_shell=fish
 
-# Provide utility functions.
+# Deploy statuses
+deploy_status_conflict=$(printf "\e[31mCONFLICT\e[m")
+deploy_status_undeployed=$(printf "\e[32mUNDEPLOYED\e[m")
+deploy_status_deployed=$(printf "\e[33mDEPLOYED\e[m")
+
+# Utilities
 print_with_color() {
   color=$1
   shift
