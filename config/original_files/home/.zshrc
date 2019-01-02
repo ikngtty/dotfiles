@@ -1,7 +1,12 @@
 # Prompt
-PROMPT='%F{white}(%?)%f
-%F{magenta}%n %# [%d]%f
-$ '
+# PROMPT='%F{white}(%?)%f
+# %F{magenta}%n %# [%d]%f
+# $ '
+
+# NOTE: These lines are added automatically.
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
 
 # Alias
 alias relogin='exec $SHELL -l'
