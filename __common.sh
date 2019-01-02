@@ -7,6 +7,9 @@
 #####
 set -eu -o pipefail
 
+# TODO: Put this directive to each line. (waiting for range-directive feature.)
+## shellcheck disable=SC2034
+
 #####
 # Arguments
 # $1: The absolute path of the project directory.

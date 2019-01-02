@@ -20,6 +20,7 @@ dir_project=$(pwd)
 
 # Read the common part.
 cd "$dir_project"
+# shellcheck source=../__common.sh
 . ./__common.sh "$dir_project"
 
 # Output a header.
