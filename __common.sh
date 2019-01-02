@@ -47,7 +47,9 @@ login_shell=fish
 # Provide utility functions.
 print_with_color() {
   color=$1
-  msg=$2
+  shift
+  # "$@" is messages.
+
   case "$color" in
     red)
       color_code='\e[31m'
@@ -75,33 +77,33 @@ print_with_color() {
       exit $code_unexpected
   esac
   printf "$color_code"
-  printf "$(echo "$msg" | sed \
-    -e 's/<b>/\\e\[1m/g'\
-    -e 's/<\/b>/\\e[m\'"$color_code"'/g')"
+  for msg in "$@"; do
+    printf "$(echo "$msg" | sed \
+      -e 's/<b>/\\e\[1m/g'\
+      -e 's/<\/b>/\\e[m\'"$color_code"'/g')"
+  done
   printf '\e[m'
 }
 
 echo_with_color() {
   color=$1
-  msg=$2
-  print_with_color "$1" "$2"
+  shift
+  print_with_color "$color" "$@"
   echo    # For a breakline.
 }
 
 log() {
   file_name=$1
-  msg=$2
-  echo_with_color magenta "[$1 log] $2"
+  shift
+  echo_with_color magenta "[$file_name log] " "$@"
 }
 
 err_msg() {
-  msg=$1
-  echo_with_color red "$1"
+  echo_with_color red "$@"
 }
 
 success_msg() {
-  msg=$1
-  echo_with_color green "$1"
+  echo_with_color green "$@"
 }
 
 exit_for_not_installed() {

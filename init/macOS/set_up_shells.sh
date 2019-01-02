@@ -39,8 +39,8 @@ add_shells fish
 if [ "$SHELL" != "$(which $login_shell)" ]; then
   here_log "Change login shell to $login_shell."
   chsh -s "$(which $login_shell)"
-  print_with_color green "Login shell has changed! "
-  echo_with_color green "Please relogin to your terminal."
+  echo_with_color green "Login shell has changed!"\
+    " Please relogin to your terminal."
 fi
 
 # Deploy rc files.
@@ -49,12 +49,14 @@ deploy_rc() {
   pattern=$1
   status_line=$($sh_check_deploy_status "$pattern")
   if [ $(echo "$status_line" | wc -l) -gt 1 ]; then
-    err_msg "Oh no! I don't know which is the right <b>$pattern</b> file? Please fix the ambiguous search in me!"
+    err_msg "Oh no! I don't know which is the right <b>$pattern</b> file?"\
+      " Please fix the ambiguous search in me!"
     exit $code_ambiguous_search
   fi
 
   if echo "$status_line" | grep 'CONFLICT\e\[m$' > /dev/null ; then
-    err_msg "Oh my God! Cannot deploy the <b>$pattern</b> file because it conflicts. Please resolve it!"
+    err_msg "Oh my God! Cannot deploy the <b>$pattern</b> file"\
+      " because it conflicts. Please resolve it!"
     exit $code_conflict
   fi
   $sh_deploy "$pattern"

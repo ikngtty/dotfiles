@@ -33,9 +33,9 @@ $sh_check_deploy_status "$pattern_deploy"   |
           echo_with_color green ' Done!'
           ;;
         *CONFLICT*)
-          print_with_color yellow "WARNING: Failed to deploy <b>$file_name</b> "
-          print_with_color yellow 'because it conflicts. '
-          echo_with_color yellow 'Please check and resolve it.'
+          echo_with_color yellow 'WARNING: Failed to deploy'\
+            " <b>$file_name</b> because it conflicts."\
+            ' Please check and resolve it.'
           ;;
       esac
     done
