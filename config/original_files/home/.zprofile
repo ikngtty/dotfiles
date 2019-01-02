@@ -2,7 +2,9 @@
 GOPATH="$HOME/Projects/workspace/go"
 export GOPATH
 PATH="$GOPATH/bin:$PATH"
-PATH="$(go env GOROOT)/bin:$PATH"
+if which go >/dev/null 2>&1;then
+  PATH="$(go env GOROOT)/bin:$PATH"
+fi
 PATH="$HOME/.nodebrew/current/bin:$PATH"
 PATH="/Applications/Racket v7.1/bin:$PATH"
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"

@@ -15,7 +15,9 @@ set -gx GOPATH ~/Projects/workspace/go
 ## PATH
 warn_if_universal_var fish_user_paths
 set fish_user_paths $GOPATH/bin $fish_user_paths
-set fish_user_paths (go env GOROOT)/bin $fish_user_paths
+if which go > /dev/null ^ /dev/null
+  set fish_user_paths (go env GOROOT)/bin $fish_user_paths
+end
 set fish_user_paths ~/.nodebrew/current/bin $fish_user_paths
 set fish_user_paths /Applications/Racket\ v7.1/bin $fish_user_paths
 set fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
