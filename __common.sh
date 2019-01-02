@@ -38,6 +38,7 @@ code_conflict=10
 code_ambiguous_search=20
 code_not_installed=30
 code_not_opened_yet=40
+code_different_shell=50
 
 # Login shell
 login_shell=fish
@@ -71,4 +72,14 @@ exit_for_not_opened_yet() {
   printf " once!"
   printf "\e[m\n"                   # Reset
   exit $code_not_opened_yet
+}
+
+exit_for_diffrent_login_shell() {
+  printf "\e[31m"                   # Red
+  printf "Cannot run! Please change the login shell to "
+  printf "\e[1m$login_shell\e[m"    # Bold and reset
+  printf "\e[31m"                   # Red again
+  printf "!"
+  printf "\e[m\n"                   # Reset
+  exit $code_different_shell
 }

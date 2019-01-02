@@ -26,6 +26,8 @@ here_log "Check requirements."
 [ -e "$file_plist" ] || exit_for_not_opened_yet iTerm2
 fc-list | grep -F "Inconsolata-dz for Powerline" >/dev/null 2>&1\
   || exit_for_not_installed "Inconsolata-dz for Powerline"
+## To install shell integration for the expected login shell.
+[ "$SHELL" == "$(which $login_shell)" ] || exit_for_diffrent_login_shell
 
 # Change preferences.
 here_log "Change preferences."
@@ -45,6 +47,12 @@ change_pref PromptOnQuit bool false
 
 # TODO: Install Japaneseque colorscheme.
 # TODO: Choose colorscheme.
+
+# Enable shell integration.
+# HACK: Prevent from unnecessary running.
+here_log "Enable shell integration for the login shell."
+curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
+# TODO: For other shells. cf. <https://www.iterm2.com/documentation-shell-integration.html>
 
 printf "\e[32m"
 printf "Yeah! $my_file_name complete!"
