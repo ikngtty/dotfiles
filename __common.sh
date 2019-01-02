@@ -39,47 +39,84 @@ code_ambiguous_search=20
 code_not_installed=30
 code_not_opened_yet=40
 code_different_shell=50
+code_unexpected=66
 
 # Login shell
 login_shell=fish
 
 # Provide utility functions.
+print_with_color() {
+  color=$1
+  msg=$2
+  case "$color" in
+    red)
+      color_code='\e[31m'
+      ;;
+    green)
+      color_code='\e[32m'
+      ;;
+    yellow)
+      color_code='\e[33m'
+      ;;
+    blue)
+      color_code='\e[34m'
+      ;;
+    purple)
+      color_code='\e[35m'
+      ;;
+    magenta)
+      color_code='\e[36m'
+      ;;
+    white)
+      color_code='\e[37m'
+      ;;
+    *)
+      err_msg "What is $1?"
+      exit $code_unexpected
+  esac
+  printf "$color_code"
+  printf "$(echo "$msg" | sed \
+    -e 's/<b>/\\e\[1m/g'\
+    -e 's/<\/b>/\\e[m\'"$color_code"'/g')"
+  printf '\e[m'
+}
+
+echo_with_color() {
+  color=$1
+  msg=$2
+  print_with_color "$1" "$2"
+  echo    # For a breakline.
+}
+
 log() {
   file_name=$1
   msg=$2
-  printf "\e[36m"
-  printf "[$1 log] $2"
-  printf "\e[m\n"
+  echo_with_color magenta "[$1 log] $2"
+}
+
+err_msg() {
+  msg=$1
+  echo_with_color red "$1"
+}
+
+success_msg() {
+  msg=$1
+  echo_with_color green "$1"
 }
 
 exit_for_not_installed() {
   require_app=$1
-  printf "\e[31m"                   # Red
-  printf "Cannot run! Please install "
-  printf "\e[1m$1\e[m"              # Bold and reset
-  printf "\e[31m"                   # Red again
-  printf "!"
-  printf "\e[m\n"                   # Reset
+  err_msg "Cannot run! Please install <b>$require_app</b>!"
   exit $code_not_installed
 }
 
 exit_for_not_opened_yet() {
   require_app=$1
-  printf "\e[31m"                   # Red
-  printf "Cannot run! Please open "
-  printf "\e[1m$1\e[m"              # Bold and reset
-  printf "\e[31m"                   # Red again
-  printf " once!"
-  printf "\e[m\n"                   # Reset
+  err_msg "Cannot run! Please open <b>$require_app</b> once!"
   exit $code_not_opened_yet
 }
 
 exit_for_diffrent_login_shell() {
-  printf "\e[31m"                   # Red
-  printf "Cannot run! Please change the login shell to "
-  printf "\e[1m$login_shell\e[m"    # Bold and reset
-  printf "\e[31m"                   # Red again
-  printf "!"
-  printf "\e[m\n"                   # Reset
+  err_msg "Cannot run! Please change the login shell to <b>$login_shell</b>!"
   exit $code_different_shell
 }

@@ -39,9 +39,8 @@ add_shells fish
 if [ "$SHELL" != "$(which $login_shell)" ]; then
   here_log "Change login shell to $login_shell."
   chsh -s "$(which $login_shell)"
-  printf "\e[32m"
-  printf "Login shell has changed! Please relogin to your terminal."
-  printf "\e[m\n"
+  print_with_color green "Login shell has changed! "
+  echo_with_color green "Please relogin to your terminal."
 fi
 
 # Deploy rc files.
@@ -50,22 +49,12 @@ deploy_rc() {
   pattern=$1
   status_line=$($sh_check_deploy_status "$pattern")
   if [ $(echo "$status_line" | wc -l) -gt 1 ]; then
-    printf "\e[31m"                 # Red
-    printf "Oh no! I don't know which is the right "
-    printf "\e[1m$pattern\e[m"      # Bold
-    printf "\e[31m"                 # Red
-    printf " file? Please fix the ambiguous search in me!"
-    printf "\e[m\n"                 # Normal text
+    err_msg "Oh no! I don't know which is the right <b>$pattern</b> file? Please fix the ambiguous search in me!"
     exit $code_ambiguous_search
   fi
 
   if echo "$status_line" | grep 'CONFLICT\e\[m$' > /dev/null ; then
-    printf "\e[31m"                 # Red
-    printf "Oh my God! Cannot deploy the "
-    printf "\e[1m$pattern\e[m"      # Bold
-    printf "\e[31m"                 # Red
-    printf " file because it conflicts. Please resolve it!"
-    printf "\e[m\n"                 # Normal text
+    err_msg "Oh my God! Cannot deploy the <b>$pattern</b> file because it conflicts. Please resolve it!"
     exit $code_conflict
   fi
   $sh_deploy "$pattern"
@@ -83,6 +72,4 @@ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fi
 here_log 'Run `fisher`.'
 fish -c fisher
 
-printf "\e[32m"
-printf "Yeah! $my_file_name complete!"
-printf "\e[m\n"
+success_msg "Yeah! $my_file_name complete!"

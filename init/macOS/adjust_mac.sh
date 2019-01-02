@@ -62,6 +62,4 @@ rm_if_exist /Applications/.localized
 # chflags nohidden ~/Library
 # sudo chflags nohidden /Volumes
 
-printf "\e[32m"
-printf "Yeah! $my_file_name complete! Please reboot to reflect settings."
-printf "\e[m\n"
+success_msg "Yeah! $my_file_name complete! Please reboot to reflect settings."

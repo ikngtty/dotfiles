@@ -54,6 +54,4 @@ here_log "Enable shell integration for the login shell."
 curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash
 # TODO: For other shells. cf. <https://www.iterm2.com/documentation-shell-integration.html>
 
-printf "\e[32m"
-printf "Yeah! $my_file_name complete!"
-printf "\e[m\n"
+success_msg "Yeah! $my_file_name complete!"

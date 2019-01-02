@@ -25,24 +25,17 @@ $sh_check_deploy_status "$pattern_deploy"   |
   tail -n +2                                | # Remove the header
     while IFS="$(printf "\t")" read deploy_from deploy_to deploy_status
     do
+      file_name=$(basename "$deploy_from")
       case "$deploy_status" in
         *UNDEPLOYED*)
-          printf "\e[32m"
-          printf "Deploying "
-          printf "\e[1m$(basename "$deploy_from")\e[m"
-          printf "\e[32m"
-          printf "... "
+          print_with_color green "Deploying <b>$file_name</b> ..."
           ln -s "$deploy_from" "$(dirname "$deploy_to")"
-          printf "Done!"
-          printf "\e[m\n"
+          echo_with_color green ' Done!'
           ;;
         *CONFLICT*)
-          printf "\e[33m"
-          printf "WARNING: Failed to deploy "
-          printf "\e[1m$(basename "$deploy_from")\e[m "
-          printf "\e[33m"
-          printf "because it conflicts. Please check and resolve it."
-          printf "\e[m\n"
+          print_with_color yellow "WARNING: Failed to deploy <b>$file_name</b> "
+          print_with_color yellow 'because it conflicts. '
+          echo_with_color yellow 'Please check and resolve it.'
           ;;
       esac
     done

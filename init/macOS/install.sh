@@ -38,6 +38,4 @@ here_log "Run \`brew bundle check\`."
 here_log "Run \`brew bundle\`."
 brew bundle
 
-printf "\e[32m"
-printf "Yeah! $my_file_name complete!"
-printf "\e[m\n"
+success_msg "Yeah! $my_file_name complete!"
