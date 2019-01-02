@@ -47,7 +47,7 @@ fi
 here_log "Deploy rc files if it has not."
 deploy_rc() {
   pattern=$1
-  status_line=$($sh_check_deploy_status "$pattern")
+  status_line=$($sh_check_deploy_status "$pattern" | tail -n +2)
   if [ $(echo "$status_line" | wc -l) -gt 1 ]; then
     err_msg "Oh no! I don't know which is the right <b>$pattern</b> file?"\
       " Please fix the ambiguous search in me!"
