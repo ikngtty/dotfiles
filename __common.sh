@@ -68,7 +68,7 @@ exit_for_not_opened_yet() {
   printf "Cannot run! Please open "
   printf "\e[1m$1\e[m"              # Bold and reset
   printf "\e[31m"                   # Red again
-  printf " more than once!"
+  printf " once!"
   printf "\e[m\n"                   # Reset
   exit $code_not_opened_yet
 }
