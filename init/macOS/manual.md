@@ -122,16 +122,6 @@ Need not to share.
 ### terminal
 TODO:
 
-### MacDown
-*   Editor
-    *   Font -> Ricty Diminshed 24pts
-    *   Theme -> Tomorrow+ (default)
-*   Rendering
-    *   CSS -> GitHub2_edited TODO: Make font size bigger.
-    *   Turn on reflection breaklines.
-
-TODO: Try to make it scripts with using `defaults` command.
-
 ### Notation
 Set bigger textsize as default.
 
