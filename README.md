@@ -3,6 +3,6 @@ Configuration files and scripts.
 
 ## How to use
 1.  Follow `init/[os]/README.md` to init.
-2.  Run `check_deploy_status.sh`, verify that the output is normal
+2.  Run `config/dotfiles.sh check`, verify that the output is normal
     and resolve conflictions.
-3.  Run `deploy.sh`.
+3.  Run `config/dotfiles.sh deploy`.

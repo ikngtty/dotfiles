@@ -31,8 +31,7 @@ file_shells=/etc/shells
 dir_init=$1/init
 dir_init_mac=$dir_init/macOS
 
-sh_check_deploy_status=$dir_config/check_deploy_status.sh
-sh_deploy=$dir_config/deploy.sh
+sh_dotfiles=$dir_config/dotfiles.sh
 
 lib_plist_buddy="/usr/libexec/PlistBuddy"
 
