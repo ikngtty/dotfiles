@@ -15,7 +15,7 @@ fi
 get_with_info() {
   package_url=$1
   package_name=$(basename "$package_url")
-  printf "\e[36m"         # Water color
+  printf "\e[36m"         # Magenta
   printf "Get $package_name..."
   printf "\e[m\n"         # Reset
   go get -u "$package_url"
@@ -37,6 +37,7 @@ get_with_info github.com/zmb3/gogetdoc
 get_with_info golang.org/x/tools/cmd/goimports
 get_with_info golang.org/x/tools/cmd/gorename
 get_with_info golang.org/x/tools/cmd/guru
+get_with_info golang.org/x/tools/cmd/stringer
 
 ## May need.
 get_with_info bitbucket.org/liamstask/goose/cmd/goose
