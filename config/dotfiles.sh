@@ -14,29 +14,72 @@ cd "$dir_project"
 # shellcheck source=../__common.sh
 . ./__common.sh "$dir_project"
 
+commands() {
+  cat <<EOS
+Commands:
+  check       Check whether each dotfile is deployed or not.
+              $(print_with_color yellow "WARNING: Directories where dotfiles are deployed will be created.")
+  deploy      Deploy dotfiles.
+  help        "help" shows this usage.
+              "help <command>" shows an usage for the specified command.
+
+EOS
+}
+
 usage() {
   cat <<EOS
-Usage: dotfiles.sh [-h|--help] <command> [<args>]
+Usage: dotfiles.sh <command> [<options>] [<args>]
 
-Commands are:
-  check     Check whether each dotfile is deployed or not.
-            $(print_with_color yellow "WARNING: Directories where dotfiles are deployed will be created.")
-            arg1: text to search (using partial match)
-                  If specified, show only hit lines.
+EOS
+  commands
+}
 
-  deploy    Deploy dotfiles.
-            arg1: text to specify dotfiles (using partial match)
-                  If specified, deploy only files in hit lines which are output
-                  by 'check' command.
+usage_for_check() {
+  cat <<EOS
+Usage: dotfiles.sh check [-h] [<keyword>]
 
-  help      Show this usage.
+Check whether each dotfile is deployed or not.
+$(print_with_color yellow "WARNING: Directories where dotfiles are deployed will be created.")
+
+args:
+  keyword       If it is specified, show status of dotfiles related to it.
+                $(print_with_color magenta "NOTE:") The searching is partial match.
+                If it is not, show status of all dotfiles.
+
+options:
+  -h, --help    Show this usage.
+
+EOS
+}
+
+usage_for_deploy() {
+  cat <<EOS
+Usage: dotfiles.sh deploy [-h] [<keyword>]
+
+Deploy dotfiles.
+
+args:
+  keyword       If it is specified, deploy dotfiles related to it
+                $(print_with_color magenta "NOTE:") The searching is partial match for status lines,
+                which can be shown by "check" command.
+                If it is not, deploy all dotfiles.
+
+options:
+  -h, --help    Show this usage.
+
 EOS
 }
 
 check() {
   # Check arguments.
   check_pattern=""
-  [ $# -eq 1 ] && check_pattern=$1
+  if [ $# -ge 1 ]; then
+    if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+      usage_for_check
+      exit
+    fi
+    check_pattern=$1
+  fi
 
   # Output a header.
   printf "DEPLOY_FROM\tDEPLOY_TO\tSTATUS\n"
@@ -82,7 +125,13 @@ check() {
 deploy() {
   # Check arguments.
   pattern_deploy=""
-  [ $# -eq 1 ] && pattern_deploy=$1
+  if [ $# -ge 1 ]; then
+    if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+      usage_for_deploy
+      exit
+    fi
+    pattern_deploy=$1
+  fi
 
   # Deploy.
   check "$pattern_deploy"   |
@@ -108,6 +157,30 @@ deploy() {
       done
 }
 
+help() {
+  if [ $# -eq 0 ]; then
+    usage
+    exit
+  fi
+
+  case "$1" in
+    check)
+      usage_for_check
+      ;;
+    deploy)
+      usage_for_deploy
+      ;;
+    help|-*)
+      usage
+      ;;
+    *)
+      err_msg "Invalid command '$1'"
+      echo
+      commands
+      exit 1
+  esac
+}
+
 case "$1" in
   check)
     shift
@@ -119,8 +192,13 @@ case "$1" in
     deploy "$@"
     ;;
 
-  help|-h|--help)
-    usage
+  help)
+    shift
+    help "$@"
+    ;;
+
+  -h|--help)
+    help
     ;;
 
   *)
