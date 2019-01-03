@@ -174,12 +174,19 @@ help() {
       usage
       ;;
     *)
-      err_msg "Invalid command '$1'"
+      err_msg "Invalid command \"$1\"."
       echo
       commands
       exit 1
   esac
 }
+
+if [ $# -eq 0 ]; then
+  err_msg 'Command is required.'
+  echo
+  usage
+  exit 1
+fi
 
 case "$1" in
   check)
@@ -202,7 +209,7 @@ case "$1" in
     ;;
 
   *)
-    err_msg "Invalid command '$1'"
+    err_msg "Invalid command \"$1\"."
     echo
     usage
     exit 1
