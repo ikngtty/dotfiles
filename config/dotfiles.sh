@@ -170,14 +170,21 @@ help() {
     deploy)
       usage_for_deploy
       ;;
-    help|-*)
+    help)
       usage
+      ;;
+    -*)
+      err_msg "Invalid option \"$1\"."
+      echo
+      usage
+      exit 1
       ;;
     *)
       err_msg "Invalid command \"$1\"."
       echo
       commands
       exit 1
+      ;;
   esac
 }
 
@@ -206,6 +213,13 @@ case "$1" in
 
   -h|--help)
     help
+    ;;
+
+  -*)
+    err_msg "Invalid option \"$1\"."
+    echo
+    usage
+    exit 1
     ;;
 
   *)
