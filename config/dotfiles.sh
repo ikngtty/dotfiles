@@ -28,7 +28,7 @@ EOS
 
 usage() {
   cat <<EOS
-Usage: dotfiles.sh <command> [<options>] [<args>]
+Usage: dotfiles.sh <command> [<options>]
 
 EOS
   commands
@@ -36,36 +36,32 @@ EOS
 
 usage_for_check() {
   cat <<EOS
-Usage: dotfiles.sh check [-h] [<keyword>]
+Usage: dotfiles.sh check [-h] [-q <keyword>]
 
 Check whether each dotfile is deployed or not.
 $(print_with_color yellow "WARNING: Directories where dotfiles are deployed will be created.")
 
-args:
-  keyword       If it is specified, show status of dotfiles related to it.
-                $(print_with_color magenta "NOTE:") The searching is partial match.
-                If it is not, show status of all dotfiles.
-
 options:
   -h, --help    Show this usage.
+  -q, --query   Show status of dotfiles related to specified keyword.
+                $(print_with_color magenta "NOTE:") The searching is partial match.
+                If it is not specified, show status of all dotfiles.
 
 EOS
 }
 
 usage_for_deploy() {
   cat <<EOS
-Usage: dotfiles.sh deploy [-h] [<keyword>]
+Usage: dotfiles.sh deploy [-h] [-q <keyword>]
 
 Deploy dotfiles.
 
-args:
-  keyword       If it is specified, deploy dotfiles related to it
-                $(print_with_color magenta "NOTE:") The searching is partial match for status lines,
-                which can be shown by "check" command.
-                If it is not, deploy all dotfiles.
-
 options:
   -h, --help    Show this usage.
+  -q, --query   Deploy dotfiles related to specified keyword.
+                $(print_with_color magenta "NOTE:") The searching is partial match for status lines,
+                which can be shown by "check" command.
+                If it is not specified, deploy all dotfiles.
 
 EOS
 }
@@ -73,13 +69,37 @@ EOS
 check() {
   # Check arguments.
   check_pattern=""
-  if [ $# -ge 1 ]; then
-    if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-      usage_for_check
-      exit
-    fi
-    check_pattern=$1
-  fi
+  while [ $# -gt 0 ]; do
+    case "$1" in
+      -h|--help)
+        usage_for_check
+        exit
+        ;;
+      -q|--query)
+        shift
+        if [ $# -eq 0 ]; then
+          err_msg '"-q" and "--query" should be specified with a keyword.'
+          echo
+          usage_for_check
+          exit 1
+        fi
+        check_pattern="$1"
+        ;;
+      -*)
+        err_msg "Invalid option \"$1\"."
+        echo
+        usage_for_check
+        exit 1
+        ;;
+      *)
+        err_msg "Invalid argument \"$1\"."
+        echo
+        usage_for_check
+        exit 1
+        ;;
+    esac
+    shift
+  done
 
   # Output a header.
   printf "DEPLOY_FROM\tDEPLOY_TO\tSTATUS\n"
@@ -125,17 +145,41 @@ check() {
 deploy() {
   # Check arguments.
   pattern_deploy=""
-  if [ $# -ge 1 ]; then
-    if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
-      usage_for_deploy
-      exit
-    fi
-    pattern_deploy=$1
-  fi
+  while [ $# -gt 0 ]; do
+    case "$1" in
+      -h|--help)
+        usage_for_deploy
+        exit
+        ;;
+      -q|--query)
+        shift
+        if [ $# -eq 0 ]; then
+          err_msg '"-q" and "--query" should be specified with a keyword.'
+          echo
+          usage_for_deploy
+          exit 1
+        fi
+        pattern_deploy="$1"
+        ;;
+      -*)
+        err_msg "Invalid option \"$1\"."
+        echo
+        usage_for_deploy
+        exit 1
+        ;;
+      *)
+        err_msg "Invalid argument \"$1\"."
+        echo
+        usage_for_deploy
+        exit 1
+        ;;
+    esac
+    shift
+  done
 
   # Deploy.
-  check "$pattern_deploy"   |
-    tail -n +2              | # Remove the header
+  check -q "$pattern_deploy"  |
+    tail -n +2                | # Remove the header
       while IFS="$(printf "\t")" read deploy_from deploy_to deploy_status
       do
         file_name=$(basename "$deploy_from")

@@ -27,7 +27,7 @@ fi
 
 # Deploy `Brewfile`.
 here_log "Deploy Brewfile if it has not."
-$sh_dotfiles deploy "Brewfile"
+$sh_dotfiles deploy -q "Brewfile"
 
 # Install packages with Homebrew.
 cd "$dir_deploy_home/Configurations/Homebrew-Bundle"
