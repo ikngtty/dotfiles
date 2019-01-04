@@ -28,7 +28,7 @@ fish --version >/dev/null 2>&1 || exit_for_not_installed fish
 add_shells() {
   shell_name=$1
   shell_path="$(which $shell_name)"
-  if ! grep "$shell_path" "$file_shells" > /dev/null; then
+  if ! grep -q "$shell_path" "$file_shells"; then
     here_log "Add '$shell_name' path to '$file_shells'."
     sudo bash -c "echo '$shell_path' >> '$file_shells'"
   fi
@@ -55,7 +55,7 @@ deploy_rc() {
     exit $code_ambiguous_search
   fi
 
-  if echo "$status_line" | grep -F "$deploy_status_conflict" > /dev/null ; then
+  if echo "$status_line" | grep -qF "$deploy_status_conflict"; then
     err_msg "Oh my God! Cannot deploy the <b>$pattern</b> file"\
       " because it conflicts. Please resolve it!"
     exit $code_conflict

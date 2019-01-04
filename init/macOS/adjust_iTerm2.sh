@@ -25,7 +25,7 @@ file_plist="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
 here_log "Check requirements."
 [ -e "/Applications/iTerm.app" ] || exit_for_not_installed iTerm2
 [ -e "$file_plist" ] || exit_for_not_opened_yet iTerm2
-fc-list | grep -F "Inconsolata-dz for Powerline" >/dev/null 2>&1\
+fc-list | grep -qF "Inconsolata-dz for Powerline"\
   || exit_for_not_installed "Inconsolata-dz for Powerline"
 ## To install shell integration for the expected login shell.
 [ "$SHELL" == "$(which $login_shell)" ] || exit_for_diffrent_login_shell
