@@ -13,11 +13,15 @@ util=$(pwd)
 err_msg() {
   "$util/err_msg.sh" "$@"
 }
+status_code() {
+  # Recursive call.
+  "$util/status_code.sh" "$@"
+}
 
 # Check arguments.
 if [ $# -ne 1 ]; then
   err_msg "The number of arguments is $#, but it should be 1."
-  exit 1
+  exit "$(status_code invalid_argument)"
 fi
 status_name="$1"
 
@@ -37,7 +41,10 @@ case "$status_name" in
   different_shell)
     echo 50
     ;;
+  invalid_argument)
+    echo 60
+    ;;
   *)
     err_msg "Status name \"$status_name\" does not exist."
-    exit 1
+    exit "$(status_code invalid_argument)"
 esac

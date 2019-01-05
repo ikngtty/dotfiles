@@ -16,11 +16,14 @@ echo_with_color() {
 err_msg() {
   "$util/err_msg.sh" "$@"
 }
+status_code() {
+  "$util/status_code.sh" "$@"
+}
 
 # Check arguments.
 if [ $# -eq 0 ]; then
   err_msg 'An argument is required to specify file name.'
-  exit 1
+  exit "$(status_code invalid_argument)"
 fi
 file_name=$1
 shift   # "$@" is messages.

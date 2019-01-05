@@ -31,13 +31,16 @@ EOS
 err_msg() {
   "$util/err_msg.sh" "$@"
 }
+status_code() {
+  "$util/status_code.sh" "$@"
+}
 
 # Check arguments.
 if [ $# -ne 2 ]; then
   err_msg "The number of arguments is $#, but it should be 2."
   echo
   usage
-  exit 1
+  exit "$(status_code invalid_argument)"
 fi
 kind="$1"
 name="$2"
@@ -55,7 +58,7 @@ case "$kind" in
         ;;
       *)
         err_msg "Directory \"$name\" does not exist."
-        exit 1
+        exit "$(status_code invalid_argument)"
         ;;
     esac
     ;;
@@ -67,7 +70,7 @@ case "$kind" in
         ;;
       *)
         err_msg "File \"$name\" does not exist."
-        exit 1
+        exit "$(status_code invalid_argument)"
         ;;
     esac
     ;;
@@ -78,7 +81,7 @@ case "$kind" in
         ;;
       *)
         err_msg "Shell script \"$name\" does not exist."
-        exit 1
+        exit "$(status_code invalid_argument)"
         ;;
     esac
     ;;
@@ -89,7 +92,7 @@ case "$kind" in
         ;;
       *)
         err_msg "Library \"$name\" does not exist."
-        exit 1
+        exit "$(status_code invalid_argument)"
         ;;
     esac
     ;;
@@ -97,6 +100,6 @@ case "$kind" in
     err_msg "Kind \"$kind\" does not exist."
     echo
     usage
-    exit 1
+    exit "$(status_code invalid_argument)"
     ;;
 esac

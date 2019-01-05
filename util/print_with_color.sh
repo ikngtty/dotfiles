@@ -13,11 +13,14 @@ util=$(pwd)
 err_msg() {
   "$util/err_msg.sh" "$@"
 }
+status_code() {
+  "$util/status_code.sh" "$@"
+}
 
 # Check arguments.
 if [ $# -eq 0 ]; then
   err_msg 'An argument is required to specify a color.'
-  exit 1
+  exit "$(status_code invalid_argument)"
 fi
 color=$1
 case "$color" in
@@ -44,7 +47,7 @@ case "$color" in
     ;;
   *)
     err_msg "Color \"$color\" does not exist."
-    exit 1
+    exit "$(status_code invalid_argument)"
 esac
 shift     # "$@" is messages.
 

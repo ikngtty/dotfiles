@@ -25,6 +25,9 @@ project_const() {
 project_path() {
   "$util/project_path.sh" "$@"
 }
+status_code() {
+  "$util/status_code.sh" "$@"
+}
 
 # Import consts.
 deploy_status_conflict="$(project_const deploy_status_conflict)"
@@ -109,7 +112,7 @@ check() {
           err_msg '"-q" and "--query" should be specified with a keyword.'
           echo
           usage_for_check
-          exit 1
+          exit "$(status_code invalid_argument)"
         fi
         check_pattern="$1"
         ;;
@@ -117,13 +120,13 @@ check() {
         err_msg "Invalid option \"$1\"."
         echo
         usage_for_check
-        exit 1
+        exit "$(status_code invalid_argument)"
         ;;
       *)
         err_msg "Invalid argument \"$1\"."
         echo
         usage_for_check
-        exit 1
+        exit "$(status_code invalid_argument)"
         ;;
     esac
     shift
@@ -185,7 +188,7 @@ deploy() {
           err_msg '"-q" and "--query" should be specified with a keyword.'
           echo
           usage_for_deploy
-          exit 1
+          exit "$(status_code invalid_argument)"
         fi
         pattern_deploy="$1"
         ;;
@@ -193,13 +196,13 @@ deploy() {
         err_msg "Invalid option \"$1\"."
         echo
         usage_for_deploy
-        exit 1
+        exit "$(status_code invalid_argument)"
         ;;
       *)
         err_msg "Invalid argument \"$1\"."
         echo
         usage_for_deploy
-        exit 1
+        exit "$(status_code invalid_argument)"
         ;;
     esac
     shift
@@ -248,13 +251,13 @@ help() {
       err_msg "Invalid option \"$1\"."
       echo
       usage
-      exit 1
+      exit "$(status_code invalid_argument)"
       ;;
     *)
       err_msg "Invalid command \"$1\"."
       echo
       commands
-      exit 1
+      exit "$(status_code invalid_argument)"
       ;;
   esac
 }
@@ -263,7 +266,7 @@ if [ $# -eq 0 ]; then
   err_msg 'Command is required.'
   echo
   usage
-  exit 1
+  exit "$(status_code invalid_argument)"
 fi
 
 case "$1" in
@@ -290,13 +293,13 @@ case "$1" in
     err_msg "Invalid option \"$1\"."
     echo
     usage
-    exit 1
+    exit "$(status_code invalid_argument)"
     ;;
 
   *)
     err_msg "Invalid command \"$1\"."
     echo
     usage
-    exit 1
+    exit "$(status_code invalid_argument)"
     ;;
 esac

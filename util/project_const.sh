@@ -13,11 +13,14 @@ util=$(pwd)
 err_msg() {
   "$util/err_msg.sh" "$@"
 }
+status_code() {
+  "$util/status_code.sh" "$@"
+}
 
 # Check arguments.
 if [ $# -ne 1 ]; then
   err_msg "The number of arguments is $#, but it should be 1."
-  exit 1
+  exit "$(status_code invalid_argument)"
 fi
 const_name="$1"
 
@@ -36,5 +39,5 @@ case "$const_name" in
     ;;
   *)
     err_msg "Const name \"$const_name\" does not exist."
-    exit 1
+    exit "$(status_code invalid_argument)"
 esac
