@@ -42,10 +42,11 @@ Check whether each dotfile is deployed or not.
 $(print_with_color yellow "WARNING: Directories where dotfiles are deployed will be created.")
 
 options:
-  -h, --help    Show this usage.
-  -q, --query   Show status of dotfiles related to specified keyword.
-                $(print_with_color magenta "NOTE:") The searching is partial match.
-                If it is not specified, show status of all dotfiles.
+  -b, --bodyonly  Do not show a header.
+  -h, --help      Show this usage.
+  -q, --query     Show status of dotfiles related to specified keyword.
+                  $(print_with_color magenta "NOTE:") The searching is partial match.
+                  If it is not specified, show status of all dotfiles.
 
 EOS
 }
@@ -57,11 +58,11 @@ Usage: dotfiles.sh deploy [-h] [-q <keyword>]
 Deploy dotfiles.
 
 options:
-  -h, --help    Show this usage.
-  -q, --query   Deploy dotfiles related to specified keyword.
-                $(print_with_color magenta "NOTE:") The searching is partial match for status lines,
-                which can be shown by "check" command.
-                If it is not specified, deploy all dotfiles.
+  -h, --help      Show this usage.
+  -q, --query     Deploy dotfiles related to specified keyword.
+                  $(print_with_color magenta "NOTE:") The searching is partial match for status lines,
+                  which can be shown by "check" command.
+                  If it is not specified, deploy all dotfiles.
 
 EOS
 }
@@ -69,11 +70,15 @@ EOS
 check() {
   # Check arguments.
   check_pattern=""
+  bodyonly=0
   while [ $# -gt 0 ]; do
     case "$1" in
       -h|--help)
         usage_for_check
         exit
+        ;;
+      -b|--bodyonly)
+        bodyonly=1
         ;;
       -q|--query)
         shift
@@ -102,7 +107,7 @@ check() {
   done
 
   # Output a header.
-  printf "DEPLOY_FROM\tDEPLOY_TO\tSTATUS\n"
+  [ $bodyonly -eq 0 ] && printf "DEPLOY_FROM\tDEPLOY_TO\tSTATUS\n"
 
   # List the file paths.
   {
@@ -178,27 +183,26 @@ deploy() {
   done
 
   # Deploy.
-  check -q "$pattern_deploy"  |
-    tail -n +2                | # Remove the header
-      while IFS="$(printf "\t")" read deploy_from deploy_to deploy_status
-      do
-        file_name=$(basename "$deploy_from")
-        case "$deploy_status" in
-          "$deploy_status_undeployed")
-            print_with_color green "Deploying <b>$file_name</b> ..."
-            ln -s "$deploy_from" "$(dirname "$deploy_to")"
-            echo_with_color green ' Done!'
-            ;;
-          "$deploy_status_conflict")
-            echo_with_color yellow 'WARNING: Failed to deploy'\
-              " <b>$file_name</b> because it conflicts."\
-              ' Please check and resolve it.'
-            ;;
-          "$deploy_status_deployed")
-            echo_with_color magenta "<b>$file_name</b> is already deployed."
-            ;;
-        esac
-      done
+  check -b -q "$pattern_deploy" |
+    while IFS="$(printf "\t")" read deploy_from deploy_to deploy_status
+    do
+      file_name=$(basename "$deploy_from")
+      case "$deploy_status" in
+        "$deploy_status_undeployed")
+          print_with_color green "Deploying <b>$file_name</b> ..."
+          ln -s "$deploy_from" "$(dirname "$deploy_to")"
+          echo_with_color green ' Done!'
+          ;;
+        "$deploy_status_conflict")
+          echo_with_color yellow 'WARNING: Failed to deploy'\
+            " <b>$file_name</b> because it conflicts."\
+            ' Please check and resolve it.'
+          ;;
+        "$deploy_status_deployed")
+          echo_with_color magenta "<b>$file_name</b> is already deployed."
+          ;;
+      esac
+    done
 }
 
 help() {
