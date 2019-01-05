@@ -1,19 +1,38 @@
 #!/usr/bin/env bash
 set -eu -o pipefail
 
-# Get project directory's absolute path.
+# Get util directory's absolute path.
 # NOTE: Should do before changing the working directory because
 # `$0` returns a relative path.
 my_file_name="$(basename "$0")"
-cd "$(dirname "$0")"
-# dir_here=$(pwd)
-cd ../../
-dir_project=$(pwd)
+cd "$(dirname "$0")"  # Directory includes this script.
+cd ../../             # Project directory.
+cd util
+util=$(pwd)
 
-# Read the common part.
-cd "$dir_project"
-# shellcheck source=../../__common.sh
-. ./__common.sh "$dir_project"
+# Alias for util.
+log() {
+  "$util/log.sh" "$@"
+}
+project_const() {
+  "$util/project_const.sh" "$@"
+}
+project_path() {
+  "$util/project_path.sh" "$@"
+}
+status_code() {
+  "$util/status_code.sh" "$@"
+}
+success_msg() {
+  "$util/success_msg.sh" "$@"
+}
+
+# Import paths.
+file_shells="$(project_path file shells)"
+sh_dotfiles="$(project_path sh dotfiles)"
+# Import consts.
+login_shell="$(project_const login_shell)"
+deploy_status_conflict="$(project_const deploy_status_conflict)"
 
 here_log() {
   log "$my_file_name" "$1"
@@ -21,6 +40,10 @@ here_log() {
 
 # Check requirements.
 here_log "Check requirements."
+exit_for_not_installed() {
+  err_msg "Cannot run! Please install <b>$1</b>!"
+  exit "$(statsu_code not_installed)"
+}
 zsh --version >/dev/null 2>&1 || exit_for_not_installed zsh
 fish --version >/dev/null 2>&1 || exit_for_not_installed fish
 
@@ -52,13 +75,13 @@ deploy_rc() {
   if [ "$(echo "$status_line" | wc -l)" -gt 1 ]; then
     err_msg "Oh no! I don't know which is the right <b>$pattern</b> file?"\
       " Please fix the ambiguous search in me!"
-    exit $code_ambiguous_search
+    exit "$(status_code ambiguous_search)"
   fi
 
   if echo "$status_line" | grep -qF "$deploy_status_conflict"; then
     err_msg "Oh my God! Cannot deploy the <b>$pattern</b> file"\
       " because it conflicts. Please resolve it!"
-    exit $code_conflict
+    exit "$(status_code conflict)"
   fi
   $sh_dotfiles deploy -q "$pattern"
 }

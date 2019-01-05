@@ -1,19 +1,37 @@
 #!/bin/sh
 set -eu -o pipefail
 
-# Get project directory's absolute path.
+# Get util directory's absolute path.
 # NOTE: Should do before changing the working directory because
 # `$0` returns a relative path.
-cd "$(dirname "$0")"
-# dir_here=$(pwd)
-cd ../
-dir_project=$(pwd)
+cd "$(dirname "$0")"  # Directory includes this script.
+cd ../                # Project directory.
+cd util
+util=$(pwd)
 
-# Read the common part.
-cd "$dir_project"
-# shellcheck source=../__common.sh
-. ./__common.sh "$dir_project"
+# Alias for util.
+echo_with_color() {
+  "$util/echo_with_color.sh" "$@"
+}
+err_msg() {
+  "$util/err_msg.sh" "$@"
+}
+print_with_color() {
+  "$util/print_with_color.sh" "$@"
+}
+project_const() {
+  "$util/project_const.sh" "$@"
+}
+project_path() {
+  "$util/project_path.sh" "$@"
+}
 
+# Import consts.
+deploy_status_conflict="$(project_const deploy_status_conflict)"
+deploy_status_undeployed="$(project_const deploy_status_undeployed)"
+deploy_status_deployed="$(project_const deploy_status_deployed)"
+
+# Usages.
 commands() {
   cat <<EOS
 Commands:
@@ -67,7 +85,12 @@ options:
 EOS
 }
 
+# Commands.
 check() {
+  # Import paths.
+  dir_origin_home="$(project_path dir origin_home)"
+  dir_deploy_home="$(project_path dir deploy_home)"
+
   # Check arguments.
   check_pattern=""
   bodyonly=0
