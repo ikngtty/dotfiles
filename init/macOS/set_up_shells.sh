@@ -42,7 +42,7 @@ here_log() {
 here_log "Check requirements."
 exit_for_not_installed() {
   err_msg "Cannot run! Please install <b>$1</b>!"
-  exit "$(statsu_code not_installed)"
+  exit "$(status_code not_installed)"
 }
 zsh --version >/dev/null 2>&1 || exit_for_not_installed zsh
 fish --version >/dev/null 2>&1 || exit_for_not_installed fish

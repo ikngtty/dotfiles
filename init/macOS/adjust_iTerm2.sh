@@ -45,15 +45,15 @@ file_plist="$HOME/Library/Preferences/com.googlecode.iterm2.plist"
 here_log "Check requirements."
 exit_for_not_installed() {
   err_msg "Cannot run! Please install <b>$1</b>!"
-  exit "$(statsu_code not_installed)"
+  exit "$(status_code not_installed)"
 }
 exit_for_not_opened_yet() {
   err_msg "Cannot run! Please open <b>$1</b> once!"
-  exit "$(statsu_code not_opened_yet)"
+  exit "$(status_code not_opened_yet)"
 }
 exit_for_different_login_shell() {
   err_msg "Cannot run! Please change the login shell to <b>$login_shell</b>!"
-  exit "$(statsu_code different_shell)"
+  exit "$(status_code different_shell)"
 }
 [ -e "/Applications/iTerm.app" ] || exit_for_not_installed iTerm2
 [ -e "$file_plist" ] || exit_for_not_opened_yet iTerm2
