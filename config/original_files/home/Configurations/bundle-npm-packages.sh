@@ -19,6 +19,7 @@ npm update -g
 # Install.
 npm i -g elm-format
 npm i -g elm-live
+npm i -g node-giff
 npm i -g spaceship-prompt
 npm i -g standard
 npm i -g yarn
