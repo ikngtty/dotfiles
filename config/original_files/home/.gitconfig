@@ -14,6 +14,7 @@
 [commit]
 	template = /Users/ikngtty/.stCommitMsg
 [alias]
+	b = browse
 	br = branch
 	cm = commit
 	cma = commit --amend
