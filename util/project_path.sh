@@ -1,5 +1,5 @@
 #!/bin/sh
-set -eu -o pipefail
+set -Ceu -o pipefail
 
 # Get absolute paths.
 # NOTE: Should do before changing the working directory because

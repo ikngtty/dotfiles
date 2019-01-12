@@ -1,5 +1,5 @@
 #!/bin/sh
-set -eu -o pipefail
+set -Ceu -o pipefail
 
 # Check Requirements.
 if ! which go >/dev/null 2>&1; then

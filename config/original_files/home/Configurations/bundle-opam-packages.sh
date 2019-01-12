@@ -1,5 +1,5 @@
 #!/bin/sh
-set -eu -o pipefail
+set -Ceu -o pipefail
 
 # Check Requirements.
 if ! which opam >/dev/null 2>&1; then

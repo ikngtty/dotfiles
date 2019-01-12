@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eu -o pipefail
+set -Ceu -o pipefail
 
 # Get util directory's absolute path.
 # NOTE: Should do before changing the working directory because
