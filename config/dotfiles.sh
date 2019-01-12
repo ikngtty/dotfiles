@@ -34,7 +34,14 @@ deploy_status_conflict="$(project_const deploy_status_conflict)"
 deploy_status_undeployed="$(project_const deploy_status_undeployed)"
 deploy_status_deployed="$(project_const deploy_status_deployed)"
 
-# Usages.
+usage() {
+  cat <<EOS
+Usage: dotfiles.sh <command> [<options>]
+
+EOS
+  commands
+}
+
 commands() {
   cat <<EOS
 Commands:
@@ -47,12 +54,48 @@ Commands:
 EOS
 }
 
-usage() {
-  cat <<EOS
-Usage: dotfiles.sh <command> [<options>]
+main() {
+  if [ $# -eq 0 ]; then
+    err_msg 'Command is required.'
+    echo
+    usage
+    exit "$(status_code invalid_argument)"
+  fi
 
-EOS
-  commands
+  case "$1" in
+    check)
+      shift
+      check "$@"
+      ;;
+
+    deploy)
+      shift
+      deploy "$@"
+      ;;
+
+    help)
+      shift
+      help "$@"
+      ;;
+
+    -h|--help)
+      help
+      ;;
+
+    -*)
+      err_msg "Invalid option \"$1\"."
+      echo
+      usage
+      exit "$(status_code invalid_argument)"
+      ;;
+
+    *)
+      err_msg "Invalid command \"$1\"."
+      echo
+      usage
+      exit "$(status_code invalid_argument)"
+      ;;
+  esac
 }
 
 usage_for_check() {
@@ -68,22 +111,6 @@ options:
   -q, --query     Show status of dotfiles related to specified keyword.
                   $(print_with_color magenta "NOTE:") The searching is partial match.
                   If it is not specified, show status of all dotfiles.
-
-EOS
-}
-
-usage_for_deploy() {
-  cat <<EOS
-Usage: dotfiles.sh deploy [-h] [-q <keyword>]
-
-Deploy dotfiles.
-
-options:
-  -h, --help      Show this usage.
-  -q, --query     Deploy dotfiles related to specified keyword.
-                  $(print_with_color magenta "NOTE:") The searching is partial match for status lines,
-                  which can be shown by "check" command.
-                  If it is not specified, deploy all dotfiles.
 
 EOS
 }
@@ -171,6 +198,22 @@ check() {
     done                      |
     grep -F "$check_pattern"  |
     grep -Fv ".DS_Store"
+}
+
+usage_for_deploy() {
+  cat <<EOS
+Usage: dotfiles.sh deploy [-h] [-q <keyword>]
+
+Deploy dotfiles.
+
+options:
+  -h, --help      Show this usage.
+  -q, --query     Deploy dotfiles related to specified keyword.
+                  $(print_with_color magenta "NOTE:") The searching is partial match for status lines,
+                  which can be shown by "check" command.
+                  If it is not specified, deploy all dotfiles.
+
+EOS
 }
 
 deploy() {
@@ -262,44 +305,4 @@ help() {
   esac
 }
 
-if [ $# -eq 0 ]; then
-  err_msg 'Command is required.'
-  echo
-  usage
-  exit "$(status_code invalid_argument)"
-fi
-
-case "$1" in
-  check)
-    shift
-    check "$@"
-    ;;
-
-  deploy)
-    shift
-    deploy "$@"
-    ;;
-
-  help)
-    shift
-    help "$@"
-    ;;
-
-  -h|--help)
-    help
-    ;;
-
-  -*)
-    err_msg "Invalid option \"$1\"."
-    echo
-    usage
-    exit "$(status_code invalid_argument)"
-    ;;
-
-  *)
-    err_msg "Invalid command \"$1\"."
-    echo
-    usage
-    exit "$(status_code invalid_argument)"
-    ;;
-esac
+main "$@"
