@@ -13,27 +13,48 @@ if ! which npm >/dev/null 2>&1; then
 fi
 
 # Update installed packages.
+printf "\e[32m"                 # Green
+printf "[bundle log] Updating installed packages."
+printf "\e[m\n"                 # Reset
 npm update -g
 # TODO: Are outdated packages cleaned up? Check through `npm outdated -g`.
 
-# Install.
-npm i -g elm-format
-npm i -g elm-live
-npm i -g node-giff
-npm i -g spaceship-prompt
-npm i -g standard
-npm i -g yarn
+# Install packages.
+# TODO: Use yarn.
+npm_i() {
+  pkg="$1"
+  if npm ls -g "$pkg" >/dev/null 2>&1; then
+    printf "\e[36m"                 # Magenta
+    printf "[bundle log] "
+    printf "\e[1m$pkg\e[m\e[36m"    # Bold and reset
+    printf " is already installed."
+    printf "\e[m\n"                 # Reset
+  else
+    printf "\e[32m"                 # Green
+    printf "[bundle log] Start install "
+    printf "\e[1m$pkg\e[m\e[36m"    # Bold and reset
+    printf "."
+    printf "\e[m\n"                 # Reset
+    npm i -g "$pkg"
+  fi
+}
+npm_i elm-format
+npm_i elm-live
+npm_i node-giff
+npm_i spaceship-prompt
+npm_i standard
+npm_i yarn
 ## For <https://www.npmjs.com/package/eslint-config-prettier-standard>.
-npm i -g eslint
-npm i -g eslint-config-prettier
-npm i -g eslint-config-prettier-standard
-npm i -g eslint-config-standard
-npm i -g eslint-plugin-import
-npm i -g eslint-plugin-node
-npm i -g eslint-plugin-prettier
-npm i -g eslint-plugin-promise
-npm i -g eslint-plugin-standard
-npm i -g prettier
+npm_i eslint
+npm_i eslint-config-prettier
+npm_i eslint-config-prettier-standard
+npm_i eslint-config-standard
+npm_i eslint-plugin-import
+npm_i eslint-plugin-node
+npm_i eslint-plugin-prettier
+npm_i eslint-plugin-promise
+npm_i eslint-plugin-standard
+npm_i prettier
 
 printf "\e[32m"     # Green
 printf "Done!"
