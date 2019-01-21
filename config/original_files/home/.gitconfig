@@ -25,6 +25,7 @@
 	cpq = cherry-pick --quit
 	df = diff
 	dfs = diff --staged
+	fe = fetch
 	mg = merge
 	mga = merge --abort
 	mgc = merge --continue
