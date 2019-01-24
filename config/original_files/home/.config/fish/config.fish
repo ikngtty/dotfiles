@@ -85,7 +85,7 @@ if status --is-interactive
   builtin source $fisher_path/functions/fish_title.fish
 
   # Config
-  set -g fish_prompt_pwd_dir_length 0
+  set -g fish_prompt_pwd_dir_length 4
   set -g theme_color_scheme dracula
   set -g theme_display_vagrant yes
   set -g theme_newline_cursor clean
