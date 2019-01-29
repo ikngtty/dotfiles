@@ -125,6 +125,18 @@ TODO:
 ### Notation
 Set bigger textsize as default.
 
+### Station
+*   Gmail
+*   Outlook Pro
+*   Microsoft Teams
+*   Slack
+*   Twitter
+*   TweetDeck
+*   Discord
+*   Office365
+
+TODO: Try to fetch settings.
+
 ### Virtual Box
 Change the default VM folder path.
 
