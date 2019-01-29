@@ -47,6 +47,9 @@ TODO: Detailed way to call our programs.
 *   Quit `utop`
     *   `exit 0;;`
 
+### Haskell
+Use haskell-stack.
+
 ### Scheme
 Use `Dr.Racket`?
 TODO:

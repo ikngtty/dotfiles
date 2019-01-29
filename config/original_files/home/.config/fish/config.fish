@@ -54,6 +54,7 @@ if status --is-interactive
   abbr --add r rails
   abbr --add relogin exec $SHELL -l
   abbr --add rocaml rlwrap ocaml
+  abbr --add s stack
   abbr --add v vagrant
 end
 
