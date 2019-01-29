@@ -41,12 +41,18 @@ $sh_dotfiles deploy -q "Brewfile"
 
 # Install packages with Homebrew.
 cd "$dir_deploy_home/Configurations/Homebrew-Bundle"
-here_log "Run \`brew upgrade --cleanup\`."
-brew upgrade --cleanup
+here_log "Run \`brew cleanup\`."
+brew cleanup
+here_log "Run \`brew upgrade\`."
+brew upgrade
+here_log "Run \`brew cleanup\`."
+brew cleanup
 here_log "Run \`brew bundle check\`."
 # brew bundle check
 # TODO: Research the `brew bundle check` feature.
 here_log "Run \`brew bundle\`."
 brew bundle
+here_log "Run \`brew cleanup\`."
+brew cleanup
 
 success_msg "Yeah! $my_file_name complete!"
