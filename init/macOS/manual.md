@@ -117,7 +117,7 @@ TODO: Try to make it scripts.
         *   Broser Theme - DO NOT load the dark theme. It is bad to see.
 
 ### Karabiner
-Need not to share.
+TODO: Research how to share profiles.
 
 ### terminal
 TODO:
