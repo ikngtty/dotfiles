@@ -88,7 +88,7 @@ TODO: Find out steps to create Lisp IDE.
 3.  Make CotEditor read it at `settings` window. (Then they can be deleted.)
 
 *   Display
-    *   Font -> Ricty Diminished 20pts
+    *   Font -> Ricty Diminished 18pts
     *   Theme -> base16-Monokai.dark
 
 TODO: Make it scripts.
