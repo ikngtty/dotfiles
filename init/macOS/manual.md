@@ -120,7 +120,10 @@ TODO: Try to make it scripts.
 TODO: Research how to share profiles.
 
 ### terminal
-TODO:
+*   Copy "Basic" profile as "My Basic", and configure it as below.
+    *   Font: InconsolataForPowerline-dz 18pts
+
+TODO: Try to make it scripts.
 
 ### Notation
 Set bigger textsize as default.
