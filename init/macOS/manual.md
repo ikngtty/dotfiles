@@ -150,6 +150,14 @@ Use [Vivaldi.net](https://vivaldi.net).
 TODO: Detailed settings.
 
 ## Set up others.
+### Lisp
+TODO: Unify devices' library path.
+
+1.  `cd <lib path>` and `git clone slime/slime` (using `hub`).
+2.  Set atom-slime's "Slime Path".
+
+TODO: Make it scripts.
+
 ### Node.js
 1.  `mkdir -p ~/.nodebrew/src`
 2.  `nodebrew install-binary stable`
