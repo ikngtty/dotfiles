@@ -38,6 +38,7 @@ stack_install() {
   printf "\e[m\n"                 # Reset
   stack install "$pkg" $options
 }
+stack_install hlint
 stack_install stylish-haskell
 ## HACK: Though I want to attach "-rtsopts" ghc-option to use GHCRTS
 ## environment value, "--ghc-options" seems not to work.
