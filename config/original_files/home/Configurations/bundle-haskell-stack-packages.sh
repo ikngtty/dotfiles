@@ -29,14 +29,20 @@ stack update
 # Install packages.
 stack_install() {
   pkg="$1"
+  shift
+  options="$*"
   printf "\e[32m"                 # Green
   printf "[bundle log] Start install "
   printf "\e[1m$pkg\e[m\e[36m"    # Bold and reset
   printf "."
   printf "\e[m\n"                 # Reset
-  stack install "$pkg"
+  stack install "$pkg" $options
 }
 stack_install stylish-haskell
+stack_install ghc-mod --resolver lts-9.21
+
+# TODO: Introduce haskell-ide-engine after bugs about memory consumption for mac
+# is solved.
 
 printf "\e[32m"     # Green
 printf "Done!"
