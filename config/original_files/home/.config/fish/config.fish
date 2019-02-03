@@ -38,10 +38,7 @@ end
 ## Limit GHC's heap size somehow.
 ## haskell-stack cannot run because 1GB heap size is lack.
 # set -gx GHCRTS -M1G
-## ghc-mod (and perhaps other tools) cannot run because of some GHCRTS value.
-## It is likely to work if it is built with "-rtsopts" ghc-options,
-## but Stack's "--ghc-options" option seems not to work.
-# set -gx GHCRTS -M2G
+set -gx GHCRTS -M2G
 
 # Init
 if status --is-interactive
