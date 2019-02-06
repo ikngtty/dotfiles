@@ -151,10 +151,11 @@ TODO: Detailed settings.
 
 ## Set up others.
 ### Lisp
-TODO: Unify devices' library path.
-
-1.  `cd <lib path>` and `git clone slime/slime` (using `hub`).
-2.  Set atom-slime's "Slime Path".
+#### atom-slime
+1.  Check atom-slime's "Slime Path" setting.
+2.  If the user name in the slime path is diffrent from my current machine's,
+    give up syncronize settings and change slime path in the setting.
+3.  `cd <parent folder of slime path>` and `hub clone slime/slime`.
 
 TODO: Make it scripts.
 
