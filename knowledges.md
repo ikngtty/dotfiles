@@ -47,6 +47,8 @@ TODO: Detailed way to call our programs.
 *   Quit `utop`
     *   `exit 0;;`
 
+TODO: Research the best way to build.
+
 ### Haskell
 Use haskell-stack.
 
