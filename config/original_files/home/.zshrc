@@ -16,7 +16,7 @@ alias dc='docker-compose'
 alias g='git'
 alias r='rails'
 alias relogin='exec $SHELL -l'
-alias rocaml='rlwrap ocaml'
+alias rl='rlwrap'
 alias v='vagrant'
 ## The description is shown by `hub alias zsh`.
 which hub >/dev/null 2>&1 && eval "$(hub alias -s zsh)"

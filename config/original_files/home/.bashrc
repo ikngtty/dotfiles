@@ -18,7 +18,7 @@ alias dc='docker-compose'
 alias g='git'
 alias r='rails'
 alias relogin='exec $SHELL -l'
-alias rocaml='rlwrap ocaml'
+alias rl='rlwrap'
 alias v='vagrant'
 
 # Greeting
