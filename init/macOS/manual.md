@@ -82,7 +82,7 @@ Follow my comment in `init.coffee`.
 TODO: Make it scripts.
 TODO: Find out steps to create Lisp IDE.
 
-# CotEditor
+### CotEditor
 1.  Download themes from [here](https://github.com/naotaka/CotEditor-themes).
 2.  Open the theme specified below.
 3.  Make CotEditor read it at `settings` window. (Then they can be deleted.)
