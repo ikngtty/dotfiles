@@ -1,4 +1,5 @@
 # PATH
+PATH="usr/local/sbin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
 GOPATH="$HOME/Projects/workspace/go"
 export GOPATH
