@@ -14,10 +14,6 @@ export PATH
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export MANPATH
 
-# Other environment value
-GHCRTS='-M2G'
-export GHCRTS
-
 # Other
 which rbenv >/dev/null 2>&1 && eval "$(rbenv init -)"
 which pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
