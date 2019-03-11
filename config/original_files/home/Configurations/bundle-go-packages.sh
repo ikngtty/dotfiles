@@ -37,7 +37,8 @@ get_with_info golang.org/x/tools/cmd/goimports
 get_with_info github.com/sqs/goreturns
 ### Linters. (Choose one.)
 get_with_info github.com/alecthomas/gometalinter
-get_with_info github.com/golang/lint/golint
+get_with_info github.com/golangci/golangci-lint/cmd/golangci-lint
+get_with_info github.com/mgechev/revive
 ## Navigators. (Choose one.)
 get_with_info github.com/rogpeppe/godef
 
