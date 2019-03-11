@@ -45,6 +45,13 @@ get_with_info github.com/rogpeppe/godef
 ## For Atom's go-debug package.
 get_with_info github.com/derekparker/delve/cmd/dlv
 
+## Gore (REPL).
+get_with_info github.com/motemen/gore/cmd/gore
+### Additional features.
+# get_with_info github.com/mdempsky/gocode
+get_with_info github.com/k0kubun/pp
+get_with_info golang.org/x/tools/cmd/godoc
+
 ## Others.
 get_with_info bitbucket.org/liamstask/goose/cmd/goose
 get_with_info golang.org/x/tools/cmd/stringer
