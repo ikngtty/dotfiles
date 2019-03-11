@@ -19,10 +19,6 @@ set hlsearch
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " Mapping
-map <C-j> <Esc>
-map! <C-j> <Esc>
-map <C-j><C-j> <Esc><Esc>
-map! <C-j><C-j> <Esc><Esc>
 nnoremap <CR> o<Esc>
 
 " Other
