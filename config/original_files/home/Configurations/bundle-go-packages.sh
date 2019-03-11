@@ -23,24 +23,30 @@ get_with_info() {
 
 # Install.
 # TODO: Find a tool to manage dependency without a vendor directory.
-get_with_info github.com/alecthomas/gometalinter
-get_with_info github.com/derekparker/delve/cmd/dlv
+## For Atom's go-plus package.
 get_with_info github.com/fatih/gomodifytags
-get_with_info github.com/golang/lint/golint
 get_with_info github.com/mdempsky/gocode
 get_with_info github.com/ramya-rao-a/go-outline
-get_with_info github.com/rogpeppe/godef
-get_with_info github.com/sqs/goreturns
 get_with_info github.com/tpng/gopkgs
 get_with_info github.com/zmb3/goaddimport
 get_with_info github.com/zmb3/gogetdoc
-get_with_info golang.org/x/tools/cmd/goimports
 get_with_info golang.org/x/tools/cmd/gorename
 get_with_info golang.org/x/tools/cmd/guru
-get_with_info golang.org/x/tools/cmd/stringer
+### Formatters. (Choose one.)
+get_with_info golang.org/x/tools/cmd/goimports
+get_with_info github.com/sqs/goreturns
+### Linters. (Choose one.)
+get_with_info github.com/alecthomas/gometalinter
+get_with_info github.com/golang/lint/golint
+## Navigators. (Choose one.)
+get_with_info github.com/rogpeppe/godef
 
-## May need.
+## For Atom's go-debug package.
+get_with_info github.com/derekparker/delve/cmd/dlv
+
+## Others.
 get_with_info bitbucket.org/liamstask/goose/cmd/goose
+get_with_info golang.org/x/tools/cmd/stringer
 
 printf "\e[32m"     # Green
 printf "Done!"
