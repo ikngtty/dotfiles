@@ -45,7 +45,11 @@ TODO: Make it scripts.
 *   Security and Privacy
     *   The time require the password is right after sleeping and saving the scrreen.
 *   Keyboard
-    *   Make function keys default.
+    *   Keyboard
+        *   Make function keys default.
+    *   User Dictionary
+        *   Disable auto-correcting spell.
+        *   Disable inputting period by pushing space key twice.
 *   Dock
     *   Change position to left.
     *   Turn on to show/hide automatically.
