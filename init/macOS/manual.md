@@ -172,14 +172,13 @@ TODO: Make it scripts.
 ### Ruby gems
 1.  Set up a Ruby environment (by using `rbenv`).
 2.  `gem update` (then `gem cleanup`).
-3.  Move to `~/Configurations/gem` (after deploying), and `bundle install`.
+3.  Move to `~/Configurations/gem` (after deploying), and `bundle update`
+    (then `gem cleanup`).
 
 NOTE: These gems are installed globally (per virtual environment).
 We had better to install locally per project with
 `bundle install --path=vendor/bundle` as much as we can,
 because we can use `bundle clean` with project's bundle file.
-
-TODO: Decide to use `bundle install` or `bundle update`.
 
 TODO: Install `rbenv-binstubs` and use `bundle install`
 with `--binstubs=bundle_bin`.
