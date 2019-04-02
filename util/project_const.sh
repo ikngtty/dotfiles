@@ -29,13 +29,13 @@ case "$const_name" in
     echo fish
     ;;
   deploy_status_conflict)
-    printf "\e[31mCONFLICT\e[m"
+    printf "\e[31m:CONFLICT:\e[m"
     ;;
   deploy_status_undeployed)
-    printf "\e[32mUNDEPLOYED\e[m"
+    printf "\e[32m:UNDEPLOYED:\e[m"
     ;;
   deploy_status_deployed)
-    printf "\e[33mDEPLOYED\e[m"
+    printf "\e[33m:DEPLOYED:\e[m"
     ;;
   *)
     err_msg "Const name \"$const_name\" does not exist."
