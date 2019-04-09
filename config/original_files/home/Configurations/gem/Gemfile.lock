@@ -47,7 +47,7 @@ GEM
     arel (9.0.0)
     args_parser (0.2.0)
     ast (2.4.0)
-    backport (0.3.0)
+    backport (1.0.0)
     buftok (0.2.0)
     builder (3.2.3)
     concurrent-ruby (1.1.5)
@@ -131,7 +131,7 @@ GEM
     rake (12.3.2)
     reverse_markdown (1.1.0)
       nokogiri
-    rubocop (0.66.0)
+    rubocop (0.67.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
@@ -139,10 +139,13 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 1.6)
+    rubocop-performance (1.0.0)
+      rubocop (>= 0.58.0)
     ruby-progressbar (1.10.0)
     simple_oauth (0.3.1)
-    solargraph (0.31.3)
-      backport (~> 0.3)
+    solargraph (0.32.0)
+      backport (~> 1.0)
+      bundler (>= 1.17.2)
       htmlentities (~> 4.3, >= 4.3.4)
       jaro_winkler (~> 1.5)
       kramdown (~> 1.16)
@@ -197,6 +200,8 @@ PLATFORMS
 
 DEPENDENCIES
   rails
+  rubocop
+  rubocop-performance
   solargraph
   tw
 
