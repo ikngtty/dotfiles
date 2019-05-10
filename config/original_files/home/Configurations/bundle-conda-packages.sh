@@ -19,8 +19,8 @@ install_message() {
   printf "\e[m\n"         # Reset
 }
 
-install_message pylama
-conda install -c conda-forge pylama
+install_message python-language-server
+conda install -c=conda-forge python-language-server
 
 printf "\e[32m"     # Green
 printf "Done!"
