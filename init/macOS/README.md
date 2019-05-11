@@ -35,5 +35,12 @@ ssh-add -K ~/.ssh/id_rsa
 12. Follow [the manual](./manual.md).
 
 TODO: Install GUI apps with `cask` command in `install.sh`.
+
 TODO: Where should I execute `xcode-select --install`?
+In addition, It is necessary to execute below code for `pyenv`. (cf. <https://github.com/pyenv/pyenv/wiki>)
+
+```sh
+sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+```
+
 TODO: Create a script to generate a SSH key.
