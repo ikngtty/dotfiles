@@ -24,10 +24,8 @@ Execute in Atom's `slime` or use `sbcl` or `clisp`.
 TODO: Detailed way to call our programs.
 
 ### Python
-*   Environment
-    1.  Install `Anaconda` through `pyenv` to avoid to conflict with
-        the system's default Python.
-    2.  Use `conda` to create virtual environments and manage packages.
+Use `pipenv`.
+Do not forget to `pipenv --rm` when moving or removing a project directory.
 
 ### Scala
 *   Create a new project.

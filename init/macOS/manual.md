@@ -184,3 +184,8 @@ TODO: Install `rbenv-binstubs` and use `bundle install`
 with `--binstubs=bundle_bin`.
 
 TODO: Make it scripts.
+
+### Python
+1.  Set up a Python environment (by using `pyenv`).
+2.  `pip install --upgrade pip`
+3.  Move to `~/Configurations/pip` (after deploying), and `pip install -r requirements.txt`
