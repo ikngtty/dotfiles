@@ -25,7 +25,6 @@ TODO: Detailed way to call our programs.
 
 ### Python
 Use `pipenv`.
-Do not forget to `pipenv --rm` when moving or removing a project directory.
 
 ### Scala
 *   Create a new project.

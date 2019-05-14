@@ -14,7 +14,11 @@ export PATH
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export MANPATH
 
-# Other
+# Other environment values
+PIPENV_VENV_IN_PROJECT=1
+export PIPENV_VENV_IN_PROJECT
+
+# Others
 which rbenv >/dev/null 2>&1 && eval "$(rbenv init -)"
 which pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 

@@ -45,6 +45,9 @@ end
 ## but Stack's "--ghc-options" option seems not to work.
 # set -gx GHCRTS -M2G
 
+## Pipenv
+set -gx PIPENV_VENV_IN_PROJECT 1
+
 # Init
 if status --is-interactive
   which rbenv > /dev/null ^ /dev/null; and rbenv init - | source
