@@ -47,6 +47,7 @@ end
 
 ## Pipenv
 set -gx PIPENV_VENV_IN_PROJECT 1
+set -gx EDITOR atom
 
 # Init
 if status --is-interactive
