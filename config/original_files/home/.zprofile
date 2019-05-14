@@ -24,3 +24,4 @@ export EDITOR
 # Others
 which rbenv >/dev/null 2>&1 && eval "$(rbenv init -)"
 which pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
+which pipenv >/dev/null 2>&1 && eval "$(pipenv --completion)"

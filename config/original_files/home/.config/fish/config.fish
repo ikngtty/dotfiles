@@ -56,6 +56,11 @@ if status --is-interactive
   which direnv > /dev/null ^ /dev/null; and eval (direnv hook fish)
 end
 
+# Completions
+if status --is-interactive
+  which pipenv > /dev/null ^ /dev/null; and eval (pipenv --completion)
+end
+
 # Abbreviations
 if status --is-interactive
   set -g fish_user_abbreviations
