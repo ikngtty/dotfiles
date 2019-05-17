@@ -68,6 +68,7 @@ if status --is-interactive
   abbr --add d docker
   abbr --add dc docker-compose
   abbr --add g git
+  abbr --add pe pipenv
   abbr --add r rails
   abbr --add relogin exec $SHELL -l
   abbr --add rl rlwrap
