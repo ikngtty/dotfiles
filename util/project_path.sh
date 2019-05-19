@@ -1,5 +1,8 @@
 #!/bin/sh
-set -Ceu -o pipefail
+set -Ceu
+if set -o | grep pipefail >/dev/null 2>&1; then
+  set -o pipefail
+fi
 
 # Get absolute paths.
 # NOTE: Should do before changing the working directory because

@@ -1,5 +1,11 @@
 #!/bin/sh
-set -Ceu -o pipefail
+set -Ceu
+if set -o | grep pipefail >/dev/null 2>&1; then
+  set -o pipefail
+else
+  printf "$(echo '<red>WARNING: Cannot use pipefail option.</red>' |
+    sed -e 's/<red>/\\e\[31m/g' -e 's/<\/red>/\\e\[m/g')\r\n"
+fi
 
 # Check Requirements.
 if ! which npm >/dev/null 2>&1; then
