@@ -59,7 +59,7 @@ main() {
     err_msg 'Command is required.'
     echo
     usage
-    exit "$(status_code invalid_argument)"
+    return "$(status_code invalid_argument)"
   fi
 
   case "$1" in
@@ -86,14 +86,14 @@ main() {
       err_msg "Invalid option \"$1\"."
       echo
       usage
-      exit "$(status_code invalid_argument)"
+      return "$(status_code invalid_argument)"
       ;;
 
     *)
       err_msg "Invalid command \"$1\"."
       echo
       usage
-      exit "$(status_code invalid_argument)"
+      return "$(status_code invalid_argument)"
       ;;
   esac
 }
@@ -128,7 +128,7 @@ check() {
     case "$1" in
       -h|--help)
         usage_for_check
-        exit
+        return
         ;;
       -b|--bodyonly)
         bodyonly=1
@@ -139,7 +139,7 @@ check() {
           err_msg '"-q" and "--query" should be specified with a keyword.'
           echo
           usage_for_check
-          exit "$(status_code invalid_argument)"
+          return "$(status_code invalid_argument)"
         fi
         check_pattern="$1"
         ;;
@@ -147,13 +147,13 @@ check() {
         err_msg "Invalid option \"$1\"."
         echo
         usage_for_check
-        exit "$(status_code invalid_argument)"
+        return "$(status_code invalid_argument)"
         ;;
       *)
         err_msg "Invalid argument \"$1\"."
         echo
         usage_for_check
-        exit "$(status_code invalid_argument)"
+        return "$(status_code invalid_argument)"
         ;;
     esac
     shift
@@ -223,7 +223,7 @@ deploy() {
     case "$1" in
       -h|--help)
         usage_for_deploy
-        exit
+        return
         ;;
       -q|--query)
         shift
@@ -231,7 +231,7 @@ deploy() {
           err_msg '"-q" and "--query" should be specified with a keyword.'
           echo
           usage_for_deploy
-          exit "$(status_code invalid_argument)"
+          return "$(status_code invalid_argument)"
         fi
         pattern_deploy="$1"
         ;;
@@ -239,13 +239,13 @@ deploy() {
         err_msg "Invalid option \"$1\"."
         echo
         usage_for_deploy
-        exit "$(status_code invalid_argument)"
+        return "$(status_code invalid_argument)"
         ;;
       *)
         err_msg "Invalid argument \"$1\"."
         echo
         usage_for_deploy
-        exit "$(status_code invalid_argument)"
+        return "$(status_code invalid_argument)"
         ;;
     esac
     shift
@@ -277,7 +277,7 @@ deploy() {
 help() {
   if [ $# -eq 0 ]; then
     usage
-    exit
+    return
   fi
 
   case "$1" in
@@ -294,13 +294,13 @@ help() {
       err_msg "Invalid option \"$1\"."
       echo
       usage
-      exit "$(status_code invalid_argument)"
+      return "$(status_code invalid_argument)"
       ;;
     *)
       err_msg "Invalid command \"$1\"."
       echo
       commands
-      exit "$(status_code invalid_argument)"
+      return "$(status_code invalid_argument)"
       ;;
   esac
 }
