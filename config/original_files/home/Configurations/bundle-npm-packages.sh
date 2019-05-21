@@ -49,6 +49,7 @@ npm_i elm-live
 npm_i node-giff
 npm_i spaceship-prompt
 npm_i standard
+npm_i wtfjs
 npm_i yarn
 ## For <https://www.npmjs.com/package/eslint-config-prettier-standard>.
 npm_i eslint
