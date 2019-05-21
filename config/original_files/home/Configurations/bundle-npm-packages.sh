@@ -54,14 +54,14 @@ npm_i yarn
 ## For <https://www.npmjs.com/package/eslint-config-prettier-standard>.
 npm_i eslint
 npm_i eslint-config-prettier
-npm_i eslint-config-prettier-standard
-npm_i eslint-config-standard
 npm_i eslint-plugin-import
 npm_i eslint-plugin-node
-npm_i eslint-plugin-prettier
 npm_i eslint-plugin-promise
 npm_i eslint-plugin-standard
+npm_i eslint-config-standard
 npm_i prettier
+npm_i eslint-plugin-prettier
+npm_i eslint-config-prettier-standard
 
 printf "\e[32m"     # Green
 printf "Done!"
