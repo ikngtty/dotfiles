@@ -29,7 +29,10 @@ npm update -g
 # TODO: Use yarn.
 npm_i() {
   pkg="$1"
-  if npm ls -g "$pkg" >/dev/null 2>&1; then
+  # NOTE: To check whether the package is installed or not, `npm ls -g "$pkg"`
+  # has trouble because it raises an error when the package is installed but
+  # contains an "UNMET PEER DEPENDENCY" error.
+  if npm explore -g "$pkg" >/dev/null 2>&1; then
     printf "\e[36m"                 # Magenta
     printf "[bundle log] "
     printf "\e[1m$pkg\e[m\e[36m"    # Bold and reset
