@@ -60,6 +60,7 @@ get_with_info golang.org/x/tools/cmd/godoc
 
 ## Others.
 get_with_info bitbucket.org/liamstask/goose/cmd/goose
+get_with_info github.com/BurntSushi/toml/cmd/tomlv
 get_with_info golang.org/x/tools/cmd/stringer
 
 printf "\e[32m"     # Green
