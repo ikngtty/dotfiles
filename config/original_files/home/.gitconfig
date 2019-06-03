@@ -19,6 +19,7 @@
 	br = branch
 	cm = commit
 	cma = commit --amend
+	cmf = commit --fixup
 	co = checkout
 	cp = cherry-pick
 	cpa = cherry-pick --abort
