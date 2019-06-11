@@ -33,3 +33,6 @@ autoload -Uz compinit && compinit
 cowfile=`ls /usr/local/Cellar/cowsay/3.04/share/cows | grep '\.cow$' | shuf -n1 | sed 's/\.cow$//'`
 fortune | cowsay -f $cowfile
 echo $cowfile
+
+# added by travis gem
+[ -f /Users/ikngtty/.travis/travis.sh ] && source /Users/ikngtty/.travis/travis.sh

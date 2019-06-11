@@ -24,3 +24,6 @@ alias v='vagrant'
 
 # Greeting
 echo "This is Bash."
+
+# added by travis gem
+[ -f /Users/ikngtty/.travis/travis.sh ] && source /Users/ikngtty/.travis/travis.sh
