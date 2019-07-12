@@ -22,6 +22,9 @@ alias relogin='exec $SHELL -l'
 alias rl='rlwrap'
 alias v='vagrant'
 
+# Completion
+which pipenv >/dev/null 2>&1 && eval "$(pipenv --completion)"
+
 # Greeting
 echo "This is Bash."
 

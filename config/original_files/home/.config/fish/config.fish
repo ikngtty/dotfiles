@@ -1,30 +1,34 @@
-function warn_if_universal_var \
-  -d "Call before adding values to the specified variable in `config.fish`."
+# Functions
+if status --is-interactive
+  function warn_if_universal_var \
+    -d "Call before adding values to the specified variable in `config.fish`."
 
-  if set -qU $argv
-    set_color red
-    echo "WARNING: $argv has universal values."
-    echo "This may cause the values to increase whenever fish starts."
-    set -S $argv
-    set_color normal
+    if set -qU $argv
+      set_color red
+      echo "WARNING: $argv has universal values."
+      echo "This may cause the values to increase whenever fish starts."
+      set -S $argv
+      set_color normal
+    end
   end
 end
 
 # Set paths
-set -gx GOPATH ~/Projects/workspace/go
-## PATH
-warn_if_universal_var fish_user_paths
-set fish_user_paths /usr/local/sbin $fish_user_paths
-set fish_user_paths ~/.local/bin $fish_user_paths
-set fish_user_paths $GOPATH/bin $fish_user_paths
-if which go > /dev/null ^ /dev/null
-  set fish_user_paths (go env GOROOT)/bin $fish_user_paths
-end
-set fish_user_paths ~/.nodebrew/current/bin $fish_user_paths
-set fish_user_paths /Applications/Racket\ v7.1/bin $fish_user_paths
-set fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
-## MANPATH
-if status --is-interactive
+if status --is-login
+  set -gx GOPATH ~/Projects/workspace/go
+  # PATH
+  warn_if_universal_var fish_user_paths
+  set fish_user_paths /usr/local/sbin $fish_user_paths
+  set fish_user_paths ~/.local/bin $fish_user_paths
+  set fish_user_paths $GOPATH/bin $fish_user_paths
+  if which go > /dev/null ^ /dev/null
+    set fish_user_paths (go env GOROOT)/bin $fish_user_paths
+  end
+  set fish_user_paths ~/.nodebrew/current/bin $fish_user_paths
+  set fish_user_paths /Applications/Racket\ v7.1/bin $fish_user_paths
+  set fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
+
+  # MANPATH
   warn_if_universal_var MANPATH
   if test (count $MANPATH) -eq 0
     # NOTE: To search default paths for `manpath` command,
@@ -36,21 +40,23 @@ if status --is-interactive
 end
 
 # Set other environment values
-## Limit GHC's heap size somehow.
-## haskell-stack cannot run because 1GB heap size is lack.
-# set -gx GHCRTS -M1G
-## stylish-haskell (and perhaps other tools) cannot run because of
-## some GHCRTS value.
-## It is likely to work if it is built with "-rtsopts" ghc-options,
-## but Stack's "--ghc-options" option seems not to work.
-# set -gx GHCRTS -M2G
+if status --is-login
+  # Limit GHC's heap size somehow.
+  # # NOTE: haskell-stack cannot run because 1GB heap size is lack.
+  # set -gx GHCRTS -M1G
+  # # NOTE: stylish-haskell (and perhaps other tools) cannot run because of
+  # # some GHCRTS value.
+  # # It is likely to work if it is built with "-rtsopts" ghc-options,
+  # # but Stack's "--ghc-options" option seems not to work.
+  # set -gx GHCRTS -M2G
 
-## Pipenv
-set -gx PIPENV_VENV_IN_PROJECT 1
-set -gx EDITOR atom
+  # Pipenv
+  set -gx PIPENV_VENV_IN_PROJECT 1
+  set -gx EDITOR atom
+end
 
 # Init
-if status --is-interactive
+if status --is-login
   which rbenv > /dev/null ^ /dev/null; and rbenv init - | source
   which pyenv > /dev/null ^ /dev/null; and pyenv init - | source
   which direnv > /dev/null ^ /dev/null; and eval (direnv hook fish)
@@ -85,13 +91,15 @@ if status --is-interactive
 end
 
 # Fisherman
-set -g fisher_path ~/.config/fisher_conf
+if status --is-interactive
+  set -g fisher_path ~/.config/fisher_conf
 
-set fish_function_path $fish_function_path[1] $fisher_path/functions $fish_function_path[2..-1]
-set fish_complete_path $fish_complete_path[1] $fisher_path/completions $fish_complete_path[2..-1]
+  set fish_function_path $fish_function_path[1] $fisher_path/functions $fish_function_path[2..-1]
+  set fish_complete_path $fish_complete_path[1] $fisher_path/completions $fish_complete_path[2..-1]
 
-for file in $fisher_path/conf.d/*.fish
-    builtin source $file ^ /dev/null
+  for file in $fisher_path/conf.d/*.fish
+      builtin source $file ^ /dev/null
+  end
 end
 
 # bobthefish
