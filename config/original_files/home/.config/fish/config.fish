@@ -11,6 +11,10 @@ if status --is-interactive
       set_color normal
     end
   end
+
+  function cd -d "Do `cd` and `ls -a`."
+    builtin cd $argv; and ls -a
+  end
 end
 
 # Set paths
