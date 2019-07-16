@@ -192,3 +192,14 @@ TODO: Make it scripts.
 1.  Set up a Python environment (by using `pyenv`).
 2.  `pip install --upgrade pip`
 3.  Move to `~/Configurations/pip` (after deploying), and `pip install -r requirements.txt`
+
+### Haskell
+0.  To reset, delete `~/.stack` directory.
+1.  *   To install GHC for a project, move to the project directory, which
+        contains `stack.yaml` file, and `stack setup`.
+    *   To install the latest GHC without considering any certain project,
+        `stack setup` at any directory which does not contain `stack.yaml`.
+    *   TODO: To update GHC. (Edit `resolver` in `stack.yaml` in the project
+        directory or `~/.stack/global-project`, and `stack setup` again?)
+2.  Replace `~/.stack/config.yaml` by that of dotfiles with my `deploy` command.
+3.  `~/Configurations/bundle-haskell-stack-packages.sh`
