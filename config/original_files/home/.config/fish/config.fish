@@ -32,6 +32,18 @@ if status --is-login
   set fish_user_paths /Applications/Racket\ v7.1/bin $fish_user_paths
   set fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
 
+  # sqlite is keg-only, which means it was not symlinked into /usr/local,
+  # because macOS provides an older sqlite3.
+  #
+  # If you need to have sqlite first in your PATH run:
+  set fish_user_paths /usr/local/opt/sqlite/bin $fish_user_paths
+
+  # For compilers to find sqlite you may need to set:
+  #   set -gx LDFLAGS "-L/usr/local/opt/sqlite/lib"
+  #   set -gx CPPFLAGS "-I/usr/local/opt/sqlite/include"
+  # For pkg-config to find sqlite you may need to set:
+  #   set -gx PKG_CONFIG_PATH "/usr/local/opt/sqlite/lib/pkgconfig"
+
   # MANPATH
   warn_if_universal_var MANPATH
   if test (count $MANPATH) -eq 0
