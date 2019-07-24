@@ -1,5 +1,5 @@
 *~
 .DS_Store
 
-# Pipenv creates this directory in project directories.
-.venv/
+.venv/  # Pipenv
+.elixir_ls/
