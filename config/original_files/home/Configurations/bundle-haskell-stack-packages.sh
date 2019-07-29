@@ -44,11 +44,10 @@ stack_install() {
   printf "\e[m\n"                 # Reset
   stack install "$pkg" $options
 }
-stack_install hlint
-stack_install stylish-haskell
-
-# TODO: Introduce haskell-ide-engine after bugs about memory consumption for mac
-# is solved.
+# # Alternative to haskell-ide-engine, especially for an old GHC.
+# # TODO: Understand whether and how `stack install` works for multiple GHC versions. 
+# stack_install hlint
+# stack_install stylish-haskell
 
 printf "\e[32m"     # Green
 printf "Done!"

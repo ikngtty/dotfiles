@@ -203,3 +203,7 @@ TODO: Make it scripts.
         directory or `~/.stack/global-project`, and `stack setup` again?)
 2.  Replace `~/.stack/config.yaml` by that of dotfiles with my `deploy` command.
 3.  `~/Configurations/bundle-haskell-stack-packages.sh`
+
+#### haskell-ide-engine
+See [docs](https://github.com/haskell/haskell-ide-engine).
+TODO: Make it scripts.
