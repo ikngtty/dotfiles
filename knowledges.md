@@ -47,11 +47,11 @@ Use `pipenv`.
 TODO: Research the best way to build.
 
 ### Haskell
-Use haskell-stack and haskell-ide-engine.
+Use haskell-stack.
+If using ghc-8 or more than it, use Atom with haskell-ide-engine.
+If using ghc-7 or less than it, use VSCode with intero (through Haskero).
 
 NOTE: I'm not tried to use hie for multiple GHC versions.
-
-TODO: Install IDE for GHC less than version 8. ghc-mod? Intero with VSCode?
 
 ### Scheme
 Use `Dr.Racket`?

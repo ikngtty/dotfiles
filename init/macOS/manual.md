@@ -210,5 +210,11 @@ TODO: Make it scripts.
 3.  `~/Configurations/bundle-haskell-stack-packages.sh`
 
 #### haskell-ide-engine
+Build for each GHC version.
 See [docs](https://github.com/haskell/haskell-ide-engine).
+TODO: Make it scripts.
+
+#### intero
+Build for each GHC version.
+See [docs](https://github.com/chrisdone/intero/blob/master/TOOLING.md).
 TODO: Make it scripts.
