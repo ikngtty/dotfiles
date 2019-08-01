@@ -13,7 +13,6 @@
 *   Slack.app
 *   TweetDeck.app
 *   (comment out) Unity
-*   (comment out) Visual Studio Code.app
 
 ### jar
 *   (comment out) Automaton Simulator
