@@ -33,6 +33,8 @@ printf "\e[m\n"                 # Reset
 stack update
 
 # Install packages.
+# NOTE: `stack install` overrides a package's binary.
+# It should run with the latest GHC.
 stack_install() {
   pkg="$1"
   shift
@@ -44,9 +46,13 @@ stack_install() {
   printf "\e[m\n"                 # Reset
   stack install "$pkg" $options
 }
-# NOTE: `stack install` overrides a package's binary.
-# It should run with the latest GHC.
-stack_install stylish-haskell # For VSCode with Intero
+## IDE
+### Main set, for Atom
+# stack_install haskell-ide-engine # special way, so install manually
+
+### Sub set, for VSCode
+# stack_install intero # special way, so install manually
+stack_install stylish-haskell
 
 printf "\e[32m"     # Green
 printf "Done!"
