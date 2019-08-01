@@ -44,10 +44,9 @@ stack_install() {
   printf "\e[m\n"                 # Reset
   stack install "$pkg" $options
 }
-# # Alternative to haskell-ide-engine, especially for an old GHC.
-# # TODO: Understand whether and how `stack install` works for multiple GHC versions. 
-# stack_install hlint
-# stack_install stylish-haskell
+# NOTE: `stack install` overrides a package's binary.
+# It should run with the latest GHC.
+stack_install stylish-haskell # For VSCode with Intero
 
 printf "\e[32m"     # Green
 printf "Done!"
