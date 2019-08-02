@@ -53,6 +53,7 @@ stack_install() {
 ### Sub set, for VSCode
 # stack_install intero # special way, so install manually
 stack_install stylish-haskell
+stack_install hindent
 
 printf "\e[32m"     # Green
 printf "Done!"
