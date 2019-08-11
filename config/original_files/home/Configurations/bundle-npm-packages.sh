@@ -47,6 +47,7 @@ npm_i() {
     npm i -g "$pkg"
   fi
 }
+npm_i elm-analyse
 npm_i elm-format
 npm_i elm-live
 npm_i node-giff
