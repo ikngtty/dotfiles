@@ -6,13 +6,19 @@
 *   Google Drive.app
 *   (comment out) IntelliJ IDEA CE.app
 *   Karabiner
-*   Kindle.app
-*   LINE.app
 *   (comment out) PyCharm CE.app
 *   (comment out) Racket v7.1
-*   Slack.app
-*   TweetDeck.app
 *   (comment out) Unity
+
+## Through App Store.
+*   Alfred
+*   CotEditor
+*   Kindle
+*   Line
+*   Microsoft Office 365 (A bundle for Word, Excel, PowerPoint and Outlook)
+*   Slack
+*   TweetDeck
+*   Xcode
 
 ### jar
 *   (comment out) Automaton Simulator
