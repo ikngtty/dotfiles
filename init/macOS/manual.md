@@ -13,6 +13,7 @@
 ## Through App Store.
 *   Alfred
 *   CotEditor
+*   GIPHY Capture
 *   Kindle
 *   Line
 *   Microsoft Office 365 (A bundle for Word, Excel, PowerPoint and Outlook)
