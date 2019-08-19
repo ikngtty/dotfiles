@@ -4,7 +4,9 @@ if set -o | grep pipefail >/dev/null 2>&1; then
   set -o pipefail
 else
   printf "$(echo '<red>WARNING: Cannot use pipefail option.</red>' |
-    sed -e 's/<red>/\\e\[31m/g' -e 's/<\/red>/\\e\[m/g')\r\n"
+    sed -e 's/<red>/\\e\[31m/g' -e 's/<\/red>/\\e\[m/g'
+    )"
+  printf "\r\n"
 fi
 
 # Get util directory's absolute path.
