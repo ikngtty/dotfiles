@@ -56,3 +56,9 @@ NOTE: I'm not tried to use hie for multiple GHC versions.
 ### Scheme
 Use `Dr.Racket`?
 TODO:
+
+### Elixir
+Use `Mix`.
+Without `Mix` (using `elixir` command for a `.exs` file or `elixirc` for `.ex`),
+`ide-elixir`, an Atom package, cannot lint. It uses elixir's compiler and
+Dialiyzer to lint, but both don't run.
