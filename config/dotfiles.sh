@@ -56,6 +56,7 @@ Commands:
   check       Check whether each dotfile is deployed or not.
               $(print_with_color yellow "WARNING: Directories where dotfiles are deployed will be created.")
   deploy      Deploy dotfiles.
+  undeploy    Undeploy dotfiles.
   help        "help" shows this usage.
               "help <command>" shows an usage for the specified command.
 
@@ -79,6 +80,11 @@ main() {
     deploy)
       shift
       deploy "$@"
+      ;;
+
+    undeploy)
+      shift
+      undeploy "$@"
       ;;
 
     help)
@@ -281,6 +287,80 @@ deploy() {
     done
 }
 
+usage_for_undeploy() {
+  cat <<EOS
+Usage: dotfiles.sh undeploy [-h] [-q <keyword>]
+
+Undeploy dotfiles.
+
+options:
+  -h, --help      Show this usage.
+  -q, --query     Undeploy dotfiles related to specified keyword.
+                  $(print_with_color magenta "NOTE:") The searching is partial match for status lines,
+                  which can be shown by "check" command.
+                  If it is not specified, undeploy all dotfiles.
+
+EOS
+}
+
+undeploy() {
+  # Check arguments.
+  pattern_undeploy=""
+  while [ $# -gt 0 ]; do
+    case "$1" in
+      -h|--help)
+        usage_for_undeploy
+        return
+        ;;
+      -q|--query)
+        shift
+        if [ $# -eq 0 ]; then
+          err_msg '"-q" and "--query" should be specified with a keyword.'
+          echo
+          usage_for_undeploy
+          return "$(status_code invalid_argument)"
+        fi
+        pattern_undeploy="$1"
+        ;;
+      -*)
+        err_msg "Invalid option \"$1\"."
+        echo
+        usage_for_undeploy
+        return "$(status_code invalid_argument)"
+        ;;
+      *)
+        err_msg "Invalid argument \"$1\"."
+        echo
+        usage_for_undeploy
+        return "$(status_code invalid_argument)"
+        ;;
+    esac
+    shift
+  done
+
+  # Undeploy.
+  check -b -q "$pattern_undeploy" |
+    while IFS="$(printf "\t")" read deploy_from deploy_to deploy_status
+    do
+      file_name=$(basename "$deploy_from")
+      case "$deploy_status" in
+        "$deploy_status_undeployed")
+          echo_with_color yellow "WARNING: Skipping <b>$file_name</b>"\
+            ' because it is not deployed.'
+          ;;
+        "$deploy_status_conflict")
+          echo_with_color yellow "WARNING: Skipping <b>$file_name</b>"\
+            ' because it is conflicted.'
+          ;;
+        "$deploy_status_deployed")
+          print_with_color green "Undeploying <b>$file_name</b> ..."
+          rm -f "$deploy_to"
+          echo_with_color green ' Done!'
+          ;;
+      esac
+    done
+}
+
 help() {
   if [ $# -eq 0 ]; then
     usage
@@ -293,6 +373,9 @@ help() {
       ;;
     deploy)
       usage_for_deploy
+      ;;
+    undeploy)
+      usage_for_undeploy
       ;;
     help)
       usage
