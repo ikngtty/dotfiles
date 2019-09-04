@@ -123,7 +123,6 @@ options:
 EOS
 }
 
-# Commands.
 check() {
   # Import paths.
   dir_origin_home="$(project_path dir origin_home)"
