@@ -1,7 +1,7 @@
 # PATH
 PATH="usr/local/sbin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
-GOPATH="$HOME/Projects/workspace/go"
+GOPATH="$HOME/Projects"
 export GOPATH
 PATH="$GOPATH/bin:$PATH"
 if which go >/dev/null 2>&1;then

@@ -19,7 +19,7 @@ end
 
 # Set paths
 if status --is-login
-  set -gx GOPATH ~/Projects/workspace/go
+  set -gx GOPATH ~/Projects
   # PATH
   warn_if_universal_var fish_user_paths
   set fish_user_paths /usr/local/sbin $fish_user_paths
