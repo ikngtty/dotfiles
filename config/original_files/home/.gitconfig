@@ -1,6 +1,6 @@
 [core]
 	editor = atom --wait
-	excludesfile = /Users/ikngtty/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
@@ -13,7 +13,7 @@
 	name = ikngtty
 	email = ikngtty@gmail.com
 [commit]
-	template = /Users/ikngtty/.stCommitMsg
+	template = ~/.stCommitMsg
 [alias]
 	b = browse
 	br = branch
