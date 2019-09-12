@@ -24,6 +24,9 @@ echo_with_color() {
 err_msg() {
   "$util/err_msg.sh" "$@"
 }
+file_exist() {
+  "$util/file_exist.sh" "$@"
+}
 print_with_color() {
   "$util/print_with_color.sh" "$@"
 }
@@ -201,7 +204,7 @@ check() {
 
       # Check a deployment status.
       deploy_status="$deploy_status_conflict"
-      if [ ! -e "$file_deploy" ]; then
+      if ! file_exist "$file_deploy"; then
         deploy_status="$deploy_status_undeployed"
       elif [ "$(readlink "$file_deploy")" = "$file_origin" ]; then
         deploy_status="$deploy_status_deployed"
