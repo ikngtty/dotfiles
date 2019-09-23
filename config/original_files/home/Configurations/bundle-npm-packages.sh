@@ -53,6 +53,7 @@ npm_i elm-analyse
 npm_i elm-format
 npm_i elm-live
 npm_i node-giff
+npm_i rebase-editor
 npm_i spaceship-prompt
 npm_i standard
 npm_i wtfjs

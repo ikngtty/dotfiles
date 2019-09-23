@@ -59,6 +59,8 @@
 	rebase = true
 [rebase]
 	autosquash = true
+[sequence]
+	editor = rebase-editor
 [url "git@github.com:"]
   insteadOf = https://github.com/
 [user]
