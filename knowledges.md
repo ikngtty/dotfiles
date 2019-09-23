@@ -19,6 +19,32 @@
 ### Ruby
 Use `rbenv`.
 
+#### Init a new project
+Follow these steps:
+
+*   `bundle init` and set up `Gemfile`. These gems may be useful:
+    *   `rubocop`
+    *   `rubocop-performance`
+    *   `rubocop-rails`
+    *   `rubocop-require_tools` (`rubocop/require_tools` for `require`)
+    *   `rubocop-rspec`
+    *   `rubocop-thread_safety`
+*   `bundle install --path=vendor/bundle`
+    *   `.bundle/config` is created, so from the next time
+        `--path=vendor/bundle` can be omitted.
+*   Create `.rubocop.yml` and set up `require`, where rubocop's plugins should
+    be declared.
+
+After `.rubocop.yml` is created, Atom's `linter-rubocop` package does
+`bundle exec rubocop` automatically when a ruby file is opened.
+If it is done before `bundle install --path=vendor/bundle`,
+it may cause some troubles (though it does not do `bundle install`).
+e.g. New `Gemfile.lock` is created unexpectedly.
+
+#### Formatting
+Run Atom's `Linter Rubocop: Fix File` manually.
+(`rubocop-auto-correct` is unhandy because of its slowness.)
+
 ### Common Lisp
 Execute in Atom's `slime` or use `sbcl` or `clisp`.
 TODO: Detailed way to call our programs.
