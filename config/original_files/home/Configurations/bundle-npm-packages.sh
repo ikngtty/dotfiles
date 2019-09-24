@@ -20,6 +20,12 @@ if ! which npm >/dev/null 2>&1; then
   exit 10
 fi
 
+# Update npm.
+printf "\e[32m"                 # Green
+printf "[bundle log] Updating npm."
+printf "\e[m\n"                 # Reset
+npm update -g npm
+
 # Update installed packages.
 printf "\e[32m"                 # Green
 printf "[bundle log] Updating installed packages."
