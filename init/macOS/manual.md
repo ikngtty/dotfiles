@@ -110,6 +110,13 @@ Use `fish_config` command.
 ### Google IME
 TODO:
 
+### Insomnia
+*   Interface Font Size - 16px
+*   Text Editor Font - Ricty Diminished
+*   Editor Font Size - 18px
+
+TODO: Make it scripts.
+
 ### iTerm2
 Download `Japanesque.itermcolors` from [GitHub](https://github.com/mbadolato/iTerm2-Color-Schemes),
 and choose the theme.
