@@ -49,7 +49,7 @@ TODO: Make it scripts.
 *   General
     *   Make Vivaldi the default browser.
 *   Security and Privacy
-    *   The time require the password is right after sleeping and saving the scrreen.
+    *   The time require the password is right after sleeping and saving the screen.
 *   Keyboard
     *   Keyboard
         *   Make function keys default.
