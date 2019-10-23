@@ -16,6 +16,8 @@
 	mga = merge --abort
 	mgc = merge --continue
 	mgnc = merge --no-commit
+	pl = pull
+	ps = push
 	psf = push --force-with-lease
 	rb = rebase
 	rba = rebase --abort
