@@ -21,49 +21,61 @@ if ! which go >/dev/null 2>&1; then
 fi
 
 get_with_info() {
-  module_mode=$1
+  mode=$1
   package_url=$2
   package_name=$(basename "$package_url")
   printf "\e[36m"         # Magenta
   printf "Get $package_name..."
   printf "\e[m\n"         # Reset
-  GO111MODULE="$module_mode" go get -u "$package_url"
+  case "$mode" in
+    module )
+      GO111MODULE=on go get -u "$package_url"
+      ;;
+    gopath )
+      GO111MODULE=off go get -u "$package_url"
+      ;;
+    * )
+      printf "\e[31m"   # Red
+      printf "Mode \"$mode\" is unexpected. Please fix the script!"
+      printf "\e[m\n"   # Reset
+      exit 20
+  esac
 }
 
 # Install.
 ## For Atom's go-plus package.
-get_with_info on github.com/fatih/gomodifytags
-get_with_info on github.com/mdempsky/gocode
-get_with_info on github.com/ramya-rao-a/go-outline
-get_with_info on github.com/tpng/gopkgs
-get_with_info on github.com/zmb3/goaddimport
-get_with_info on github.com/zmb3/gogetdoc
-get_with_info on golang.org/x/tools/cmd/gorename
-get_with_info on golang.org/x/tools/cmd/guru
+get_with_info module github.com/fatih/gomodifytags
+get_with_info module github.com/mdempsky/gocode
+get_with_info module github.com/ramya-rao-a/go-outline
+get_with_info module github.com/tpng/gopkgs
+get_with_info module github.com/zmb3/goaddimport
+get_with_info module github.com/zmb3/gogetdoc
+get_with_info module golang.org/x/tools/cmd/gorename
+get_with_info module golang.org/x/tools/cmd/guru
 ### Formatters. (Choose one.)
-get_with_info on golang.org/x/tools/cmd/goimports
-get_with_info on github.com/sqs/goreturns
+get_with_info module golang.org/x/tools/cmd/goimports
+get_with_info module github.com/sqs/goreturns
 ### Linters. (Choose one.)
-get_with_info off github.com/alecthomas/gometalinter # on -> mysterious error
-get_with_info on github.com/golangci/golangci-lint/cmd/golangci-lint
-get_with_info on github.com/mgechev/revive
+get_with_info gopath github.com/alecthomas/gometalinter # module -> mysterious error
+get_with_info module github.com/golangci/golangci-lint/cmd/golangci-lint
+get_with_info module github.com/mgechev/revive
 ## Navigators. (Choose one.)
-get_with_info on github.com/rogpeppe/godef
+get_with_info module github.com/rogpeppe/godef
 
 ## For Atom's go-debug package.
-get_with_info off github.com/derekparker/delve/cmd/dlv # on -> mysterious error
+get_with_info gopath github.com/derekparker/delve/cmd/dlv # module -> mysterious error
 
 ## Gore (REPL).
-get_with_info on github.com/motemen/gore/cmd/gore
+get_with_info module github.com/motemen/gore/cmd/gore
 ### Additional features.
 # get_with_info github.com/mdempsky/gocode
-get_with_info on github.com/k0kubun/pp
-get_with_info on golang.org/x/tools/cmd/godoc
+get_with_info module github.com/k0kubun/pp
+get_with_info module golang.org/x/tools/cmd/godoc
 
 ## Others.
-get_with_info on bitbucket.org/liamstask/goose/cmd/goose
-get_with_info on github.com/BurntSushi/toml/cmd/tomlv
-get_with_info on golang.org/x/tools/cmd/stringer
+get_with_info module bitbucket.org/liamstask/goose/cmd/goose
+get_with_info module github.com/BurntSushi/toml/cmd/tomlv
+get_with_info module golang.org/x/tools/cmd/stringer
 
 printf "\e[32m"     # Green
 printf "Done!"
