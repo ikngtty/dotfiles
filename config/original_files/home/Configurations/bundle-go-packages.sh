@@ -29,10 +29,14 @@ get_with_info() {
   printf "\e[m\n"         # Reset
   case "$mode" in
     module )
-      GO111MODULE=on go get -u "$package_url"
+      GO111MODULE=on \
+        go get -u "$package_url"
       ;;
     gopath )
-      GO111MODULE=off go get -u "$package_url"
+      GO111MODULE=off \
+        GOPATH="$HOME/Projects/gopath-get" \
+        GOBIN="$HOME/Projects/bin" \
+        go get -u "$package_url"
       ;;
     * )
       printf "\e[31m"   # Red
