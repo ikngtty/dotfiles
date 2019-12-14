@@ -39,7 +39,7 @@
 [commit]
 	template = ~/.stCommitMsg
 [core]
-	editor = atom --wait
+	editor = cot --wait
 	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
