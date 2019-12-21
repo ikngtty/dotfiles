@@ -13,6 +13,8 @@ PS1='$(st=$?
 # Alias
 alias relogin='exec $SHELL -l'
 alias b='bundle'
+alias be='bundle exec'
+alias ber='bundle exec rails'
 alias d='docker'
 alias dc='docker-compose'
 alias g='git'

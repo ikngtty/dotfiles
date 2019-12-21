@@ -87,6 +87,8 @@ end
 if status --is-interactive
   set -g fish_user_abbreviations
   abbr --add b bundle
+  abbr --add be bundle exec
+  abbr --add ber bundle exec rails
   abbr --add d docker
   abbr --add dc docker-compose
   abbr --add g git
