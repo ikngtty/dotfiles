@@ -8,6 +8,7 @@
 *   Karabiner
 *   (comment out) PyCharm CE.app
 *   (comment out) Racket v7.1
+*   [Stack](https://getstack.app/)
 *   (comment out) Unity
 
 ## Through App Store.
@@ -144,18 +145,6 @@ TODO: Try to make it scripts.
 
 ### Notation
 Set bigger textsize as default.
-
-### Station
-*   Gmail
-*   Outlook Pro
-*   Microsoft Teams
-*   Slack
-*   Twitter
-*   TweetDeck
-*   Discord
-*   Office365
-
-TODO: Try to fetch settings.
 
 ### Virtual Box
 Change the default VM folder path.
