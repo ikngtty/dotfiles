@@ -57,6 +57,11 @@ TODO: Make it scripts.
     *   User Dictionary
         *   Disable auto-correcting spell.
         *   Disable inputting period by pushing space key twice.
+    *   Shortcut
+        *   Application
+            *   Add these shortcuts.
+                *   All applications - ペーストしてスタイルを合わせる - ⌘V
+                *   All applications - 貼り付けてスタイルに合わせる - ⌘V
 *   Dock
     *   Change position to left.
     *   Turn on to show/hide automatically.
