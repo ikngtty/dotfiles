@@ -62,6 +62,9 @@ TODO: Make it scripts.
             *   Add these shortcuts.
                 *   All applications - ペーストしてスタイルを合わせる - ⌘V
                 *   All applications - 貼り付けてスタイルに合わせる - ⌘V
+    *   Input Source
+        *   Input Mode
+            *   Enable all options.
 *   Dock
     *   Change position to left.
     *   Turn on to show/hide automatically.
