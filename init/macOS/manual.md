@@ -198,9 +198,6 @@ We had better to install locally per project with
 `bundle install --path=vendor/bundle` as much as we can,
 because we can use `bundle clean` with project's bundle file.
 
-TODO: Install `rbenv-binstubs` and use `bundle install`
-with `--binstubs=bundle_bin`.
-
 TODO: Make it scripts.
 
 ### Python
