@@ -66,7 +66,7 @@ get_with_info module github.com/mgechev/revive
 get_with_info module github.com/rogpeppe/godef
 
 ## For Atom's go-debug package.
-get_with_info gopath github.com/derekparker/delve/cmd/dlv # module -> mysterious error
+get_with_info module github.com/go-delve/delve/cmd/dlv
 
 ## Gore (REPL).
 get_with_info module github.com/motemen/gore/cmd/gore
