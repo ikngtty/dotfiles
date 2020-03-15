@@ -1,5 +1,27 @@
 # Knowledges
 ## My way to development
+### Common Lisp
+Execute in Atom's `slime` or use `sbcl` or `clisp`.
+TODO: Detailed way to call our programs.
+
+### Elixir
+Use `Mix`.
+Without `Mix` (using `elixir` command for a `.exs` file or `elixirc` for `.ex`),
+`ide-elixir`, an Atom package, cannot lint. It uses elixir's compiler and
+Dialiyzer to lint, but both don't run.
+
+### Golang
+Use VSCode.
+Atom's `go-plus` package is almost not maintained, and other tools are not
+so good. (I want `gopls` to be stable.)
+
+### Haskell
+Use haskell-stack.
+If using ghc-8 or more than it, use Atom with haskell-ide-engine.
+If using ghc-7 or less than it, use VSCode with intero (through Haskero).
+
+NOTE: I'm not tried to use hie for multiple GHC versions.
+
 ### JavaScript (Node.js)
 *   Linter and Formatter
     *   Project-local
@@ -15,6 +37,19 @@
             `.eslintrc` file should be deployed to home directory and
             necessary ESLint modules should be installed globally
             by `bundle-npm-packages.sh`.
+
+### OCaml
+*   Install and manage packages.
+    *   Use `OPAM`.
+*   Execute
+    *   Call by `#use "filename.ml"` in `utop`.
+*   Quit `utop`
+    *   `exit 0;;`
+
+TODO: Research the best way to build.
+
+### Python
+Use `pipenv`.
 
 ### Ruby
 Use `rbenv`.
@@ -45,13 +80,6 @@ e.g. New `Gemfile.lock` is created unexpectedly.
 Run Atom's `Linter Rubocop: Fix File` manually.
 (`rubocop-auto-correct` is unhandy because of its slowness.)
 
-### Common Lisp
-Execute in Atom's `slime` or use `sbcl` or `clisp`.
-TODO: Detailed way to call our programs.
-
-### Python
-Use `pipenv`.
-
 ### Scala
 *   Create a new project.
     1.  `sbt new scala/scala-seed.g8` -> Enter project's name.
@@ -62,34 +90,6 @@ Use `pipenv`.
     1.  In Atom, do `Ensime: Start`.
     2.  Execute the program with `sbt run`.
 
-### OCaml
-*   Install and manage packages.
-    *   Use `OPAM`.
-*   Execute
-    *   Call by `#use "filename.ml"` in `utop`.
-*   Quit `utop`
-    *   `exit 0;;`
-
-TODO: Research the best way to build.
-
-### Haskell
-Use haskell-stack.
-If using ghc-8 or more than it, use Atom with haskell-ide-engine.
-If using ghc-7 or less than it, use VSCode with intero (through Haskero).
-
-NOTE: I'm not tried to use hie for multiple GHC versions.
-
 ### Scheme
 Use `Dr.Racket`?
 TODO:
-
-### Elixir
-Use `Mix`.
-Without `Mix` (using `elixir` command for a `.exs` file or `elixirc` for `.ex`),
-`ide-elixir`, an Atom package, cannot lint. It uses elixir's compiler and
-Dialiyzer to lint, but both don't run.
-
-### Golang
-Use VSCode.
-Atom's `go-plus` package is almost not maintained, and other tools are not
-so good. (I want `gopls` to be stable.)
