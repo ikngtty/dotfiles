@@ -60,7 +60,6 @@ get_with_info module golang.org/x/tools/cmd/guru
 get_with_info module golang.org/x/tools/cmd/goimports
 get_with_info module github.com/sqs/goreturns
 ### Linters. (Choose one.)
-get_with_info gopath github.com/alecthomas/gometalinter # module -> mysterious error
 get_with_info module github.com/golangci/golangci-lint/cmd/golangci-lint
 get_with_info module github.com/mgechev/revive
 ## Navigators. (Choose one.)
