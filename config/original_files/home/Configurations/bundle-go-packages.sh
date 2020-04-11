@@ -48,32 +48,56 @@ get_with_info() {
 
 # Install.
 ## For Atom's go-plus package.
-get_with_info module github.com/fatih/gomodifytags
+# get_with_info module github.com/fatih/gomodifytags      # Duplicate
+# get_with_info module github.com/mdempsky/gocode         # Duplicate
+# get_with_info module github.com/ramya-rao-a/go-outline  # Duplicate
+# get_with_info module github.com/tpng/gopkgs # NOTE: old version
+# get_with_info module github.com/zmb3/goaddimport
+# get_with_info module github.com/zmb3/gogetdoc           # Duplicate
+# get_with_info module golang.org/x/tools/cmd/gorename    # Duplicate
+# get_with_info module golang.org/x/tools/cmd/guru        # Duplicate
+### Formatters. (Choose one.)
+# get_with_info module golang.org/x/tools/cmd/goimports   # Duplicate
+# get_with_info module github.com/sqs/goreturns           # Duplicate
+### Linters. (Choose one.)
+# get_with_info module github.com/golangci/golangci-lint/cmd/golangci-lint # Duplicate
+# get_with_info module github.com/mgechev/revive          # Duplicate
+## Navigators. (Choose one.)
+# get_with_info module github.com/rogpeppe/godef          # Duplicate
+
+## For Atom's go-debug package.
+# get_with_info module github.com/go-delve/delve/cmd/dlv  # Duplicate
+
+## For VSCode's Go package.
+## NOTE: If they are not installed, VSCode automatically guides us to install them.
 get_with_info module github.com/mdempsky/gocode
+get_with_info module github.com/uudashr/gopkgs/v2/cmd/gopkgs
 get_with_info module github.com/ramya-rao-a/go-outline
-get_with_info module github.com/tpng/gopkgs
-get_with_info module github.com/zmb3/goaddimport
-get_with_info module github.com/zmb3/gogetdoc
 get_with_info module golang.org/x/tools/cmd/gorename
+get_with_info module github.com/fatih/gomodifytags
+# get_with_info module github.com/go-delve/delve/cmd/dlv # TODO: mysterious error
+# get_with_info module github.com/stamblerre/gocode # TODO: name as "gocode-gomod"
+get_with_info module github.com/rogpeppe/godef
+### Docs. (Choose one.)
+get_with_info module golang.org/x/tools/cmd/godoc
+get_with_info module github.com/zmb3/gogetdoc
 get_with_info module golang.org/x/tools/cmd/guru
 ### Formatters. (Choose one.)
 get_with_info module golang.org/x/tools/cmd/goimports
 get_with_info module github.com/sqs/goreturns
-### Linters. (Choose one.)
+get_with_info module winterdrache.de/goformat/goformat
+### Linters.  (Choose one.)
+get_with_info module golang.org/x/lint/golint
 get_with_info module github.com/golangci/golangci-lint/cmd/golangci-lint
 get_with_info module github.com/mgechev/revive
-## Navigators. (Choose one.)
-get_with_info module github.com/rogpeppe/godef
-
-## For Atom's go-debug package.
-get_with_info module github.com/go-delve/delve/cmd/dlv
+get_with_info module honnef.co/go/tools/... # NOTE: use "staticcheck"
 
 ## Gore (REPL).
 get_with_info module github.com/motemen/gore/cmd/gore
 ### Additional features.
-# get_with_info github.com/mdempsky/gocode
+# get_with_info github.com/mdempsky/gocode                # Duplicate
 get_with_info module github.com/k0kubun/pp
-get_with_info module golang.org/x/tools/cmd/godoc
+# get_with_info module golang.org/x/tools/cmd/godoc       # Duplicate
 
 ## Others.
 get_with_info module bitbucket.org/liamstask/goose/cmd/goose
