@@ -23,9 +23,8 @@ fi
 get_with_info() {
   mode=$1
   package_url=$2
-  package_name=$(basename "$package_url")
   printf "\e[36m"         # Magenta
-  printf "Get $package_name..."
+  printf "Get $package_url ..."
   printf "\e[m\n"         # Reset
   case "$mode" in
     module )
