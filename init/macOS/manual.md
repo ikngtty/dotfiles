@@ -116,9 +116,6 @@ TODO: Make it scripts.
 Use `fish_config` command.
 *   colors -> Choose `Tomorrow Night Bright` theme.
 
-### Google IME
-TODO:
-
 ### Insomnia
 *   Interface Font Size - 16px
 *   Text Editor Font - Ricty Diminished
