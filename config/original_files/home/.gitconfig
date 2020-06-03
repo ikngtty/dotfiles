@@ -68,3 +68,5 @@
 [user]
 	email = ikngtty@gmail.com
 	name = ikngtty
+[includeIf "gitdir:~/Projects/src/redhat/"]
+  path = ~/Projects/src/redhat/.gitconfig
