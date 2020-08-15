@@ -87,7 +87,7 @@ get_with_info module github.com/sqs/goreturns
 get_with_info module winterdrache.de/goformat/goformat
 ### Linters.  (Choose one.)
 get_with_info module golang.org/x/lint/golint
-get_with_info module github.com/golangci/golangci-lint/cmd/golangci-lint
+# get_with_info module github.com/golangci/golangci-lint/cmd/golangci-lint # TODO: fixing its version or binary install is required
 get_with_info module github.com/mgechev/revive
 get_with_info module honnef.co/go/tools/... # NOTE: use "staticcheck"
 
