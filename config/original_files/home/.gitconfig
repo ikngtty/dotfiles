@@ -39,7 +39,7 @@
 [commit]
 	template = ~/.stCommitMsg
 [core]
-	editor = cot --wait
+	editor = nano
 	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
