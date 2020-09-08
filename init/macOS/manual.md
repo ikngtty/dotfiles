@@ -213,9 +213,17 @@ TODO: Make it scripts.
 2.  Replace `~/.stack/config.yaml` by that of dotfiles with my `deploy` command.
 3.  `~/Configurations/bundle-haskell-stack-packages.sh`
 
-#### haskell-ide-engine
-Build for each GHC version.
-See [docs](https://github.com/haskell/haskell-ide-engine).
+#### haskell-language-server
+Download binaries for each GHC version from its repository.
+See [docs](https://github.com/haskell/haskell-language-server/).
+
+The binaries should be executable (`chmod +x`) and be allowed by the macOS
+security.
+
+To let `haskell-language-server-wrapper` choose `haskell-language-server` for
+the proper GHC version, the filename of `haskell-language-server` should be
+`haskell-language-server-<GHC version>`.
+
 TODO: Make it scripts.
 
 #### intero

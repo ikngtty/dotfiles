@@ -17,10 +17,9 @@ so good. (I want `gopls` to be stable.)
 
 ### Haskell
 Use haskell-stack.
-If using ghc-8 or more than it, use Atom with haskell-ide-engine.
+If using ghc-8 or more than it, use Atom with haskell-language-server
+(through ide-haskell-hie).
 If using ghc-7 or less than it, use VSCode with intero (through Haskero).
-
-NOTE: I'm not tried to use hie for multiple GHC versions.
 
 ### JavaScript (Node.js)
 *   Linter and Formatter
