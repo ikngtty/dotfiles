@@ -24,6 +24,7 @@ if status --is-login
   warn_if_universal_var fish_user_paths
   set fish_user_paths /usr/local/sbin $fish_user_paths
   set fish_user_paths ~/.local/bin $fish_user_paths
+  set fish_user_paths ~/.cargo/bin $fish_user_paths
   set fish_user_paths $GOPATH/bin $fish_user_paths
   if which go > /dev/null ^ /dev/null
     set fish_user_paths (go env GOROOT)/bin $fish_user_paths
@@ -89,6 +90,7 @@ if status --is-interactive
   abbr --add b bundle
   abbr --add be bundle exec
   abbr --add ber bundle exec rails
+  abbr --add c cargo
   abbr --add d docker
   abbr --add dc docker-compose
   abbr --add g git

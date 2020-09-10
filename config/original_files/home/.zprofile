@@ -1,6 +1,7 @@
 # PATH
 PATH="usr/local/sbin:$PATH"
 PATH="$HOME/.local/bin:$PATH"
+PATH="$HOME/.cargo/bin:$PATH"
 GOPATH="$HOME/Projects"
 export GOPATH
 PATH="$GOPATH/bin:$PATH"

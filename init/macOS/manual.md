@@ -230,3 +230,7 @@ TODO: Make it scripts.
 Build for each GHC version.
 See [docs](https://github.com/chrisdone/intero/blob/master/TOOLING.md).
 TODO: Make it scripts.
+
+### Rust
+0.  install `rustup` via `Configrutions/Homebrew-Bundle/Brewfile`
+1.  `rustup-init`
