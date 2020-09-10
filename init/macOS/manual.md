@@ -166,42 +166,6 @@ Use [Vivaldi.net](https://vivaldi.net).
 TODO: Detailed settings.
 
 ## Set up others.
-### Lisp
-#### atom-slime
-1.  Check atom-slime's "Slime Path" setting.
-2.  If the user name in the slime path is diffrent from my current machine's,
-    give up syncronize settings and change slime path in the setting.
-3.  `cd <parent folder of slime path>` and `hub clone slime/slime`.
-
-TODO: Make it scripts.
-
-### Node.js
-1.  `mkdir -p ~/.nodebrew/src`
-2.  `nodebrew install-binary stable`
-3.  `nodebrew use stable`
-4.  Execute `~/Configurations/bundle-npm-packages.sh` after deploying.
-
-### Ruby gems
-1.  Set up a Ruby environment (by using `rbenv`).
-2.  `gem update` (then `gem cleanup`).
-3.  If `bundle` command is not installed since using an old Ruby,
-    `gem install bundler`
-    If Ruby < 2.3.0., `gem install bundler -v 1.17.3`
-4.  Move to `~/Configurations/gem` (after deploying), and `bundle update`
-    (then `gem cleanup`).
-
-NOTE: These gems are installed globally (per virtual environment).
-We had better to install locally per project with
-`bundle install --path=vendor/bundle` as much as we can,
-because we can use `bundle clean` with project's bundle file.
-
-TODO: Make it scripts.
-
-### Python
-1.  Set up a Python environment (by using `pyenv`).
-2.  `pip install --upgrade pip`
-3.  Move to `~/Configurations/pip` (after deploying), and `pip install -r requirements.txt`
-
 ### Haskell
 0.  To reset, delete `~/.stack` directory.
 1.  *   To install GHC for a project, move to the project directory, which
@@ -229,6 +193,42 @@ TODO: Make it scripts.
 #### intero
 Build for each GHC version.
 See [docs](https://github.com/chrisdone/intero/blob/master/TOOLING.md).
+TODO: Make it scripts.
+
+### Lisp
+#### atom-slime
+1.  Check atom-slime's "Slime Path" setting.
+2.  If the user name in the slime path is diffrent from my current machine's,
+    give up syncronize settings and change slime path in the setting.
+3.  `cd <parent folder of slime path>` and `hub clone slime/slime`.
+
+TODO: Make it scripts.
+
+### Node.js
+1.  `mkdir -p ~/.nodebrew/src`
+2.  `nodebrew install-binary stable`
+3.  `nodebrew use stable`
+4.  Execute `~/Configurations/bundle-npm-packages.sh` after deploying.
+
+### Python
+1.  Set up a Python environment (by using `pyenv`).
+2.  `pip install --upgrade pip`
+3.  Move to `~/Configurations/pip` (after deploying), and `pip install -r requirements.txt`
+
+### Ruby gems
+1.  Set up a Ruby environment (by using `rbenv`).
+2.  `gem update` (then `gem cleanup`).
+3.  If `bundle` command is not installed since using an old Ruby,
+    `gem install bundler`
+    If Ruby < 2.3.0., `gem install bundler -v 1.17.3`
+4.  Move to `~/Configurations/gem` (after deploying), and `bundle update`
+    (then `gem cleanup`).
+
+NOTE: These gems are installed globally (per virtual environment).
+We had better to install locally per project with
+`bundle install --path=vendor/bundle` as much as we can,
+because we can use `bundle clean` with project's bundle file.
+
 TODO: Make it scripts.
 
 ### Rust
