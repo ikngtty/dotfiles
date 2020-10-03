@@ -12,7 +12,8 @@
 *   (comment out) Unity
 
 ## Through App Store.
-*   Alfred
+*   ~~Alfred~~
+    *   The App Store version seems to be old. Use the version installed by Homebrew Cask.
 *   CotEditor
 *   GIPHY Capture
 *   Kindle
