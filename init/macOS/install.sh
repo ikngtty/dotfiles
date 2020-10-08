@@ -32,7 +32,7 @@ here_log() {
 # Install `Homebrew`.
 if ! brew -v > /dev/null 2>&1; then
   here_log "Install Homebrew."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
 # Deploy `Brewfile`.
