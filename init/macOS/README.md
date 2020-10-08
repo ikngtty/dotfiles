@@ -4,7 +4,7 @@
     Contents in the link is below.
 ```
 ssh-keygen -t rsa -b 4096 -C ikngtty@gmail.com
-vim ~/.ssh/config                 # Modify as below.
+nano ~/.ssh/config                 # Modify as below.
 ```
 ```
 Host *
