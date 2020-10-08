@@ -159,7 +159,7 @@ TODO: Research how to share profiles.
 
 TODO: Try to make it scripts.
 
-### Notation
+### Notes
 
 Set bigger textsize as default.
 
