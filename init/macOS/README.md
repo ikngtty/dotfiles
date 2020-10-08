@@ -11,6 +11,7 @@ Host *
  AddKeysToAgent yes
  UseKeychain yes
  IdentityFile ~/.ssh/id_rsa
+ ForwardAgent yes
 ```
 ```
 ssh-add -K ~/.ssh/id_rsa
