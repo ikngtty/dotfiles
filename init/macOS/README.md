@@ -42,8 +42,7 @@ ssh-add -K ~/.ssh/id_rsa
 10. `./config/dotfiles.sh deploy -q bash` and relogin bash to install comfortably.
 11. `./init/macOS/install.sh | tee ~/Desktop/install.log`
 12. `./init/macOS/set_up_shells.sh`
-13. `./init/macOS/adjust_iTerm2.sh`
-14. Follow [the manual](./manual.md).
+13. Follow [the manual](./manual.md).
 
 TODO: Install GUI apps with `cask` command in `install.sh`.
 

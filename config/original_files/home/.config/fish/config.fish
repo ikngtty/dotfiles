@@ -142,6 +142,3 @@ end
 # NOTE: Added automatically by `opam init`(probably)
 # opam configuration
 source /Users/ikngtty/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
-
-# NOTE: Added automatically.
-test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish

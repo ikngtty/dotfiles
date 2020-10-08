@@ -137,13 +137,6 @@ Use `fish_config` command.
 
 TODO: Make it scripts.
 
-### iTerm2
-
-Download `Japanesque.itermcolors` from [GitHub](https://github.com/mbadolato/iTerm2-Color-Schemes),
-and choose the theme.
-
-TODO: Try to make it scripts.
-
 ### jasper
 
 [Download the dark theme](https://github.com/jasperapp/jasper/tree/master/theme/dark).
