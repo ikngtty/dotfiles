@@ -90,6 +90,8 @@ deploy_rc config.fish
 deploy_rc fishfile
 deploy_rc .zprofile
 deploy_rc .zshrc
+deploy_rc .bash_profile
+deploy_rc .bashrc
 
 # Install Fisherman
 here_log "Install Fisherman."
