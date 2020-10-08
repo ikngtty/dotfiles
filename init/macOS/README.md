@@ -39,7 +39,7 @@ ssh-add -K ~/.ssh/id_rsa
 
 8.  `./init/macOS/adjust_mac.sh`.
 9.  Reboot and `cd ~/Projects/src/github.com/ikngtty/dotfiles`.
-10. `./config/dotfiles.sh deploy bash` and relogin bash to install comfortably.
+10. `./config/dotfiles.sh deploy -q bash` and relogin bash to install comfortably.
 11. `./init/macOS/install.sh | tee ~/Desktop/install.log`
 12. `./init/macOS/set_up_shells.sh`
 13. `./init/macOS/set_up_iTerm2.sh`
