@@ -3,7 +3,6 @@
 ## Install applications.
 
 *   (comment out) DB Browser for SQLite.app
-*   (comment out) Discord.app
 *   (comment out) Eclipse.app
 *   Google Drive.app
 *   (comment out) IntelliJ IDEA CE.app
