@@ -51,7 +51,7 @@ here_log "Run \`brew bundle check\`."
 # brew bundle check
 # TODO: Research the `brew bundle check` feature.
 here_log "Run \`brew bundle\`."
-brew bundle
+brew bundle --verbose
 here_log "Run \`brew cleanup\`."
 brew cleanup
 
