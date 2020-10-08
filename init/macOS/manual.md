@@ -1,5 +1,7 @@
 # Manual
+
 ## Install applications.
+
 *   (comment out) DB Browser for SQLite.app
 *   (comment out) Discord.app
 *   (comment out) Eclipse.app
@@ -12,6 +14,7 @@
 *   (comment out) Unity
 
 ## Through App Store.
+
 *   ~~Alfred~~
     *   The App Store version seems to be old. Use the version installed by Homebrew Cask.
 *   CotEditor
@@ -24,21 +27,26 @@
 *   Xcode
 
 ### jar
+
 *   (comment out) Automaton Simulator
 
 ### My scripts
+
 TODO: Decide how share them.
 *   Connect_with_iPhone.app
 *   Google Chrome(fullscreen).app
 
 ## Install fonts.
+
 Install with Homebrew Cask except below.
 *   [Ricty](https://www.rs.tus.ac.jp/yyusa/ricty.html)
 
 TODO: Make it scripts.
 
 ## Set up GUI.
+
 ### Mac
+
 *   Adjust brightness of display.
 *   Change the computer name (and reboot?).
     ```
@@ -88,6 +96,7 @@ TODO: Make it scripts.
 TODO: Try to make it scripts with using `defaults` command.
 
 ### Alfred
+
 *   General
     *   I'm in Japan.
 *   Features
@@ -97,12 +106,14 @@ TODO: Try to make it scripts with using `defaults` command.
     *   Choose theme.
 
 ### Atom
+
 Use `Sync Settings` package.
 Follow my comment in `init.coffee`.
 TODO: Make it scripts.
 TODO: Find out steps to create Lisp IDE.
 
 ### CotEditor
+
 1.  Download themes from [here](https://github.com/naotaka/CotEditor-themes).
 2.  Open the theme specified below.
 3.  Make CotEditor read it at `settings` window. (Then they can be deleted.)
@@ -114,10 +125,12 @@ TODO: Find out steps to create Lisp IDE.
 TODO: Make it scripts.
 
 ### Fish
+
 Use `fish_config` command.
 *   colors -> Choose `Tomorrow Night Bright` theme.
 
 ### Insomnia
+
 *   Interface Font Size - 16px
 *   Text Editor Font - Ricty Diminished
 *   Editor Font Size - 18px
@@ -125,12 +138,14 @@ Use `fish_config` command.
 TODO: Make it scripts.
 
 ### iTerm2
+
 Download `Japanesque.itermcolors` from [GitHub](https://github.com/mbadolato/iTerm2-Color-Schemes),
 and choose the theme.
 
 TODO: Try to make it scripts.
 
 ### jasper
+
 [Download the dark theme](https://github.com/jasperapp/jasper/tree/master/theme/dark).
 
 *   Preferences
@@ -141,33 +156,41 @@ TODO: Try to make it scripts.
         *   Broser Theme - DO NOT load the dark theme. It is bad to see.
 
 ### Karabiner
+
 TODO: Research how to share profiles.
 
 ### terminal
+
 *   Copy "Basic" profile as "My Basic", and configure it as below.
     *   Font: InconsolataForPowerline-dz 18pts
 
 TODO: Try to make it scripts.
 
 ### Notation
+
 Set bigger textsize as default.
 
 ### Virtual Box
+
 Change the default VM folder path.
 
 TODO: Try to make it scripts with using `defaults` command.
 
 ### Visual Studio Code
+
 Use `Settings Sync`.
 Enter `Shell Command: Install 'code' command in PATH` command
 through the command palette.
 
 ### Vivaldi
+
 Use [Vivaldi.net](https://vivaldi.net).
 TODO: Detailed settings.
 
 ## Set up others.
+
 ### Haskell
+
 0.  To reset, delete `~/.stack` directory.
 1.  *   To install GHC for a project, move to the project directory, which
         contains `stack.yaml` file, and `stack setup`.
@@ -179,6 +202,7 @@ TODO: Detailed settings.
 3.  `~/Configurations/bundle-haskell-stack-packages.sh`
 
 #### haskell-language-server
+
 Download binaries for each GHC version from its repository.
 See [docs](https://github.com/haskell/haskell-language-server/).
 
@@ -192,12 +216,15 @@ the proper GHC version, the filename of `haskell-language-server` should be
 TODO: Make it scripts.
 
 #### intero
+
 Build for each GHC version.
 See [docs](https://github.com/chrisdone/intero/blob/master/TOOLING.md).
 TODO: Make it scripts.
 
 ### Lisp
+
 #### atom-slime
+
 1.  Check atom-slime's "Slime Path" setting.
 2.  If the user name in the slime path is diffrent from my current machine's,
     give up syncronize settings and change slime path in the setting.
@@ -206,17 +233,20 @@ TODO: Make it scripts.
 TODO: Make it scripts.
 
 ### Node.js
+
 1.  `mkdir -p ~/.nodebrew/src`
 2.  `nodebrew install-binary stable`
 3.  `nodebrew use stable`
 4.  Execute `~/Configurations/bundle-npm-packages.sh` after deploying.
 
 ### Python
+
 1.  Set up a Python environment (by using `pyenv`).
 2.  `pip install --upgrade pip`
 3.  Move to `~/Configurations/pip` (after deploying), and `pip install -r requirements.txt`
 
 ### Ruby gems
+
 1.  Set up a Ruby environment (by using `rbenv`).
 2.  `gem update` (then `gem cleanup`).
 3.  If `bundle` command is not installed since using an old Ruby,
@@ -233,5 +263,6 @@ because we can use `bundle clean` with project's bundle file.
 TODO: Make it scripts.
 
 ### Rust
+
 0.  install `rustup` via `Configrutions/Homebrew-Bundle/Brewfile`
 1.  `rustup-init`

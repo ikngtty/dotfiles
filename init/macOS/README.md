@@ -1,11 +1,14 @@
 # Initialize macOS
+
 1.  Open this repository in Safari.
 2.  [Generate a new SSH key and add it to the ssh-agent.](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
     Contents in the link is below.
+
 ```
 ssh-keygen -t rsa -b 4096 -C ikngtty@gmail.com
 nano ~/.ssh/config                 # Modify as below.
 ```
+
 ```
 Host *
  AddKeysToAgent yes
@@ -13,20 +16,24 @@ Host *
  IdentityFile ~/.ssh/id_rsa
  ForwardAgent yes
 ```
+
 ```
 ssh-add -K ~/.ssh/id_rsa
 ```
+
 3.  [Add the SSH key to my GitHub account.](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
     Contents in the link is below;
     `pbcopy < ~/.ssh/id_rsa.pub` and add the SSH key in [GitHub's settings page](https://github.com/settings/keys).
 4.  Add the SSH key in [Bitbucket's settings page](https://bitbucket.org/account/user/ikngtty/ssh-keys/).
 5.  Clone this repository.
+
 ```
     mkdir -p ~/Projects/src/github.com/ikngtty
     cd ~/Projects/src/github.com/ikngtty
     git clone git@github.com:ikngtty/dotfiles.git
     cd dotfiles
 ```
+
 6.  `./init/macOS/adjust_mac.sh`.
 7.  Reboot and `cd ~/Projects/src/github.com/ikngtty/dotfiles`.
 8.  `./config/dotfiles.sh deploy bash` and relogin bash to install comfortably.
