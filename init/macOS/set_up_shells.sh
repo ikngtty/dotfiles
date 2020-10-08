@@ -11,6 +11,9 @@ cd util
 util=$(pwd)
 
 # Alias for util.
+echo_with_color() {
+  "$util/echo_with_color.sh" "$@"
+}
 log() {
   "$util/log.sh" "$@"
 }
