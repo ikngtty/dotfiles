@@ -50,7 +50,7 @@ exit_for_not_installed() {
 zsh --version >/dev/null 2>&1 || exit_for_not_installed zsh
 fish --version >/dev/null 2>&1 || exit_for_not_installed fish
 
-# Add installed shells' path to /etc/shells
+# Add installed shells' path to `/etc/shells`.
 add_shells() {
   shell_name=$1
   shell_path="$(which $shell_name)"
@@ -96,7 +96,7 @@ deploy_rc .zshrc
 deploy_rc .bash_profile
 deploy_rc .bashrc
 
-# Install Fisherman
+# Install Fisherman.
 here_log "Install Fisherman."
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
