@@ -101,6 +101,8 @@ here_log "Install Fisherman."
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
 # Install packages by Fisherman's fishfile.
+# FIXME: `config.fish` should be loaded before executing `fisher`:
+#        `config.fish` changes `fisher_path`.
 here_log 'Run `fisher`.'
 fish -c fisher
 
