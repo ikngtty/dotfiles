@@ -42,6 +42,9 @@ Install with Homebrew Cask except below.
 
 TODO: Make it scripts.
 
+`Ricty` and `Ricty Diminished`'s backquote is broken.\
+Run `~/Configurations/fix-ricty/fix-ricty.sh`.
+
 ## Set up GUI.
 
 ### Mac
