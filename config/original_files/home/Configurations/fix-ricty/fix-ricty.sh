@@ -20,14 +20,20 @@ if ! which fontforge >/dev/null 2>&1; then
   exit 10
 fi
 
-font_path="$HOME/Library/Fonts" # HACK: cannot get via any command ?
+font_folder_path="$HOME/Library/Fonts" # HACK: cannot get via any command ?
 fix() {
-  font_filename=$1
-  printf "\e[36m"         # Magenta
-  printf "Fix $font_filename ..."
-  printf "\e[m\n"         # Reset
-  # TODO: check file existing and ignore non-existing file
-  fontforge -lang ff -script "fix-ricty.ff" "$font_path/$font_filename"
+  font_file_name=$1
+  font_file_path="$font_folder_path/$font_file_name"
+  if [ ! -f "$font_file_path" ]; then
+    printf "\e[33m"         # Yellow
+    printf "Cannot find $font_file_name."
+    printf "\e[m\n"         # Reset
+  else
+    printf "\e[36m"         # Magenta
+    printf "Fix $font_file_name ..."
+    printf "\e[m\n"         # Reset
+    fontforge -lang ff -script "fix-ricty.ff" "$font_file_path"
+  fi
 }
 fix Ricty-Bold.ttf
 fix Ricty-BoldOblique.ttf
