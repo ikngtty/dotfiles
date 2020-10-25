@@ -142,17 +142,6 @@ Use `fish_config` command.
 
 TODO: Make it scripts.
 
-### jasper
-
-[Download the dark theme](https://github.com/jasperapp/jasper/tree/master/theme/dark).
-
-*   Preferences
-    *   General
-        *   Browser - built-in
-    *   Theme
-        *   Main Theme - Load the dark theme.
-        *   Broser Theme - DO NOT load the dark theme. It is bad to see.
-
 ### Karabiner
 
 TODO: Research how to share profiles.
