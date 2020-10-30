@@ -38,7 +38,7 @@ TODO: Decide how share them.
 ## Install fonts.
 
 Install with Homebrew Cask except below.
-*   [Ricty](https://www.rs.tus.ac.jp/yyusa/ricty.html)
+*   [Ricty](https://rictyfonts.github.io)
 
 TODO: Make it scripts.
 
