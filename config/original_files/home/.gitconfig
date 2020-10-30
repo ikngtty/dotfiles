@@ -36,8 +36,6 @@
 	st = status
 	# tr means tree.
 	tr = log --all --graph --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%Y/%m/%d %H:%M:%S'
-[commit]
-	template = ~/.stCommitMsg
 [core]
 	editor = nano
 	excludesfile = ~/.gitignore_global
