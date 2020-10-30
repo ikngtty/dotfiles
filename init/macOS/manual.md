@@ -166,8 +166,6 @@ TODO: Try to make it scripts with using `defaults` command.
 ### Visual Studio Code
 
 Use `Settings Sync`.
-Enter `Shell Command: Install 'code' command in PATH` command
-through the command palette.
 
 ### Vivaldi
 
