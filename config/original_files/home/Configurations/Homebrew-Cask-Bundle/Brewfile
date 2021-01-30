@@ -32,5 +32,5 @@ cask 'visual-studio-code'
 cask 'vivaldi'
 
 # hobby
-cask 'discord'
-cask 'soundflower'
+# cask 'discord'
+# cask 'soundflower'
