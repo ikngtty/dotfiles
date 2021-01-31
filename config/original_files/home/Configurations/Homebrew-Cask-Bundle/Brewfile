@@ -33,4 +33,5 @@ cask 'vivaldi'
 
 # hobby
 # cask 'discord'
+# cask 'obs'
 # cask 'soundflower'
