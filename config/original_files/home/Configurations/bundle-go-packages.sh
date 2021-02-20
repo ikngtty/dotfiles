@@ -74,7 +74,7 @@ get_with_info() {
 # get_with_info module github.com/ramya-rao-a/go-outline
 # get_with_info module golang.org/x/tools/cmd/gorename
 # get_with_info module github.com/fatih/gomodifytags
-# # get_with_info module github.com/go-delve/delve/cmd/dlv # TODO: mysterious error
+# get_with_info module github.com/go-delve/delve/cmd/dlv
 # # get_with_info module github.com/stamblerre/gocode # TODO: name as "gocode-gomod"
 # get_with_info module github.com/rogpeppe/godef
 # ### Docs. (Choose one.)
