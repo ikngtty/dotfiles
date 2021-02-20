@@ -67,29 +67,32 @@ get_with_info() {
 ## For Atom's go-debug package.
 # get_with_info module github.com/go-delve/delve/cmd/dlv  # Duplicate
 
-## For VSCode's Go package.
-## NOTE: If they are not installed, VSCode automatically guides us to install them.
-get_with_info module github.com/mdempsky/gocode
-get_with_info module github.com/uudashr/gopkgs/v2/cmd/gopkgs
-get_with_info module github.com/ramya-rao-a/go-outline
-get_with_info module golang.org/x/tools/cmd/gorename
-get_with_info module github.com/fatih/gomodifytags
-# get_with_info module github.com/go-delve/delve/cmd/dlv # TODO: mysterious error
-# get_with_info module github.com/stamblerre/gocode # TODO: name as "gocode-gomod"
-get_with_info module github.com/rogpeppe/godef
-### Docs. (Choose one.)
-get_with_info module golang.org/x/tools/cmd/godoc
-get_with_info module github.com/zmb3/gogetdoc
-get_with_info module golang.org/x/tools/cmd/guru
-### Formatters. (Choose one.)
-get_with_info module golang.org/x/tools/cmd/goimports
-get_with_info module github.com/sqs/goreturns
-get_with_info module winterdrache.de/goformat/goformat
-### Linters.  (Choose one.)
-get_with_info module golang.org/x/lint/golint
-# get_with_info module github.com/golangci/golangci-lint/cmd/golangci-lint # TODO: fixing its version or binary install is required
-get_with_info module github.com/mgechev/revive
-get_with_info module honnef.co/go/tools/... # NOTE: use "staticcheck"
+# ## For VSCode's Go package.
+# ## NOTE: If they are not installed, VSCode automatically guides us to install them.
+# get_with_info module github.com/mdempsky/gocode
+# get_with_info module github.com/uudashr/gopkgs/v2/cmd/gopkgs
+# get_with_info module github.com/ramya-rao-a/go-outline
+# get_with_info module golang.org/x/tools/cmd/gorename
+# get_with_info module github.com/fatih/gomodifytags
+# # get_with_info module github.com/go-delve/delve/cmd/dlv # TODO: mysterious error
+# # get_with_info module github.com/stamblerre/gocode # TODO: name as "gocode-gomod"
+# get_with_info module github.com/rogpeppe/godef
+# ### Docs. (Choose one.)
+# get_with_info module golang.org/x/tools/cmd/godoc
+# get_with_info module github.com/zmb3/gogetdoc
+# get_with_info module golang.org/x/tools/cmd/guru
+# ### Formatters. (Choose one.)
+# get_with_info module golang.org/x/tools/cmd/goimports
+# get_with_info module github.com/sqs/goreturns
+# get_with_info module winterdrache.de/goformat/goformat
+# ### Linters.  (Choose one.)
+# get_with_info module golang.org/x/lint/golint
+# # get_with_info module github.com/golangci/golangci-lint/cmd/golangci-lint # TODO: fixing its version or binary install is required
+# get_with_info module github.com/mgechev/revive
+# get_with_info module honnef.co/go/tools/... # NOTE: use "staticcheck"
+
+## For IDE
+get_with_info module golang.org/x/tools/gopls
 
 ## Gore (REPL).
 get_with_info module github.com/motemen/gore/cmd/gore
