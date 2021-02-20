@@ -46,7 +46,7 @@ get_with_info() {
 }
 
 # Install.
-## For Atom's go-plus package.
+# ## For Atom's go-plus package.
 # get_with_info module github.com/fatih/gomodifytags      # Duplicate
 # get_with_info module github.com/mdempsky/gocode         # Duplicate
 # get_with_info module github.com/ramya-rao-a/go-outline  # Duplicate
@@ -55,13 +55,13 @@ get_with_info() {
 # get_with_info module github.com/zmb3/gogetdoc           # Duplicate
 # get_with_info module golang.org/x/tools/cmd/gorename    # Duplicate
 # get_with_info module golang.org/x/tools/cmd/guru        # Duplicate
-### Formatters. (Choose one.)
+# ### Formatters. (Choose one.)
 # get_with_info module golang.org/x/tools/cmd/goimports   # Duplicate
 # get_with_info module github.com/sqs/goreturns           # Duplicate
-### Linters. (Choose one.)
+# ### Linters. (Choose one.)
 # get_with_info module github.com/golangci/golangci-lint/cmd/golangci-lint # Duplicate
 # get_with_info module github.com/mgechev/revive          # Duplicate
-### Navigators. (Choose one.)
+# ### Navigators. (Choose one.)
 # get_with_info module github.com/rogpeppe/godef          # Duplicate
 
 ## For Atom's go-debug package.
