@@ -61,7 +61,7 @@ get_with_info() {
 ### Linters. (Choose one.)
 # get_with_info module github.com/golangci/golangci-lint/cmd/golangci-lint # Duplicate
 # get_with_info module github.com/mgechev/revive          # Duplicate
-## Navigators. (Choose one.)
+### Navigators. (Choose one.)
 # get_with_info module github.com/rogpeppe/godef          # Duplicate
 
 ## For Atom's go-debug package.
