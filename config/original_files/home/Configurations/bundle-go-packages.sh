@@ -80,8 +80,6 @@ get_with_info golang.org/x/tools/gopls
 get_with_info github.com/motemen/gore/cmd/gore
 ### Additional features.
 # get_with_info github.com/mdempsky/gocode                # Duplicate
-# get_with_info github.com/k0kubun/pp # TODO: this is not a executable
-# get_with_info golang.org/x/tools/cmd/godoc       # Duplicate
 
 ## Others.
 get_with_info bitbucket.org/liamstask/goose/cmd/goose
