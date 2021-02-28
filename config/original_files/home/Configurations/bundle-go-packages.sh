@@ -25,7 +25,7 @@ get_with_info() {
   printf "\e[36m"         # Magenta
   printf "Get $package_url ..."
   printf "\e[m\n"         # Reset
-  GO111MODULE=on go get -u "$package_url"
+  go install "$package_url"@latest
 }
 
 # Install.
@@ -80,7 +80,7 @@ get_with_info golang.org/x/tools/gopls
 get_with_info github.com/motemen/gore/cmd/gore
 ### Additional features.
 # get_with_info github.com/mdempsky/gocode                # Duplicate
-get_with_info github.com/k0kubun/pp
+# get_with_info github.com/k0kubun/pp # TODO: this is not a executable
 # get_with_info golang.org/x/tools/cmd/godoc       # Duplicate
 
 ## Others.
