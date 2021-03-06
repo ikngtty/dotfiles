@@ -2,15 +2,15 @@
 
 ## Install applications.
 
-*   (comment out) DB Browser for SQLite.app
-*   (comment out) Eclipse.app
+*   ~~DB Browser for SQLite.app~~
+*   ~~Eclipse.app~~
 *   Google Drive.app
-*   (comment out) IntelliJ IDEA CE.app
+*   ~~IntelliJ IDEA CE.app~~
 *   Karabiner
-*   (comment out) PyCharm CE.app
-*   (comment out) Racket v7.1
+*   ~~PyCharm CE.app~~
+*   ~~Racket v7.1~~
 *   [Stack](https://getstack.app/)
-*   (comment out) Unity
+*   ~~Unity~~
 
 ## Through App Store.
 
@@ -27,7 +27,7 @@
 
 ### jar
 
-*   (comment out) Automaton Simulator
+*   ~~Automaton Simulator~~
 
 ### My scripts
 
