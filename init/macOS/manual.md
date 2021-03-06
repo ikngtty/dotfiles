@@ -169,8 +169,69 @@ Use `Settings Sync`.
 
 ### Vivaldi
 
-Use [Vivaldi.net](https://vivaldi.net).
-TODO: Detailed settings.
+Sync settings via [Vivaldi.net](https://vivaldi.net).
+
+Some settings are not synced by it, so they should be synced manually:
+
+*   Appearance
+    *   UI zoom rate - 110%
+*   Theme
+    *   Dark or Blueprint
+*   Start page
+    *   Background - (choose by my current mood)
+    *   Speed dial's thumbnail size - small
+*   Keyboard
+    *   Developer tool console - empty
+        *   Default setting is `⌃⇧J`, which also changes IME mode to Japanese.
+*   Search
+    *   Search engines
+        *   duckduckgo.com
+            *   `https://duckduckgo.com/?q=%s&t=h_`
+            *   `d`
+        *   Google
+            *   `https://www.google.com/search?q=%s`
+            *   `g`
+        *   google.com
+            *   `https://www.google.com/search?gl=us&hl=en&gws_rd=cr&pws=0&q=%s`
+            *   `ge`
+        *   ejje.weblio.jp
+            *   `https://ejje.weblio.jp/content_find?query=%s&searchType=exact`
+            *   `e`
+        *   oxfordlearnersdictionaries.com
+            *   `https://www.oxfordlearnersdictionaries.com/us/search/english/?q=%s`
+            *   `ee`
+        *   youtube.com
+            *   `https://www.youtube.com/results?search_query=%s`
+            *   `y`
+        *   amazon.co.jp
+            *   `https://www.amazon.co.jp/s/ref=nb_sb_noss?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&url=search-alias%3Daps&field-keywords=%s`
+            *   `a`
+        *   twitter.com
+            *   `https://twitter.com/search?q=%s`
+            *   `t`
+        *   quickref.dev
+            *   `https://quickref.dev/search?q=%s&type=all`
+            *   `qr`
+        *   hoogle.haskell.org
+            *   `https://hoogle.haskell.org/?hoogle=%s&scope=set%3Astackage`
+            *   `h`
+*   Web page
+    *   default zoom rate - 110%
+
+TODO: Check untouhced detailed settings.
+
+TODO: Make it scripts
+NOTE:
+*   `~/Library/Preferences/com.vivaldi.Vivaldi.plist`, which `defaults` command
+    likely searches, contains trivial data. They don't likely contain settings
+    that I want to sync.
+*   According to `vivaldi://about/`, Vivaldi's profile is in
+    `~/Library/Application Support/Vivaldi/Default`, but that directory has
+    `README` and it says "Vivaldi settings and storage represent user-selected
+    preferences and information and MUST not be extracted, overwritten or
+    modified except through Vivaldi defined APIs.".
+*   Does exist Vivaldi API? I've failed to find.
+*   A GUI operation script may be ideal.
 
 ## Set up others.
 
