@@ -209,9 +209,6 @@ Some settings are not synced by it, so they should be synced manually:
         *   twitter.com
             *   `https://twitter.com/search?q=%s`
             *   `t`
-        *   quickref.dev
-            *   `https://quickref.dev/search?q=%s&type=all`
-            *   `qr`
         *   hoogle.haskell.org
             *   `https://hoogle.haskell.org/?hoogle=%s&scope=set%3Astackage`
             *   `h`
