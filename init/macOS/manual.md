@@ -302,6 +302,8 @@ NOTE: These gems are installed globally (per virtual environment).
 We had better to install locally per project with
 `bundle install --path=vendor/bundle` as much as we can,
 because we can use `bundle clean` with project's bundle file.
+(The option `--path=vendor/bundle` can be omitted because it is configured
+at the global config file, `~/.bundle/config`.)
 
 TODO: Make it scripts.
 

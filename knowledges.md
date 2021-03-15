@@ -74,15 +74,15 @@ Follow these steps:
     *   `rubocop-require_tools` (`rubocop/require_tools` for `require`)
     *   `rubocop-rspec`
     *   `rubocop-thread_safety`
-*   `bundle install --path=vendor/bundle`
-    *   `.bundle/config` is created, so from the next time
-        `--path=vendor/bundle` can be omitted.
+*   `bundle install`
+    *   `--path=vendor/bundle` is not necessary because it is configured
+        at the global config file, `~/.bundle/config`.
 *   Create `.rubocop.yml` and set up `require`, where rubocop's plugins should
     be declared.
 
 After `.rubocop.yml` is created, Atom's `linter-rubocop` package does
 `bundle exec rubocop` automatically when a ruby file is opened.
-If it is done before `bundle install --path=vendor/bundle`,
+If it is done before `bundle install`,
 it may cause some troubles (though it does not do `bundle install`).
 e.g. New `Gemfile.lock` is created unexpectedly.
 
