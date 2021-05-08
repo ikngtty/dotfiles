@@ -55,6 +55,7 @@ npm_i() {
     npm i -g "$pkg"
   fi
 }
+npm_i @google/clasp
 npm_i elm-analyse
 npm_i elm-live
 npm_i node-giff
