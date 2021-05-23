@@ -17,7 +17,6 @@ MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export MANPATH
 
 # Other environment values
-## Pipenv
 PIPENV_VENV_IN_PROJECT=1
 export PIPENV_VENV_IN_PROJECT
 EDITOR=atom

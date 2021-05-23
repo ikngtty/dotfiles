@@ -67,7 +67,6 @@ if status --is-login
   # # but Stack's "--ghc-options" option seems not to work.
   # set -gx GHCRTS -M2G
 
-  # Pipenv
   set -gx PIPENV_VENV_IN_PROJECT 1
   set -gx EDITOR atom
 end
