@@ -17,10 +17,10 @@ MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export MANPATH
 
 # Other environment values
-PIPENV_VENV_IN_PROJECT=1
-export PIPENV_VENV_IN_PROJECT
 EDITOR=atom
 export EDITOR
+PIPENV_VENV_IN_PROJECT=1
+export PIPENV_VENV_IN_PROJECT
 
 # Others
 which rbenv >/dev/null 2>&1 && eval "$(rbenv init -)"
