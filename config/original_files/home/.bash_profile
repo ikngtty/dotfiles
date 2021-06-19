@@ -24,7 +24,7 @@ export PIPENV_VENV_IN_PROJECT
 
 # Others
 which rbenv >/dev/null 2>&1 && eval "$(rbenv init -)"
-which pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
+which pyenv >/dev/null 2>&1 && eval "$(pyenv init --path)"
 
 # Call ".bashrc".
 [ -e "$HOME/.bashrc" ] && source "$HOME/.bashrc"

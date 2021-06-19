@@ -74,13 +74,14 @@ end
 # Init
 if status --is-login
   which rbenv > /dev/null ^ /dev/null; and rbenv init - | source
-  which pyenv > /dev/null ^ /dev/null; and pyenv init - | source
+  which pyenv > /dev/null ^ /dev/null; and pyenv init --path | source
   which direnv > /dev/null ^ /dev/null; and eval (direnv hook fish)
 end
 
 # Completions
 if status --is-interactive
   which pipenv > /dev/null ^ /dev/null; and eval (pipenv --completion)
+  which pyenv > /dev/null ^ /dev/null; and pyenv init - | source
 end
 
 # Abbreviations
