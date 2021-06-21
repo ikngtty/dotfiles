@@ -24,6 +24,7 @@
 	rbc = rebase --continue
 	rbi = rebase -i
 	rbs = rebase --skip
+	rr = restore
 	rs = reset
 	rsh = reset --hard
 	rsm = reset --mixed
@@ -34,6 +35,7 @@
 	ssl = stash list
 	ssp = stash pop
 	st = status
+	sw = switch
 	# tr means tree.
 	tr = log --all --graph --pretty='format:%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%Y/%m/%d %H:%M:%S'
 [core]
