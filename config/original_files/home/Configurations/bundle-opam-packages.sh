@@ -3,20 +3,20 @@ set -Ceu
 if set -o | grep pipefail >/dev/null 2>&1; then
   set -o pipefail
 else
-  printf "$(echo '<red>WARNING: Cannot use pipefail option.</red>' |
+  >&2 printf "$(echo '<red>WARNING: Cannot use pipefail option.</red>' |
     sed -e 's/<red>/\\e\[31m/g' -e 's/<\/red>/\\e\[m/g'
     )"
-  printf "\r\n"
+  >&2 printf "\r\n"
 fi
 
 # Check Requirements.
 if ! which opam >/dev/null 2>&1; then
-  printf "\e[31m"                   # Red
-  printf "Cannot run! Please install "
-  printf "\e[1mopam\e[m"            # Bold and reset
-  printf "\e[31m"                   # Red again
-  printf "!"
-  printf "\e[m\n"                   # Reset
+  >&2 printf "\e[31m"                   # Red
+  >&2 printf "Cannot run! Please install "
+  >&2 printf "\e[1mopam\e[m"            # Bold and reset
+  >&2 printf "\e[31m"                   # Red again
+  >&2 printf "!"
+  >&2 printf "\e[m\n"                   # Reset
   exit 10
 fi
 

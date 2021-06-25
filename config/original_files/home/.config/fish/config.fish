@@ -5,8 +5,8 @@ if status --is-interactive
 
     if set -qU $argv
       set_color red
-      echo "WARNING: $argv has universal values."
-      echo "This may cause the values to increase whenever fish starts."
+      echo "WARNING: $argv has universal values." >&2
+      echo "This may cause the values to increase whenever fish starts." >&2
       set -S $argv
       set_color normal
     end

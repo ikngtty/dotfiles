@@ -41,8 +41,7 @@ status_code() {
 # Check arguments.
 if [ $# -ne 2 ]; then
   err_msg "The number of arguments is $#, but it should be 2."
-  echo
-  usage
+  usage >&2
   exit "$(status_code invalid_argument)"
 fi
 kind="$1"
@@ -101,8 +100,7 @@ case "$kind" in
     ;;
   *)
     err_msg "Kind \"$kind\" does not exist."
-    echo
-    usage
+    usage >&2
     exit "$(status_code invalid_argument)"
     ;;
 esac

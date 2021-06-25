@@ -3,10 +3,10 @@ set -Ceu
 if set -o | grep pipefail >/dev/null 2>&1; then
   set -o pipefail
 else
-  printf "$(echo '<red>WARNING: Cannot use pipefail option.</red>' |
+  >&2 printf "$(echo '<red>WARNING: Cannot use pipefail option.</red>' |
     sed -e 's/<red>/\\e\[31m/g' -e 's/<\/red>/\\e\[m/g'
     )"
-  printf "\r\n"
+  >&2 printf "\r\n"
 fi
 
 # Get util directory's absolute path.
@@ -69,8 +69,7 @@ EOS
 main() {
   if [ $# -eq 0 ]; then
     err_msg 'Command is required.'
-    echo
-    usage
+    usage >&2
     return "$(status_code invalid_argument)"
   fi
 
@@ -101,15 +100,13 @@ main() {
 
     -*)
       err_msg "Invalid option \"$1\"."
-      echo
-      usage
+      usage >&2
       return "$(status_code invalid_argument)"
       ;;
 
     *)
       err_msg "Invalid command \"$1\"."
-      echo
-      usage
+      usage >&2
       return "$(status_code invalid_argument)"
       ;;
   esac
@@ -153,22 +150,19 @@ check() {
         shift
         if [ $# -eq 0 ]; then
           err_msg '"-q" and "--query" should be specified with a keyword.'
-          echo
-          usage_for_check
+          usage_for_check >&2
           return "$(status_code invalid_argument)"
         fi
         check_pattern="$1"
         ;;
       -*)
         err_msg "Invalid option \"$1\"."
-        echo
-        usage_for_check
+        usage_for_check >&2
         return "$(status_code invalid_argument)"
         ;;
       *)
         err_msg "Invalid argument \"$1\"."
-        echo
-        usage_for_check
+        usage_for_check >&2
         return "$(status_code invalid_argument)"
         ;;
     esac
@@ -245,22 +239,19 @@ deploy() {
         shift
         if [ $# -eq 0 ]; then
           err_msg '"-q" and "--query" should be specified with a keyword.'
-          echo
-          usage_for_deploy
+          usage_for_deploy >&2
           return "$(status_code invalid_argument)"
         fi
         pattern_deploy="$1"
         ;;
       -*)
         err_msg "Invalid option \"$1\"."
-        echo
-        usage_for_deploy
+        usage_for_deploy >&2
         return "$(status_code invalid_argument)"
         ;;
       *)
         err_msg "Invalid argument \"$1\"."
-        echo
-        usage_for_deploy
+        usage_for_deploy >&2
         return "$(status_code invalid_argument)"
         ;;
     esac
@@ -319,22 +310,19 @@ undeploy() {
         shift
         if [ $# -eq 0 ]; then
           err_msg '"-q" and "--query" should be specified with a keyword.'
-          echo
-          usage_for_undeploy
+          usage_for_undeploy >&2
           return "$(status_code invalid_argument)"
         fi
         pattern_undeploy="$1"
         ;;
       -*)
         err_msg "Invalid option \"$1\"."
-        echo
-        usage_for_undeploy
+        usage_for_undeploy >&2
         return "$(status_code invalid_argument)"
         ;;
       *)
         err_msg "Invalid argument \"$1\"."
-        echo
-        usage_for_undeploy
+        usage_for_undeploy >&2
         return "$(status_code invalid_argument)"
         ;;
     esac
@@ -385,14 +373,12 @@ help() {
       ;;
     -*)
       err_msg "Invalid option \"$1\"."
-      echo
-      usage
+      usage >&2
       return "$(status_code invalid_argument)"
       ;;
     *)
       err_msg "Invalid command \"$1\"."
-      echo
-      commands
+      commands >&2
       return "$(status_code invalid_argument)"
       ;;
   esac

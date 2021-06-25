@@ -17,4 +17,4 @@ echo_with_color() {
   "$util/echo_with_color.sh" "$@"
 }
 
-echo_with_color red "$@"
+>&2 echo_with_color red "$@"
