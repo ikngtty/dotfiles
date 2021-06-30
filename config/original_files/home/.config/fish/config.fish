@@ -26,7 +26,7 @@ if status --is-login
   set fish_user_paths ~/.local/bin $fish_user_paths
   set fish_user_paths ~/.cargo/bin $fish_user_paths
   set fish_user_paths $GOPATH/bin $fish_user_paths
-  if which go > /dev/null ^ /dev/null
+  if which go > /dev/null 2> /dev/null
     set fish_user_paths (go env GOROOT)/bin $fish_user_paths
   end
   set fish_user_paths ~/.nodebrew/current/bin $fish_user_paths
@@ -73,15 +73,15 @@ end
 
 # Init
 if status --is-login
-  which rbenv > /dev/null ^ /dev/null; and rbenv init - | source
-  which pyenv > /dev/null ^ /dev/null; and pyenv init --path | source
-  which direnv > /dev/null ^ /dev/null; and eval (direnv hook fish)
+  which rbenv > /dev/null 2> /dev/null; and rbenv init - | source
+  which pyenv > /dev/null 2> /dev/null; and pyenv init --path | source
+  which direnv > /dev/null 2> /dev/null; and eval (direnv hook fish)
 end
 
 # Completions
 if status --is-interactive
-  which pipenv > /dev/null ^ /dev/null; and eval (pipenv --completion)
-  which pyenv > /dev/null ^ /dev/null; and pyenv init - | source
+  which pipenv > /dev/null 2> /dev/null; and eval (pipenv --completion)
+  which pyenv > /dev/null 2> /dev/null; and pyenv init - | source
 end
 
 # Abbreviations
@@ -118,7 +118,7 @@ if status --is-interactive
   set fish_complete_path $fish_complete_path[1] $fisher_path/completions $fish_complete_path[2..-1]
 
   for file in $fisher_path/conf.d/*.fish
-      builtin source $file ^ /dev/null
+      builtin source $file 2> /dev/null
   end
 end
 
