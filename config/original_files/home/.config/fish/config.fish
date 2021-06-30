@@ -21,23 +21,22 @@ end
 if status --is-login
   set -gx GOPATH ~/Projects
   # PATH
-  warn_if_universal_var fish_user_paths
-  set fish_user_paths /usr/local/sbin $fish_user_paths
-  set fish_user_paths ~/.local/bin $fish_user_paths
-  set fish_user_paths ~/.cargo/bin $fish_user_paths
-  set fish_user_paths $GOPATH/bin $fish_user_paths
+  fish_add_path /usr/local/sbin
+  fish_add_path ~/.local/bin
+  fish_add_path ~/.cargo/bin
+  fish_add_path $GOPATH/bin
   if which go > /dev/null 2> /dev/null
-    set fish_user_paths (go env GOROOT)/bin $fish_user_paths
+    fish_add_path (go env GOROOT)/bin
   end
-  set fish_user_paths ~/.nodebrew/current/bin $fish_user_paths
-  set fish_user_paths /Applications/Racket\ v7.1/bin $fish_user_paths
-  set fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
+  fish_add_path ~/.nodebrew/current/bin
+  fish_add_path /Applications/Racket\ v7.1/bin
+  fish_add_path /usr/local/opt/coreutils/libexec/gnubin
 
   # sqlite is keg-only, which means it was not symlinked into /usr/local,
   # because macOS provides an older sqlite3.
   #
   # If you need to have sqlite first in your PATH run:
-  set fish_user_paths /usr/local/opt/sqlite/bin $fish_user_paths
+  fish_add_path /usr/local/opt/sqlite/bin
 
   # For compilers to find sqlite you may need to set:
   #   set -gx LDFLAGS "-L/usr/local/opt/sqlite/lib"
