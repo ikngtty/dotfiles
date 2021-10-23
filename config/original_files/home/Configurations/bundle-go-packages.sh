@@ -77,7 +77,7 @@ get_with_info golang.org/x/tools/gopls
 # get_with_info winterdrache.de/goformat/goformat
 
 ## Gore (REPL).
-get_with_info github.com/motemen/gore/cmd/gore
+get_with_info github.com/x-motemen/gore/cmd/gore
 ### Additional features.
 # get_with_info github.com/mdempsky/gocode                # Duplicate
 
