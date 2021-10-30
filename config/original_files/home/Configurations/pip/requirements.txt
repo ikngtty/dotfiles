@@ -1,6 +1,7 @@
 black
 isort
 mypy
+online-judge-tools
 python-language-server[all]
 git+https://github.com/tomv564/pyls-mypy.git
 # If you get an error similar to `'install_requires' must be a string or list of strings` then please upgrade setuptools before trying again.
