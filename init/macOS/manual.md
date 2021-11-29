@@ -22,6 +22,7 @@
 *   Line
 *   Microsoft Office 365 (A bundle for Word, Excel, PowerPoint and Outlook)
 *   Slack
+*   The Unarchiver
 *   TweetDeck
 *   Xcode
 
