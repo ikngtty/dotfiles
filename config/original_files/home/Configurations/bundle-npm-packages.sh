@@ -39,7 +39,7 @@ npm_i() {
   pkg="$1"
   # HACK: An error occurs when the package is installed but contains an
   # "UNMET PEER DEPENDENCY" error.
-  if npm ls -g "$pkg" >/dev/null 2>&1; then
+  if npm ls -g --depth=0 "$pkg" >/dev/null 2>&1; then
     printf "\e[36m"                 # Magenta
     printf "[bundle log] "
     printf "\e[1m$pkg\e[m\e[36m"    # Bold and reset
