@@ -62,7 +62,7 @@ npm_i rebase-editor
 npm_i spaceship-prompt
 npm_i standard
 npm_i wtfjs
-npm_i yarn
+# npm_i yarn  # NOTE: comment in if Node.js version < v16.10
 ## For <https://github.com/edubkendo/atom-elm>. (But Elmjutsu says I need not to install it.)
 npm_i elm-oracle
 ## For <https://marketplace.visualstudio.com/items?itemName=Elmtooling.elm-ls-vscode>.
