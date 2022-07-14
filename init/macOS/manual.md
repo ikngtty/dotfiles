@@ -56,13 +56,16 @@ Run `~/Configurations/fix-ricty/fix-ricty.sh`.
     sudo scutil --set LocalHostName *localhost name(ex.MBA-of-ikngtty)]*
     sudo scutil --set ComputerName *computer name(ex.MBA-of-ikngtty)*
     ```
-*   Trackpad
-    *   Turn on `Application Expose`.
-    *   Adjust sensitivity.
+*   Bluetooth
+    *   Display on menubar.
+*   Desktop and ScreenSaver
+*   Dock
+    *   Change position to left.
+    *   Turn on to show/hide automatically.
+    *   Adjust sizes.
+    *   Change lineups. TODO: Descirbe.
 *   General
     *   Make Vivaldi the default browser.
-*   Security and Privacy
-    *   The time require the password is right after sleeping and saving the screen.
 *   Keyboard
     *   Keyboard
         *   Make function keys default.
@@ -80,24 +83,21 @@ Run `~/Configurations/fix-ricty/fix-ricty.sh`.
         *   Default
             *   Input Mode
                 *   Enable all options.
-*   Dock
-    *   Change position to left.
-    *   Turn on to show/hide automatically.
-    *   Adjust sizes.
-    *   Change lineups. TODO: Descirbe.
+*   Saving energy
+    *   Do not darken when using a battery.
+*   Security and Privacy
+    *   The time require the password is right after sleeping and saving the screen.
+*   Siri
+    *   Turn off "Use 'Hey Siri'"
+*   Trackpad
+    *   Turn on `Application Expose`.
+    *   Adjust sensitivity.
 *   Finder
     *   General
         *   Start with the home folder.
         *   Turn off to open folder in new tab.
     *   Sidebar
         *   Add home and HDD.
-*   Bluetooth
-    *   Display on menubar.
-*   Desktop and ScreenSaver
-*   Saving energy
-    *   Do not darken when using a battery.
-*   Siri
-    *   Turn off "Use 'Hey Siri'"
 *   Others
     *   Change default place to save screenshots to a clipboard.
 
