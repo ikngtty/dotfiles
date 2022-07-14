@@ -48,6 +48,8 @@
 	prune = true
 [ghq]
 	root = ~/Projects/src
+[init]
+	defaultBranch = main
 [merge]
 	ff = false
 [mergetool "sourcetree"]
