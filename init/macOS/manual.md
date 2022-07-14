@@ -96,6 +96,8 @@ Run `~/Configurations/fix-ricty/fix-ricty.sh`.
 *   Desktop and ScreenSaver
 *   Saving energy
     *   Do not darken when using a battery.
+*   Siri
+    *   Turn off "Use 'Hey Siri'"
 *   Others
     *   Change default place to save screenshots to a clipboard.
 
