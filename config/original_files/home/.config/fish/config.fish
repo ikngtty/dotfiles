@@ -141,3 +141,7 @@ end
 # NOTE: Added automatically by `opam init`(probably)
 # opam configuration
 source /Users/ikngtty/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+# NOTE: Added automatically by gcloud
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ikngtty/Tools/google-cloud-sdk/path.fish.inc' ]; . '/Users/ikngtty/Tools/google-cloud-sdk/path.fish.inc'; end
