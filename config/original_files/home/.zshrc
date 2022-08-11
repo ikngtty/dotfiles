@@ -36,9 +36,11 @@ autoload -Uz compinit && compinit
 
 # Greeting
 ## The cow says a quotation chosen at random.
-cowfile=`ls /usr/local/Cellar/cowsay/3.04_1/share/cows | grep '\.cow$' | shuf -n1 | sed 's/\.cow$//'`
-fortune | cowsay -f $cowfile
-echo $cowfile
+if [ -d /usr/local/Cellar/cowsay/3.04_1/share/cows ]; then
+  cowfile=`ls /usr/local/Cellar/cowsay/3.04_1/share/cows | grep '\.cow$' | shuf -n1 | sed 's/\.cow$//'`
+  fortune | cowsay -f $cowfile
+  echo $cowfile
+fi
 
 # added by travis gem
 [ -f /Users/ikngtty/.travis/travis.sh ] && source /Users/ikngtty/.travis/travis.sh
