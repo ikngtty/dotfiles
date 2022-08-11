@@ -98,8 +98,6 @@ Run `~/Configurations/fix-ricty/fix-ricty.sh`.
         *   Turn off to open folder in new tab.
     *   Sidebar
         *   Add home and HDD.
-    *   Detail
-        *   Turn on to display all file name extension.
 *   Others
     *   Change default place to save screenshots to a clipboard.
 
