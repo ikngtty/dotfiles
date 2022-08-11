@@ -26,7 +26,7 @@ alias rl='rlwrap'
 alias v='vagrant'
 
 # Completion
-which pipenv >/dev/null 2>&1 && eval "$(pipenv --completion)"
+which pipenv >/dev/null 2>&1 && eval "$(_PIPENV_COMPLETE=bash_source pipenv)"
 ## Enable autocompletion and all subcommands.
 which pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 

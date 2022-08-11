@@ -79,7 +79,6 @@ end
 
 # Completions
 if status --is-interactive
-  which pipenv > /dev/null 2> /dev/null; and eval (pipenv --completion)
   which pyenv > /dev/null 2> /dev/null; and pyenv init - | source
 end
 

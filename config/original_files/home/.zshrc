@@ -26,7 +26,7 @@ alias v='vagrant'
 which hub >/dev/null 2>&1 && eval "$(hub alias -s zsh)"
 
 # Completion
-which pipenv >/dev/null 2>&1 && eval "$(pipenv --completion)"
+which pipenv >/dev/null 2>&1 && eval "$(_PIPENV_COMPLETE=zsh_source pipenv)"
 ## Enable autocompletion and all subcommands.
 which pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 ## Add.
