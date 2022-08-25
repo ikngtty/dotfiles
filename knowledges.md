@@ -14,12 +14,6 @@ Without `Mix` (using `elixir` command for a `.exs` file or `elixirc` for `.ex`),
 `ide-elixir`, an Atom package, cannot lint. It uses elixir's compiler and
 Dialiyzer to lint, but both don't run.
 
-### Golang
-
-Use VSCode.
-Atom's `go-plus` package is almost not maintained, and other tools are not
-so good. (I want `gopls` to be stable.)
-
 ### Haskell
 
 Use haskell-stack.
