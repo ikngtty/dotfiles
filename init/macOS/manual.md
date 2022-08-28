@@ -8,7 +8,6 @@
 *   ~~IntelliJ IDEA CE.app~~
 *   Karabiner
 *   ~~PyCharm CE.app~~
-*   ~~Racket v7.1~~
 *   [Stack](https://getstack.app/)
 *   ~~Unity~~
 
