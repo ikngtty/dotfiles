@@ -88,6 +88,8 @@ Run `~/Configurations/fix-ricty/fix-ricty.sh`.
     *   The time require the password is right after sleeping and saving the screen.
 *   Siri
     *   Turn off "Use 'Hey Siri'"
+*   Sound
+    *   Set always about showing sound on the menu bar
 *   Trackpad
     *   Turn on `Application Expose`.
     *   Adjust sensitivity.
