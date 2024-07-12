@@ -1,5 +1,10 @@
 # Manual
 
+## Install commands.
+
+*   cot
+    *   `ln -s /Applications/CotEditor.app/Contents/SharedSupport/bin/cot /usr/local/bin/cot`
+
 ## Install applications.
 
 *   ~~DB Browser for SQLite.app~~
