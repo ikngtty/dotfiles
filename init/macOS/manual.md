@@ -11,7 +11,7 @@
 *   [Stack](https://getstack.app/)
 *   ~~Unity~~
 
-## Through App Store.
+### Through App Store
 
 *   ~~Alfred~~
     *   The App Store version seems to be old. Use the version installed by Homebrew Cask.
