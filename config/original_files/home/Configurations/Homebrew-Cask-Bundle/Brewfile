@@ -29,7 +29,6 @@ cask 'sourcetree'
 cask 'typora'
 cask 'vagrant'
 cask 'virtualbox'
-cask 'visual-studio'
 cask 'visual-studio-code'
 cask 'vivaldi'
 
