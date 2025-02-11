@@ -166,6 +166,14 @@ TODO: Try to make it scripts.
 
 Set bigger textsize as default.
 
+### Stickies
+
+Set the below style default.
+
+*   Font size - 18
+
+TODO: Try to make it scripts.
+
 ### Virtual Box
 
 Change the default VM folder path.
