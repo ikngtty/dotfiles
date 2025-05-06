@@ -63,6 +63,8 @@
 	rebase = true
 [rebase]
 	autosquash = true
+[rerere]
+	enable = true
 [sequence]
 	editor = rebase-editor -c ^M,^G,
 [url "git@github.com:"]
