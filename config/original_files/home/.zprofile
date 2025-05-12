@@ -12,6 +12,7 @@ PATH="$HOME/.nodebrew/current/bin:$PATH"
 PATH="/Applications/Racket v7.1/bin:$PATH"
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 PATH="/usr/local/opt/sqlite/bin:$PATH"
+PATH="$HOME/.codeium/windsurf/bin:$PATH"
 export PATH
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export MANPATH

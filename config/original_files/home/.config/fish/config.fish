@@ -31,6 +31,7 @@ if status --is-login
   fish_add_path ~/.nodebrew/current/bin
   fish_add_path /Applications/Racket\ v7.1/bin
   fish_add_path /usr/local/opt/coreutils/libexec/gnubin
+  fish_add_path ~/.codeium/windsurf/bin
 
   # sqlite is keg-only, which means it was not symlinked into /usr/local,
   # because macOS provides an older sqlite3.
