@@ -91,7 +91,6 @@ if status --is-interactive
   abbr --add ber bundle exec rails
   abbr --add c cargo
   abbr --add d docker
-  abbr --add dc docker-compose
   abbr --add g git
   abbr --add pe pipenv
   abbr --add r rails
