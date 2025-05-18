@@ -31,6 +31,8 @@ printf "\e[32m"                 # Green
 printf "[bundle log] Updating installed packages."
 printf "\e[m\n"                 # Reset
 npm update -g
+# FIXME: `@ikngtty/dotenv-apart` causes a bug because npm seeks the npm registry
+# but it is only in `github:ikngtty/dotenv-apart`.
 # TODO: Are outdated packages cleaned up? Check through `npm outdated -g`.
 
 # Install packages.
@@ -82,6 +84,7 @@ npm_i eslint-config-standard ""
 npm_i prettier ""
 npm_i eslint-plugin-prettier ""
 npm_i eslint-config-prettier-standard ""
+npm_i @ikngtty/dotenv-apart github:ikngtty/dotenv-apart
 
 printf "\e[32m"     # Green
 printf "Done!"
