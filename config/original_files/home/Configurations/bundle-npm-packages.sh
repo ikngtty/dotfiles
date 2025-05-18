@@ -36,48 +36,52 @@ npm update -g
 # Install packages.
 # TODO: Use yarn.
 npm_i() {
-  pkg="$1"
+  pkg_name="$1"
+  pkg_path="$2"
+  if [ -z "$pkg_path" ]; then
+    pkg_path="$pkg_name"
+  fi
   # HACK: An error occurs when the package is installed but contains an
   # "UNMET PEER DEPENDENCY" error.
-  if npm ls -g --depth=0 "$pkg" >/dev/null 2>&1; then
-    printf "\e[36m"                 # Magenta
+  if npm ls -g --depth=0 "$pkg_name" >/dev/null 2>&1; then
+    printf "\e[36m"                   # Magenta
     printf "[bundle log] "
-    printf "\e[1m$pkg\e[m\e[36m"    # Bold and reset
+    printf "\e[1m$pkg_name\e[m\e[36m" # Bold and reset
     printf " is already installed."
-    printf "\e[m\n"                 # Reset
+    printf "\e[m\n"                   # Reset
   else
-    printf "\e[32m"                 # Green
+    printf "\e[32m"                   # Green
     printf "[bundle log] Start install "
-    printf "\e[1m$pkg\e[m\e[36m"    # Bold and reset
+    printf "\e[1m$pkg_path\e[m\e[36m" # Bold and reset
     printf "."
-    printf "\e[m\n"                 # Reset
-    npm i -g "$pkg"
+    printf "\e[m\n"                   # Reset
+    npm i -g "$pkg_path"
   fi
 }
-npm_i @google/clasp
-npm_i elm-analyse
-npm_i elm-live
-npm_i node-giff
-npm_i rebase-editor
-npm_i standard
-npm_i wtfjs
+npm_i @google/clasp ""
+npm_i elm-analyse ""
+npm_i elm-live ""
+npm_i node-giff ""
+npm_i rebase-editor ""
+npm_i standard ""
+npm_i wtfjs ""
 # npm_i yarn  # NOTE: comment in if Node.js version < v16.10
 ## For <https://github.com/edubkendo/atom-elm>. (But Elmjutsu says I need not to install it.)
-npm_i elm-oracle
+npm_i elm-oracle ""
 ## For <https://marketplace.visualstudio.com/items?itemName=Elmtooling.elm-ls-vscode>.
-npm_i elm-format
-npm_i elm-test
+npm_i elm-format ""
+npm_i elm-test ""
 ## For <https://www.npmjs.com/package/eslint-config-prettier-standard>.
-npm_i eslint
-npm_i eslint-config-prettier
-npm_i eslint-plugin-import
-npm_i eslint-plugin-node
-npm_i eslint-plugin-promise
-npm_i eslint-plugin-standard
-npm_i eslint-config-standard
-npm_i prettier
-npm_i eslint-plugin-prettier
-npm_i eslint-config-prettier-standard
+npm_i eslint ""
+npm_i eslint-config-prettier ""
+npm_i eslint-plugin-import ""
+npm_i eslint-plugin-node ""
+npm_i eslint-plugin-promise ""
+npm_i eslint-plugin-standard ""
+npm_i eslint-config-standard ""
+npm_i prettier ""
+npm_i eslint-plugin-prettier ""
+npm_i eslint-config-prettier-standard ""
 
 printf "\e[32m"     # Green
 printf "Done!"
