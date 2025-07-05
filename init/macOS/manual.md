@@ -200,6 +200,8 @@ Some settings are not synced by it, so they should be synced manually:
 *   Keyboard
     *   Developer tool console - empty
         *   Default setting is `⌃⇧J`, which also changes IME mode to Japanese.
+    *   Translation panel - `⌥⌘I`
+    *   Web panel of Weblio - `⌥⌘E`
 *   Search
     *   Search engines
         *   duckduckgo.com
