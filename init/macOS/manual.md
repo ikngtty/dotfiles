@@ -232,6 +232,10 @@ Some settings are not synced by it, so they should be synced manually:
 *   Web page
     *   default zoom rate - 110%
 
+Add web panels:
+
+*   Weblio
+
 TODO: Check untouhced detailed settings.
 
 TODO: Make it scripts
