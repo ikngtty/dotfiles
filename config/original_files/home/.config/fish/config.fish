@@ -33,6 +33,18 @@ if status --is-login
   fish_add_path /usr/local/opt/coreutils/libexec/gnubin
   fish_add_path ~/.codeium/windsurf/bin
 
+  # llvm is keg-only, which means it was not symlinked into /usr/local,
+  # because macOS already provides this software and installing another version in
+  # parallel can cause all kinds of trouble.
+
+  # If you need to have llvm first in your PATH, run:
+  fish_add_path /usr/local/opt/llvm/bin
+
+  # For compilers to find llvm you may need to set:
+  #   set -gx LDFLAGS "-L/usr/local/opt/llvm/lib"
+  #   set -gx CPPFLAGS "-I/usr/local/opt/llvm/include"
+
+
   # sqlite is keg-only, which means it was not symlinked into /usr/local,
   # because macOS provides an older sqlite3.
   #
