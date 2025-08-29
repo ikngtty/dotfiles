@@ -266,7 +266,7 @@ deploy() {
       case "$deploy_status" in
         "$deploy_status_undeployed")
           print_with_color green "Deploying <b>$file_name</b> ..."
-          ln -s "$deploy_from" "$(dirname "$deploy_to")"
+          ln -s "$deploy_from" "$(dirname "$deploy_to")/"
           echo_with_color green ' Done!'
           ;;
         "$deploy_status_conflict")
