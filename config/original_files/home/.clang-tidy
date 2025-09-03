@@ -1,4 +1,10 @@
-Checks: 'bugprone-*,clang-analyzer-*,clang-diagnostic-*,cppcoreguidelines-*,modernize-*,readability-*'
+Checks:
+  - 'bugprone-*'
+  - 'clang-analyzer-*'
+  - 'clang-diagnostic-*'
+  - 'cppcoreguidelines-*'
+  - 'modernize-*'
+  - 'readability-*'
 CheckOptions:
   - { key: readability-identifier-naming.ConstantCase, value: UPPER_CASE }
   - { key: readability-identifier-naming.EnumCase, value: CamelCase }
