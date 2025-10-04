@@ -61,18 +61,11 @@ npm_i() {
   fi
 }
 npm_i @google/clasp ""
-npm_i elm-analyse ""
-npm_i elm-live ""
 npm_i node-giff ""
 npm_i rebase-editor ""
 npm_i standard ""
 npm_i wtfjs ""
 # npm_i yarn  # NOTE: comment in if Node.js version < v16.10
-## For <https://github.com/edubkendo/atom-elm>. (But Elmjutsu says I need not to install it.)
-npm_i elm-oracle ""
-## For <https://marketplace.visualstudio.com/items?itemName=Elmtooling.elm-ls-vscode>.
-npm_i elm-format ""
-npm_i elm-test ""
 ## For <https://www.npmjs.com/package/eslint-config-prettier-standard>.
 npm_i eslint ""
 npm_i eslint-config-prettier ""
