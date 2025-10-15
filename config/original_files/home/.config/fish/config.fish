@@ -57,6 +57,19 @@ if status --is-login
   # For pkg-config to find sqlite you may need to set:
   #   set -gx PKG_CONFIG_PATH "/usr/local/opt/sqlite/lib/pkgconfig"
 
+  # ASDF configuration code (from [the official site](https://asdf-vm.com/guide/getting-started.html))
+  if test -z $ASDF_DATA_DIR
+      set _asdf_shims "$HOME/.asdf/shims"
+  else
+      set _asdf_shims "$ASDF_DATA_DIR/shims"
+  end
+  # Do not use fish_add_path (added in Fish 3.2) because it
+  # potentially changes the order of items in PATH
+  if not contains $_asdf_shims $PATH
+      set -gx --prepend PATH $_asdf_shims
+  end
+  set --erase _asdf_shims
+
   # MANPATH
   warn_if_universal_var MANPATH
   if test (count $MANPATH) -eq 0
