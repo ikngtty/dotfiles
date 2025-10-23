@@ -255,6 +255,17 @@ NOTE:
 
 ## Set up others.
 
+### Erlang
+
+TODO: Make `asdf plugin add` scripts.
+      Adding the plugin without any installed erlang version seems to cause
+      no problem (overriding `erl` is occurred when a version is installed),
+      so it is good to run a script to add all plugins in advance.
+
+0.  `asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git`
+    if not done.
+1.  Install the version and set the current.
+
 ### Haskell
 
 0.  To reset, delete `~/.stack` directory.
