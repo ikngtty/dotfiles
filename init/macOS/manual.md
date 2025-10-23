@@ -300,7 +300,7 @@ TODO: Make it scripts.
 
 ### Node.js
 
-1.  `nodebrew setup_dirs` if not done ever
+1.  `nodebrew setup_dirs` if not done ever.
 2.  `nodebrew install-binary stable`
 3.  `nodebrew use stable`
 4.  Execute `~/Configurations/bundle-npm-packages.sh` after deploying.
