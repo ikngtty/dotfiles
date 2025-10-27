@@ -255,6 +255,19 @@ NOTE:
 
 ## Set up others.
 
+### Elixir
+
+TODO: Make `asdf plugin add` scripts.
+      Adding the plugin without any installed elixir version seems to cause
+      no problem (overriding `elixir` is occurred when a version is installed),
+      so it is good to run a script to add all plugins in advance.
+
+0.  `asdf plugin add elixir https://github.com/asdf-vm/asdf-elixir.git`
+    if not done.
+1.  Prepare the corresponding version of Erlang.
+    (Cf. <https://hexdocs.pm/elixir/compatibility-and-deprecations.html#compatibility-between-elixir-and-erlang-otp>)
+2.  Install the elixir version and set the current.
+
 ### Erlang
 
 TODO: Make `asdf plugin add` scripts.
