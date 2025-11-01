@@ -97,6 +97,7 @@ Run `~/Configurations/fix-ricty/fix-ricty.sh`.
     *   Set always about showing sound on the menu bar
 *   Trackpad
     *   Turn on `Application Expose`.
+    *   Turn off `Force Click and haptic feedback`.
     *   Adjust sensitivity.
 *   Finder
     *   General
