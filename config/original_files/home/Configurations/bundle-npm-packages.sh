@@ -61,6 +61,7 @@ npm_i() {
   fi
 }
 npm_i @google/clasp ""
+npm_i @anthropic-ai/claude-code ""
 npm_i node-giff ""
 npm_i rebase-editor ""
 npm_i standard ""
