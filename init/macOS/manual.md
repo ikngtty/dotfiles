@@ -238,6 +238,7 @@ Some settings are not synced by it, so they should be synced manually:
 Add web panels:
 
 *   Weblio
+*   Google Translate
 
 TODO: Check untouhced detailed settings.
 
