@@ -22,6 +22,7 @@ brew 'fish'
 brew 'fontforge'
 brew 'fop'            # for asdf-erlang
 brew 'fortune'
+brew 'fzf'
 brew 'gcc'
 brew 'gh'
 brew 'ghq'
@@ -60,7 +61,7 @@ brew 'tree'
 brew 'trivy'
 brew 'vim'
 brew 'wget'
-brew 'wxwidgets'      # for asdf-erlang
+brew 'wxwidgets' # for asdf-erlang
 brew 'zsh'
 brew 'zsh-completions'
 brew 'goodwithtech/r/dockle'
