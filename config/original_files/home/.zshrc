@@ -42,6 +42,3 @@ if [ -d /usr/local/Cellar/cowsay/3.04_1/share/cows ]; then
   fortune | cowsay -f $cowfile
   echo $cowfile
 fi
-
-# added by travis gem
-[ -f /Users/ikngtty/.travis/travis.sh ] && source /Users/ikngtty/.travis/travis.sh

@@ -33,6 +33,3 @@ which pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 
 # Greeting
 echo "This is Bash."
-
-# added by travis gem
-[ -f /Users/ikngtty/.travis/travis.sh ] && source /Users/ikngtty/.travis/travis.sh
