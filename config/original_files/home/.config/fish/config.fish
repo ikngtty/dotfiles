@@ -164,6 +164,11 @@ if status --is-interactive
   set -g theme_show_exit_status yes
 end
 
+if status --is-interactive
+  # Set up fzf key bindings
+  fzf --fish | source
+end
+
 # NOTE: Added automatically by `opam init`(probably)
 # opam configuration
 source /Users/ikngtty/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

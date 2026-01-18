@@ -31,5 +31,8 @@ which pipenv >/dev/null 2>&1 && eval "$(_PIPENV_COMPLETE=bash_source pipenv)"
 ## Enable autocompletion and all subcommands.
 which pyenv >/dev/null 2>&1 && eval "$(pyenv init -)"
 
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+
 # Greeting
 echo "This is Bash."

@@ -35,6 +35,9 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 ## Enable.
 autoload -Uz compinit && compinit
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # Greeting
 ## The cow says a quotation chosen at random.
 if [ -d /usr/local/Cellar/cowsay/3.04_1/share/cows ]; then
