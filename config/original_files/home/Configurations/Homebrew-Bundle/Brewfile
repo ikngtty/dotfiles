@@ -63,6 +63,7 @@ brew 'trivy'
 brew 'vim'
 brew 'wget'
 brew 'wxwidgets' # for asdf-erlang
+brew 'xh'
 brew 'zsh'
 brew 'zsh-completions'
 brew 'goodwithtech/r/dockle'
