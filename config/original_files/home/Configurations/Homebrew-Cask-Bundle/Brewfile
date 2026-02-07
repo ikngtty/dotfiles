@@ -1,6 +1,7 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/core'
+tap 'VOICEVOX/voicevox'
 cask 'alfred'
 cask 'appcleaner'
 cask 'atom'
@@ -34,6 +35,7 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'visual-studio-code'
 cask 'vivaldi'
+cask 'voicevox', args: { no_quarantine: true }
 cask 'windsurf'
 cask 'wireshark-app'
 
