@@ -18,6 +18,7 @@ brew 'diff-so-fancy'
 brew 'direnv'
 brew 'elixir'
 brew 'elm'
+brew 'firebase-cli'
 brew 'fish'
 brew 'fontforge'
 brew 'fop'            # for asdf-erlang
