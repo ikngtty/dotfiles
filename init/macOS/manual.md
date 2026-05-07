@@ -239,6 +239,7 @@ Add web panels:
 
 *   Weblio
 *   Google Translate
+*   X (Twitter)
 
 TODO: Check untouhced detailed settings.
 
