@@ -204,6 +204,7 @@ Some settings are not synced by it, so they should be synced manually:
     *   Translation panel - `⌥⌘I`
     *   Web panel of Weblio - `⌥⌘E`
     *   Web panel of Google Translate - `⌥⌘T`
+    *   Web panel of Vocab Usage Archive - `⌥⌘V`
 *   Search
     *   Search engines
         *   duckduckgo.com
@@ -240,6 +241,7 @@ Add web panels:
 
 *   Weblio
 *   Google Translate
+*   [Vocab Usage Archive](https://ikngtty.github.io/vocab-usage-archive/)
 *   X (Twitter)
 
 TODO: Check untouhced detailed settings.
