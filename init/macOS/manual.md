@@ -203,6 +203,7 @@ Some settings are not synced by it, so they should be synced manually:
         *   Default setting is `⌃⇧J`, which also changes IME mode to Japanese.
     *   Translation panel - `⌥⌘I`
     *   Web panel of Weblio - `⌥⌘E`
+    *   Web panel of Google Translate - `⌥⌘T`
 *   Search
     *   Search engines
         *   duckduckgo.com
