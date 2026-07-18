@@ -4,7 +4,7 @@
 
 ### Common Lisp
 
-Execute in Atom's `slime` or use `sbcl` or `clisp`.
+Execute in Atom's `slime` or use `sbcl`.
 TODO: Detailed way to call our programs.
 
 ### Elixir

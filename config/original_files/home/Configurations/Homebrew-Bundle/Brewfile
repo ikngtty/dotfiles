@@ -10,7 +10,6 @@ brew 'aspell'
 brew 'autoconf'       # for asdf-erlang
 brew 'awscli'
 brew 'bear'
-brew 'clisp'
 brew 'cmatrix'
 brew 'cowsay'
 brew 'checkbashisms'
