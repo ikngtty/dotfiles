@@ -1,6 +1,4 @@
 tap 'aquasecurity/trivy'
-tap 'homebrew/cask'
-tap 'homebrew/core'
 tap 'possatti/possatti'
 brew 'aha'
 brew 'asciiquarium'
