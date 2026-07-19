@@ -1,4 +1,3 @@
-tap 'aquasecurity/trivy'
 tap 'possatti/possatti'
 brew 'aha'
 brew 'asciiquarium'
