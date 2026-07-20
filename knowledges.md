@@ -17,9 +17,7 @@ Dialiyzer to lint, but both don't run.
 ### Haskell
 
 Use haskell-stack.
-If using ghc-8 or more than it, use Atom with haskell-language-server
-(through ide-haskell-hie).
-If using ghc-7 or less than it, use VSCode with intero (through Haskero).
+Use Atom with haskell-language-server (through ide-haskell-hie).
 
 ### JavaScript (Node.js)
 

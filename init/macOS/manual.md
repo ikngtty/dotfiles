@@ -311,12 +311,6 @@ the proper GHC version, the filename of `haskell-language-server` should be
 
 TODO: Make it scripts.
 
-#### intero
-
-Build for each GHC version.
-See [docs](https://github.com/chrisdone/intero/blob/master/TOOLING.md).
-TODO: Make it scripts.
-
 ### Lisp
 
 #### atom-slime
