@@ -176,3 +176,6 @@ source /Users/ikngtty/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or tru
 # NOTE: Added automatically by gcloud
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ikngtty/Tools/google-cloud-sdk/path.fish.inc' ]; . '/Users/ikngtty/Tools/google-cloud-sdk/path.fish.inc'; end
+
+# NOTE: Added automatically by ghcup
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /Users/ikngtty/.ghcup/bin $PATH # ghcup-env

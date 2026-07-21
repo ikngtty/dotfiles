@@ -287,29 +287,13 @@ TODO: Make `asdf plugin add` scripts.
 
 ### Haskell
 
-0.  To reset, delete `~/.stack` directory.
-1.  *   To install GHC for a project, move to the project directory, which
-        contains `stack.yaml` file, and `stack setup`.
-    *   To install the latest GHC without considering any certain project,
-        `stack setup` at any directory which does not contain `stack.yaml`.
-    *   TODO: To update GHC. (Edit `resolver` in `stack.yaml` in the project
-        directory or `~/.stack/global-project`, and `stack setup` again?)
-2.  Replace `~/.stack/config.yaml` by that of dotfiles with my `deploy` command.
-3.  `~/Configurations/bundle-haskell-stack-packages.sh`
+0.  Deploy `~/.stack/*` files and `ghcup install stack`.
+1.  `stack new <project-name>`
+2.  When executing `stack build` or `stack run`, GHC is automatically installed with GHCup
+    (powered by `~/.stack/hooks/ghc-install.sh`, the deployed file).
+3.  When opening VSCode, Haskell Language Server is automatically installed with GHCup.
 
-#### haskell-language-server
-
-Download binaries for each GHC version from its repository.
-See [docs](https://github.com/haskell/haskell-language-server/).
-
-The binaries should be executable (`chmod +x`) and be allowed by the macOS
-security.
-
-To let `haskell-language-server-wrapper` choose `haskell-language-server` for
-the proper GHC version, the filename of `haskell-language-server` should be
-`haskell-language-server-<GHC version>`.
-
-TODO: Make it scripts.
+TODO: `~/Configurations/bundle-haskell-stack-packages.sh` is currently unused.
 
 ### Lisp
 

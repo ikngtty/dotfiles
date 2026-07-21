@@ -14,11 +14,6 @@ Without `Mix` (using `elixir` command for a `.exs` file or `elixirc` for `.ex`),
 `ide-elixir`, an Atom package, cannot lint. It uses elixir's compiler and
 Dialiyzer to lint, but both don't run.
 
-### Haskell
-
-Use haskell-stack.
-Use Atom with haskell-language-server (through ide-haskell-hie).
-
 ### JavaScript (Node.js)
 
 *   Linter and Formatter

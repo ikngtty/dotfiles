@@ -45,3 +45,6 @@ if [ -d /usr/local/Cellar/cowsay/3.04_1/share/cows ]; then
   fortune | cowsay -f $cowfile
   echo $cowfile
 fi
+
+# NOTE: Added automatically by ghcup
+[ -f "/Users/ikngtty/.ghcup/env" ] && . "/Users/ikngtty/.ghcup/env" # ghcup-env

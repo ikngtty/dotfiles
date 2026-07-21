@@ -36,3 +36,6 @@ eval "$(fzf --bash)"
 
 # Greeting
 echo "This is Bash."
+
+# NOTE: Added automatically by ghcup
+[ -f "/Users/ikngtty/.ghcup/env" ] && . "/Users/ikngtty/.ghcup/env" # ghcup-env
