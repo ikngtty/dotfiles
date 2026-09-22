@@ -21,6 +21,7 @@ end
 if status --is-login
   set -gx GOPATH ~/Projects
   # PATH
+  fish_add_path --path --append ~/.docker/bin
   fish_add_path /usr/local/sbin
   fish_add_path ~/.local/bin
   fish_add_path ~/.cargo/bin
