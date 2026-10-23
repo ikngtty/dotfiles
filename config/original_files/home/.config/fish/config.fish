@@ -101,7 +101,6 @@ end
 if status --is-login
   which rbenv > /dev/null 2> /dev/null; and rbenv init - | source
   which pyenv > /dev/null 2> /dev/null; and pyenv init --path | source
-  which direnv > /dev/null 2> /dev/null; and direnv hook fish | source
 end
 
 # Completions
@@ -163,6 +162,10 @@ if status --is-interactive
   set -g theme_display_vagrant yes
   set -g theme_newline_cursor clean
   set -g theme_show_exit_status yes
+end
+
+if status --is-interactive
+  which direnv > /dev/null 2> /dev/null; and direnv hook fish | source
 end
 
 if status --is-interactive
