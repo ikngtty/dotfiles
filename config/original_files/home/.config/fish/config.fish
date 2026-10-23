@@ -101,7 +101,7 @@ end
 if status --is-login
   which rbenv > /dev/null 2> /dev/null; and rbenv init - | source
   which pyenv > /dev/null 2> /dev/null; and pyenv init --path | source
-  which direnv > /dev/null 2> /dev/null; and eval (direnv hook fish)
+  which direnv > /dev/null 2> /dev/null; and direnv hook fish | source
 end
 
 # Completions
