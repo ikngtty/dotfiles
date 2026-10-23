@@ -35,6 +35,8 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 ## Enable.
 autoload -Uz compinit && compinit
 
+which direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
