@@ -127,6 +127,11 @@ Follow my comment in `init.coffee`.
 TODO: Make it scripts.
 TODO: Find out steps to create Lisp IDE.
 
+### Claude Code
+
+*   General - Appearance
+    *   Text size of trascripts -> Big
+
 ### CotEditor
 
 1.  Download themes from [here](https://github.com/naotaka/CotEditor-themes).
