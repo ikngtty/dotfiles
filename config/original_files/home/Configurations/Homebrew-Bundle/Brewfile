@@ -62,6 +62,7 @@ brew 'wxwidgets' # for asdf-erlang
 brew 'xh'
 brew 'zsh'
 brew 'zsh-completions'
+brew 'borkdude/brew/babashka'
 brew 'clojure/tools/clojure'
 brew 'goodwithtech/r/dockle'
 brew 'possatti/possatti/pokemonsay'
